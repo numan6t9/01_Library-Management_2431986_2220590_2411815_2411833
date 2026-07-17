@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="824.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.ReceptionistDashboardViewController">
+   <children>
+      <Label alignment="CENTER" prefHeight="51.0" prefWidth="601.0" style="-fx-background-color: grey;" text="Welcome To Receptionist Dashboard">
+         <font>
+            <Font name="FreeSans Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
