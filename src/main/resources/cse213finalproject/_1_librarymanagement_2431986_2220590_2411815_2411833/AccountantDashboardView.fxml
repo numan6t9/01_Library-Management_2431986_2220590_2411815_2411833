@@ -3,18 +3,59 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="828.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.AccountantDashboardViewController">
+<AnchorPane prefHeight="828.0" prefWidth="525.0" style="-fx-background-color: E6E6FA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.AccountantDashboardViewController">
    <children>
-      <Label layoutY="-2.0" prefHeight="38.0" prefWidth="196.0" style="-fx-background-color: gray;" text="Accountant Dashboard">
+      <Label alignment="CENTER" layoutY="-2.0" prefHeight="81.0" prefWidth="525.0" style="-fx-background-color: gray;" text="Accountant Dashboard">
          <font>
             <Font name="FreeSans Bold" size="16.0" />
          </font>
       </Label>
       <Label layoutX="161.0" layoutY="157.0" />
-      <VBox layoutX="196.0" layoutY="-4.0" prefHeight="837.0" prefWidth="412.0" style="-fx-background-color: blue;" />
-      <Button layoutX="55.0" layoutY="780.0" mnemonicParsing="false" style="-fx-background-color: red;" text="LogOut--&gt;" />
+      <Button alignment="CENTER" layoutX="170.0" layoutY="570.0" mnemonicParsing="false" onAction="#LogoutButtonForAccountant" prefHeight="54.0" prefWidth="195.0" style="-fx-background-color: red;" text="LogOut--&gt;">
+         <font>
+            <Font name="NimbusSansNarrow-Bold" size="17.0" />
+         </font></Button>
+      <Button layoutX="35.0" layoutY="140.0" mnemonicParsing="false" onAction="#SupplierPaymentsButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Supplier Payments">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="35.0" layoutY="243.0" mnemonicParsing="false" onAction="#MembershipFeesButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Membership Fees">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="293.0" layoutY="140.0" mnemonicParsing="false" onAction="#FineCollectionButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Fine Collection">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="293.0" layoutY="243.0" mnemonicParsing="false" onAction="#PayrollManagementButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Payroll Management">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="38.0" layoutY="347.0" mnemonicParsing="false" onAction="#BudgetManagementButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Budget Management">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="293.0" layoutY="347.0" mnemonicParsing="false" onAction="#FinancialReportsButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Financial Reports">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="38.0" layoutY="456.0" mnemonicParsing="false" onAction="#AuditReportsButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Audit Reports">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="293.0" layoutY="456.0" mnemonicParsing="false" onAction="#FinancialStatementButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Financial Statements " textOverrun="CLIP">
+         <font>
+            <Font name="Liberation Mono Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
