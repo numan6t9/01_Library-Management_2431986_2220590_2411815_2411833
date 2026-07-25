@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="813.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.MembershipRenewalFeeViewController">
+   <children>
+      <Label layoutX="187.0" layoutY="39.0" text="Membership Renewal Fee">
+         <font>
+            <Font name="Monospaced Regular" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="436.0" text="Enter Member Id" />
+      <TextField fx:id="enterMemberIdToSelect" layoutX="176.0" layoutY="432.0" />
+      <Button layoutX="393.0" layoutY="432.0" mnemonicParsing="false" onAction="#selectMemberButton" text="Select Member" />
+      <TableView fx:id="renewalFeeTableView" layoutX="117.0" layoutY="186.0" prefHeight="200.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="memberIdTableView" prefWidth="123.0" text="Member ID" />
+          <TableColumn fx:id="memberNameTableView" prefWidth="121.0" text="Member Name" />
+            <TableColumn fx:id="expiredDateTableView" prefWidth="121.0" text="Expired Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="72.0" layoutY="107.0" mnemonicParsing="false" onAction="#loadAllMemberButton" text="Load All Member" />
+      <CheckBox fx:id="expiredMemberCheckbox" layoutX="368.0" layoutY="111.0" mnemonicParsing="false" text="Expired Member" />
+      <Label layoutX="37.0" layoutY="505.0" text="Renewal fee" />
+      <TextField fx:id="renewalFee" layoutX="176.0" layoutY="501.0" />
+      <Label layoutX="42.0" layoutY="573.0" text="Late Renewal Fine" />
+      <TextField fx:id="lateRenewalFine" layoutX="187.0" layoutY="569.0" />
+      <Button layoutX="49.0" layoutY="633.0" mnemonicParsing="false" onAction="#calculateRenewalFeeButton" text="Calculate Renewal Fee" />
+      <Label fx:id="showTotalRenewalFees" layoutX="373.0" layoutY="617.0" prefHeight="58.0" prefWidth="151.0" style="-fx-background-color: blue;" text="Show total Renewal Fees" textFill="WHITE" />
+      <Button layoutX="431.0" layoutY="709.0" mnemonicParsing="false" onAction="#PayNowBButton" text="Pay Now" />
+      <Label layoutX="57.0" layoutY="713.0" text="Enter Payment Info" />
+      <TextField fx:id="enterpaymentInformation" layoutX="203.0" layoutY="709.0" />
+      <Button layoutX="117.0" layoutY="763.0" mnemonicParsing="false" onAction="#updateMemberStatusAndGenerateRenewalReport" text="Update member Status and generate renewal fee receipt" />
+   </children>
+</AnchorPane>

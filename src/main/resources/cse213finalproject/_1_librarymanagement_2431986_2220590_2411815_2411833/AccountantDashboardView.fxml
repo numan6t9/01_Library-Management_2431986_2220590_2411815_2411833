@@ -47,7 +47,7 @@
             <Font name="Liberation Mono Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="38.0" layoutY="456.0" mnemonicParsing="false" onAction="#AuditReportsButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="Audit Reports">
+      <Button layoutX="38.0" layoutY="456.0" mnemonicParsing="false" onAction="#AuditReportsButton" prefHeight="67.0" prefWidth="195.0" style="-fx-background-color: BA55D3;" text="membership renewal fees" textOverrun="CLIP">
          <font>
             <Font name="Liberation Mono Bold" size="15.0" />
          </font>
