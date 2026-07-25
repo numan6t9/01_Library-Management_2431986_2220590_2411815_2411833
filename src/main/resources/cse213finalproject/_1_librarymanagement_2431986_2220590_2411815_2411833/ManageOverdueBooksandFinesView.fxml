@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="rukonuddinshourov.ManageOverdueBooksandFinesViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="769.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageOverdueBooksandFinesViewController">
+    <children>
+        <Label layoutX="242.0" layoutY="55.0" text="Fine Collection">
+            <font>
+                <Font name="FreeSans Bold" size="16.0" />
+            </font></Label>
+        <Label layoutX="55.0" layoutY="150.0" text="Enter Member ID" />
+        <TextField fx:id="enterMemberId" layoutX="196.0" layoutY="146.0" />
+        <Button layoutX="411.0" layoutY="146.0" mnemonicParsing="false" onAction="#searchMemberButton" text="SearchMember" />
+        <TableView fx:id="fineCollectionTableView" layoutX="157.0" layoutY="209.0" prefHeight="200.0" prefWidth="287.0">
+            <columns>
+                <TableColumn fx:id="borrowedBookTableView" prefWidth="146.0" text="Borrowed Books" />
+                <TableColumn fx:id="bookReturnDateTableView" prefWidth="143.0" text="Book Return Date" />
+            </columns>
+        </TableView>
+        <Label layoutX="55.0" layoutY="458.0" text="Fine Per Day" />
+        <TextField fx:id="finePerDay" layoutX="249.0" layoutY="454.0" />
+        <Label layoutX="55.0" layoutY="531.0" text="Total overdue days" />
+        <TextField fx:id="overdueDays" layoutX="249.0" layoutY="527.0" />
+        <Button layoutX="429.0" layoutY="454.0" mnemonicParsing="false" onAction="#calculateFineButton" prefHeight="26.0" prefWidth="148.0" text="Calculate Fine" />
+        <Label fx:id="showTotalFine" alignment="CENTER" layoutX="440.0" layoutY="502.0" prefHeight="58.0" prefWidth="137.0" style="-fx-background-color: blue;" text="Fine to pay" textFill="WHITE">
+            <font>
+                <Font name="FreeSerif Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="55.0" layoutY="598.0" text="Enter Payment Information" />
+        <TextField fx:id="enterPaymentInformation" layoutX="249.0" layoutY="594.0" />
+        <Button layoutX="440.0" layoutY="594.0" mnemonicParsing="false" onAction="#payFineNowButton" prefHeight="26.0" prefWidth="148.0" text="Pay Now" />
+        <Button layoutX="221.0" layoutY="665.0" mnemonicParsing="false" onAction="#generateFineReceiptButton" prefHeight="26.0" prefWidth="173.0" text="Generate Fine Receipt" />
+    </children>
 </AnchorPane>
