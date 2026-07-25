@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="abdullahalnuman.BudgetManagementViewController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="771.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.BudgetManagementViewController">
+   <children>
+      <Label layoutX="308.0" layoutY="44.0" text="Budget Management" />
+      <Label layoutX="41.0" layoutY="128.0" text="Choose Budget Period" />
+      <ComboBox fx:id="chooseBudgetComboBox" layoutX="205.0" layoutY="124.0" prefWidth="150.0" />
+      <DatePicker fx:id="fromBudgetPeriod" layoutX="197.0" layoutY="177.0" />
+      <Label layoutX="41.0" layoutY="181.0" text="Enter Budget Period" />
+      <Label layoutX="405.0" layoutY="181.0" text="to" />
+      <DatePicker fx:id="toBudgetPeriod" layoutX="433.0" layoutY="177.0" />
+      <Button layoutX="48.0" layoutY="248.0" mnemonicParsing="false" onAction="#showAvailableBudgetButton" text="Show available Budget" />
+      <Label fx:id="showAvailableBudget" layoutX="386.0" layoutY="242.0" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: blue;" text="Show Available Budget" textFill="WHITE" />
+      <Label layoutX="48.0" layoutY="319.0" text="Book Acquisition" />
+      <TextField fx:id="bookAcquisition" layoutX="211.0" layoutY="315.0" />
+      <Label layoutX="395.0" layoutY="319.0" text="Staff Payroll" />
+      <TextField fx:id="staffPayroll" layoutX="526.0" layoutY="315.0" />
+      <Label layoutX="41.0" layoutY="377.0" text="Library Maintenance" />
+      <TextField fx:id="libraryMaintencance" layoutX="211.0" layoutY="373.0" />
+      <Label layoutX="395.0" layoutY="377.0" text="Digital Resources" />
+      <TextField fx:id="digitalResources" layoutX="528.0" layoutY="373.0" />
+      <Label layoutX="41.0" layoutY="424.0" text="Miscellaneous Expenses" />
+      <TextField fx:id="miscellaneousExpenses" layoutX="211.0" layoutY="420.0" />
+      <Button layoutX="423.0" layoutY="420.0" mnemonicParsing="false" onAction="#calculateExpensesButton" prefHeight="26.0" prefWidth="175.0" text="Calculate Expenses" />
+      <Label fx:id="showTotalExpenses" layoutX="285.0" layoutY="473.0" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: blue;" text="Show total expenses" textFill="WHITE" />
+      <Button layoutX="48.0" layoutY="568.0" mnemonicParsing="false" onAction="#calculateRemainingBudgetButton" prefHeight="26.0" prefWidth="209.0" text="Calculate remaining Budget" />
+      <Label fx:id="showRemainingButton" layoutX="399.0" layoutY="562.0" prefHeight="38.0" prefWidth="162.0" style="-fx-background-color: blue;" text="Show remaining Budget" textFill="WHITE" />
+      <Button layoutX="46.0" layoutY="628.0" mnemonicParsing="false" onAction="#updateBudgetButton" prefHeight="26.0" prefWidth="209.0" text="Update Budget" />
+      <Button layoutX="376.0" layoutY="628.0" mnemonicParsing="false" onAction="#generateAllocationReportButton" prefHeight="26.0" prefWidth="209.0" text="Generate Allocation Report" />
+   </children>
 </AnchorPane>
