@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="874.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.UpdateMemberInformationView">
+   <children>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="-2.0" prefHeight="72.0" prefWidth="757.0" style="-fx-background-color: grey;" text="Update Memnber Information">
+         <font>
+            <Font name="Liberation Mono Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="171.0" text="Enter Member Id " />
+      <TextField fx:id="enterMemberId" layoutX="158.0" layoutY="167.0" />
+      <Label layoutX="406.0" layoutY="171.0" text="Enter Member Name" />
+      <TextField fx:id="enterMemberName" layoutX="549.0" layoutY="167.0" />
+      <Button layoutX="129.0" layoutY="244.0" mnemonicParsing="false" onAction="#searchMemberButton" prefHeight="26.0" prefWidth="473.0" text="Search Member" />
+      <Label layoutX="32.0" layoutY="322.0" />
+      <Label layoutX="32.0" layoutY="331.0" text="Member Id:" />
+      <Label fx:id="showMemberId" layoutX="166.0" layoutY="331.0" style="-fx-background-color: green;" text="Show Member ID" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="387.0" text="Member Name:" />
+      <Label fx:id="showMemberName" layoutX="166.0" layoutY="387.0" style="-fx-background-color: green;" text="Show Member Name" textFill="WHITE" />
+      <Label layoutX="444.0" layoutY="331.0" text="Address:" />
+      <Label fx:id="showAddress" layoutX="559.0" layoutY="331.0" style="-fx-background-color: green;" text="Show Address" textFill="WHITE" />
+      <Label layoutX="437.0" layoutY="387.0" text="Email Address:" />
+      <Label fx:id="showEmailAddress" layoutX="559.0" layoutY="387.0" style="-fx-background-color: green;" text="Show Email Address" textFill="WHITE" />
+      <Label layoutX="32.0" layoutY="488.0" text="Update Name" />
+      <TextField fx:id="updateName" layoutX="150.0" layoutY="484.0" />
+      <Label layoutX="391.0" layoutY="488.0" text="Update Address" />
+      <TextField fx:id="updateAddress" layoutX="522.0" layoutY="484.0" />
+      <Label layoutX="35.0" layoutY="562.0" text="Update Email " />
+      <TextField fx:id="updateEmail" layoutX="150.0" layoutY="558.0" />
+      <Button layoutX="120.0" layoutY="644.0" mnemonicParsing="false" onAction="#updateMemberAndInformationAndSaveButton" prefHeight="26.0" prefWidth="473.0" text="Update Member Information and save" />
+   </children>
+</AnchorPane>
