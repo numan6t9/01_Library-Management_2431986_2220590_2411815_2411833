@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="905.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.RegisterMemberViewController">
+   <children>
+      <Label layoutX="261.0" layoutY="55.0" text="Register Member">
+         <font>
+            <Font name="Liberation Mono Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="128.0" text="Member Name" />
+      <TextField fx:id="enterMemberName" layoutX="169.0" layoutY="124.0" />
+      <Label layoutX="373.0" layoutY="128.0" text="Member Age" />
+      <TextField fx:id="enterMemberAge" layoutX="478.0" layoutY="124.0" />
+      <Label layoutX="50.0" layoutY="191.0" text="Gender" />
+      <RadioButton fx:id="genderMaleRadioButton" layoutX="119.0" layoutY="191.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="genderFemaleRadioButton" layoutX="192.0" layoutY="191.0" mnemonicParsing="false" text="Female" />
+      <RadioButton fx:id="othersGenderradioButton" layoutX="276.0" layoutY="191.0" mnemonicParsing="false" text="Others" />
+      <Label layoutX="366.0" layoutY="191.0" text="Date Of birth" />
+      <DatePicker fx:id="dateOfBirthOfTheMember" layoutX="465.0" layoutY="187.0" />
+      <Label layoutX="50.0" layoutY="254.0" text="Email Address" />
+      <TextField fx:id="enterEmailAddress" layoutX="159.0" layoutY="250.0" />
+      <Label layoutX="381.0" layoutY="254.0" text="Address" />
+      <TextField fx:id="enterAddress" layoutX="465.0" layoutY="250.0" />
+      <Button layoutX="167.0" layoutY="334.0" mnemonicParsing="false" onAction="#registerNewMemberAndGenerateIdButton" text="Register New Member  and Generate Membership ID" />
+      <Label fx:id="showMembershipId" layoutX="546.0" layoutY="316.0" prefHeight="63.0" prefWidth="95.0" style="-fx-background-color: blue;" text="Membership ID" textFill="WHITE" />
+   </children>
+</AnchorPane>
