@@ -16,7 +16,7 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="-1.0" layoutY="77.0" prefHeight="646.0" prefWidth="862.0" style="-fx-background-color: gray;" />
+      <Label layoutX="-90.0" layoutY="80.0" prefHeight="646.0" prefWidth="803.0" style="-fx-background-color: gray;" />
       <Label layoutX="33.0" layoutY="77.0" prefHeight="32.0" prefWidth="117.0" text="Book Id">
          <font>
             <Font size="15.0" />
@@ -85,10 +85,6 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </BottomNavigationButton>
-      <Button layoutX="712.0" layoutY="638.0" mnemonicParsing="false" onAction="#ConfirmUpdateButton" prefHeight="60.0" prefWidth="150.0" text="Confirm Update">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
+      <Button layoutX="635.0" layoutY="647.0" mnemonicParsing="false" onAction="#confirmOnActionbutton" text="Confirm" />
    </children>
 </AnchorPane>

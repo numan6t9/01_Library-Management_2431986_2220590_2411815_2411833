@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="649.0" prefWidth="600.0" style="-fx-background-color: offwhite;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberpersonalprofileupdateViewController">
+   <children>
+      <Label alignment="CENTER" prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: teal;" text="MemberPersonalProfileUpdate">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="82.0" fitWidth="146.0" layoutX="14.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="54.0" layoutY="97.0" prefHeight="72.0" prefWidth="93.0" text="Profile Photo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="179.0" prefHeight="39.0" prefWidth="109.0" text="First Name" />
+      <Label layoutX="53.0" layoutY="209.0" prefHeight="39.0" prefWidth="110.0" text="Last Name" />
+      <Label layoutX="55.0" layoutY="254.0" prefHeight="31.0" prefWidth="110.0" text="Member ID " />
+      <Label layoutX="55.0" layoutY="285.0" prefHeight="31.0" prefWidth="110.0" text="Email" />
+      <Label layoutX="53.0" layoutY="325.0" prefHeight="31.0" prefWidth="110.0" text="Phone " />
+      <Label layoutX="47.0" layoutY="368.0" prefHeight="31.0" prefWidth="110.0" text="Address  " />
+      <Label layoutX="315.0" layoutY="239.0" prefHeight="39.0" prefWidth="110.0" text="Gender" />
+      <Label layoutX="315.0" layoutY="179.0" prefHeight="46.0" prefWidth="110.0" text="Date of Birth " />
+      <Label layoutX="47.0" layoutY="427.0" prefHeight="31.0" prefWidth="110.0" text="Password" />
+      <Label layoutX="25.0" layoutY="485.0" prefHeight="31.0" prefWidth="110.0" text="Confirm Password" />
+      <PasswordField fx:id="passsword" layoutX="136.0" layoutY="430.0" />
+      <PasswordField layoutX="136.0" layoutY="488.0" onAction="#confirmButtonOnAction" />
+      <DatePicker fx:id="dateOfBirth" layoutX="391.0" layoutY="186.0" />
+      <ComboBox fx:id="gender" layoutX="391.0" layoutY="236.0" prefWidth="150.0" />
+      <TextField fx:id="firstName" layoutX="132.0" layoutY="186.0" />
+      <TextField fx:id="lastName" layoutX="133.0" layoutY="224.0" />
+      <TextField fx:id="memberId" layoutX="133.0" layoutY="257.0" />
+      <TextField fx:id="emailzid" layoutX="134.0" layoutY="288.0" />
+      <TextField fx:id="phoneNumber" layoutX="135.0" layoutY="328.0" />
+      <TextField fx:id="adress" layoutX="136.0" layoutY="371.0" />
+      <Button layoutX="490.0" layoutY="604.0" mnemonicParsing="false" onAction="#updateButtonOnAction" style="-fx-background-color: gray;" text="Update">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="35.0" layoutY="579.0" mnemonicParsing="false" onAction="#savechangeButtonOnAction" style="-fx-background-color: green;" text="Save Changes">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="211.0" layoutY="579.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" style="-fx-background-color: red;" text="Cancel">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

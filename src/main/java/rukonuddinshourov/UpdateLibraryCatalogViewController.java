@@ -42,7 +42,15 @@ public class UpdateLibraryCatalogViewController {
     public void RemoveButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void ConfirmUpdateButton(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void ConfirmButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void confirmOnActionbutton(ActionEvent actionEvent) {
     }
 }

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.RenewBorrowedBookViewController">
+
+    <!-- Header -->
+    <top>
+        <VBox alignment="CENTER" spacing="8" style="-fx-background-color: gray;">
+            <padding>
+                <Insets bottom="15" top="15" />
+            </padding>
+
+            <Label fx:id="renewborrowedbooks" style="-fx-font-size:18px; -fx-font-weight:bold;" text="Renew Borrowed Books" />
+        </VBox>
+    </top>
+
+    <!-- Center -->
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <!-- Borrowed Books Table -->
+            <TableView fx:id="tblBorrowedBooks" prefHeight="280">
+
+                <columns>
+
+                    <TableColumn fx:id="bookIdBorrow" prefWidth="100" text="Book ID" />
+
+                    <TableColumn fx:id="Title" prefWidth="250" text="Book Title" />
+
+                    <TableColumn fx:id="BorrowDate" prefWidth="150" text="Borrow Date" />
+
+                    <TableColumn fx:id="DueDatebook" prefWidth="150" text="Due Date" />
+
+                    <TableColumn fx:id="Status" prefWidth="120" text="Status" />
+
+                </columns>
+
+            </TableView>
+
+            <Separator />
+
+            <!-- Book Information -->
+            <GridPane hgap="10" vgap="12">
+
+                <Label text="Book ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                <TextField fx:id="BookID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Book Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <TextField fx:id="bookTitle" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Current Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                <TextField fx:id="DueDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="New Due Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <DatePicker fx:id="NewDueDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+
+        </VBox>
+    </center>
+
+    <!-- Bottom Buttons -->
+    <bottom>
+
+        <HBox alignment="CENTER_RIGHT" spacing="15">
+
+            <padding>
+                <Insets bottom="15" right="20" top="10" />
+            </padding>
+
+            <Button fx:id="btnRenew" onAction="#renewBookOnActionButton" prefWidth="100" text="Renew" />
+
+            <Button onAction="#clearOnActionButton" prefWidth="100" text="Clear" />
+
+            <Button fx:id="btnBack" onAction="#backOnActionButton" prefWidth="100" text="Back" />
+
+            <Button fx:id="btnLogout" onAction="#logoutOnActionButton" prefWidth="100" text="Logout" />
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

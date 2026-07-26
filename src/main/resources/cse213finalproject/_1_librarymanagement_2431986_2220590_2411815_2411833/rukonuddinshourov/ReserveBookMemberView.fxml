@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ReserveBookMemberviewController">
+
+    <children>
+
+        <VBox spacing="15" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+
+            <Label alignment="CENTER" prefHeight="118.0" prefWidth="765.0" style="-fx-background-color: teal; -fx-font-weight: bold;" text="Reserve Book">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font></Label>
+
+            <GridPane hgap="10" vgap="10">
+
+                <Label text="Member ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                <TextField fx:id="MemberID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Search Book:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <TextField fx:id="searchbook" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Button fx:id="btnSearch" onAction="#searchBook" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+
+            <TableView fx:id="tblBooks" prefHeight="250">
+
+                <columns>
+
+                    <TableColumn fx:id="bookidreserve" prefWidth="100" text="Book ID" />
+
+                    <TableColumn fx:id="Titlebook" prefWidth="250" text="Title" />
+
+                    <TableColumn fx:id="Author" prefWidth="200" text="Author" />
+
+                    <TableColumn fx:id="Status" prefWidth="120" text="Status" />
+
+                </columns>
+
+            </TableView>
+
+            <GridPane hgap="10" vgap="10">
+
+                <Label text="Book ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                <TextField fx:id="BookID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                <TextField fx:id="Title" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Availability" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                <TextField fx:id="Availability" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Reservation Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <DatePicker fx:id="ReservationDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+
+            </GridPane>
+
+            <HBox spacing="15">
+
+                <Button fx:id="btnReserve" onAction="#reserveBookOnActionButton" text="Reserve Book" />
+
+                <Button onAction="#clearButtonOnAction" text="Clear" />
+
+                <Button onAction="#backButtonOnAction" text="Back" />
+
+            </HBox>
+
+            <Label fx:id="lblMessage" style="-fx-text-fill:green;-fx-font-weight:bold;" />
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
