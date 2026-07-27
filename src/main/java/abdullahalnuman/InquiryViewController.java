@@ -1,5 +1,9 @@
 package abdullahalnuman;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 public class InquiryViewController
 {
     @javafx.fxml.FXML
