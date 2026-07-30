@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                cse213finalproject._1_librarymanagement_2431986_2220590_2411815_2411833/cse213finalproject._1_librarymanagement_2431986_2220590_2411815_2411833.HelloApplication
+                                cse213finalproject._1_librarymanagement_2431986_2220590_2411815_2411833.Launcher
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

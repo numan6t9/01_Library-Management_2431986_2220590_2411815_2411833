@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="812.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213finalproject._1_librarymanagement_2431986_2220590_2411815_2411833.LoginViewController">
+<AnchorPane fx:id="loginMainPane" prefHeight="812.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213finalproject._1_librarymanagement_2431986_2220590_2411815_2411833.LoginViewController">
    <children>
       <Label alignment="TOP_CENTER" layoutX="209.0" layoutY="52.0" text="Welcome To OpenShelf" textAlignment="CENTER">
          <font>
@@ -21,6 +21,6 @@
       <Label layoutX="104.0" layoutY="252.0" />
       <Label layoutX="104.0" layoutY="261.0" text="Enter Password" />
       <PasswordField fx:id="enterPassword" layoutX="262.0" layoutY="257.0" />
-      <Button fx:id="loginButton" layoutX="240.0" layoutY="361.0" mnemonicParsing="false" text="Login" />
+      <Button layoutX="240.0" layoutY="361.0" mnemonicParsing="false" onAction="#loginButton" text="Login" />
    </children>
 </AnchorPane>

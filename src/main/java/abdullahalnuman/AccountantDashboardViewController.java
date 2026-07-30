@@ -1,9 +1,17 @@
 package abdullahalnuman;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class AccountantDashboardViewController
 {
+
+    @javafx.fxml.FXML
+    private AnchorPane accountantMainPane;
 
     //initialize
     @javafx.fxml.FXML
@@ -32,7 +40,11 @@ public class AccountantDashboardViewController
     }
 
     @javafx.fxml.FXML
-    public void LogoutButtonForAccountant(ActionEvent actionEvent) {
+    public void LogoutButtonForAccountant(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/LoginView.fxml"));
+        Node node = fxmlLoader.load();
+        accountantMainPane.getChildren().setAll(node);
+
     }
 
     @javafx.fxml.FXML
