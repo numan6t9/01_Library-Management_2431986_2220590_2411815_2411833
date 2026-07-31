@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="914.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.RegisterVisitorEntryViewController">
+<AnchorPane fx:id="visitorEntryMainPane" prefHeight="914.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.RegisterVisitorEntryViewController">
    <children>
       <Label alignment="CENTER" layoutY="-1.0" prefHeight="57.0" prefWidth="757.0" style="-fx-background-color: grey;" text="Register Visitor Entry">
          <font>
@@ -24,5 +23,6 @@
       <TextField fx:id="enterPurposeOfVisit" layoutX="523.0" layoutY="151.0" />
       <Button layoutX="214.0" layoutY="244.0" mnemonicParsing="false" onAction="#registerVisitorAndGenerateVisitorPassButton" prefHeight="26.0" prefWidth="286.0" text="Register Visitor and Generate Visitor Pass" />
       <Label fx:id="showVisitorPass" layoutX="539.0" layoutY="322.0" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: green;" text="Show Visitor Pass" textFill="WHITE" />
+      <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="60.0" text="Back" />
    </children>
 </AnchorPane>

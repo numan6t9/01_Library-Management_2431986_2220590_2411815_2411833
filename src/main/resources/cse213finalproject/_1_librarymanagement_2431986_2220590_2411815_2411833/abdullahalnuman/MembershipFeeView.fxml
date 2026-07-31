@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="888.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.MembershipFeeViewController">
+<AnchorPane fx:id="memerbshipFeeMainPane" prefHeight="888.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.MembershipFeeViewController">
    <children>
       <Label layoutX="284.0" layoutY="32.0" text="Membership Fee">
          <font>
@@ -44,5 +44,6 @@
       <Button layoutX="104.0" layoutY="758.0" mnemonicParsing="false" onAction="#generateMembershipIDandPaymentReceipt" prefHeight="26.0" prefWidth="464.0" text="Generate Membership ID &amp; Payment receipt" />
       <Label layoutX="113.0" layoutY="642.0" prefHeight="21.0" prefWidth="148.0" text="Payment Date" />
       <DatePicker fx:id="paymentDate" layoutX="273.0" layoutY="639.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button layoutX="34.0" layoutY="19.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>

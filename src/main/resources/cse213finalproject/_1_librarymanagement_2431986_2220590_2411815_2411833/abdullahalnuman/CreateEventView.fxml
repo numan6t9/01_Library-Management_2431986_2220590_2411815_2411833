@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="893.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.CreateEventViewController">
+<AnchorPane fx:id="eventManagementMainPane" prefHeight="893.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.CreateEventViewController">
    <children>
       <Label alignment="CENTER" layoutX="-1.0" prefHeight="62.0" prefWidth="740.0" style="-fx-background-color: grey;" text="Library Event Managment">
          <font>
@@ -24,5 +23,6 @@
       <Label layoutX="411.0" layoutY="164.0" text="Event Organizer" />
       <TextField fx:id="enterEventorganizer" layoutX="533.0" layoutY="160.0" />
       <Button layoutX="255.0" layoutY="250.0" mnemonicParsing="false" onAction="#createEventButton" prefHeight="47.0" prefWidth="238.0" text="Create Event " />
+      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" prefHeight="36.0" prefWidth="110.0" text="Back" />
    </children>
 </AnchorPane>

@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="858.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.IssueLibraryCardViewController">
+<AnchorPane fx:id="libraryCardsMainPane" prefHeight="858.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.IssueLibraryCardViewController">
    <children>
       <Label alignment="CENTER" layoutX="-2.0" layoutY="-6.0" prefHeight="66.0" prefWidth="576.0" style="-fx-background-color: grey;" text="Issue Library Cards">
          <font>
@@ -22,5 +21,6 @@
       <Label fx:id="showMemberStatus" layoutX="218.0" layoutY="299.0" prefHeight="56.0" prefWidth="137.0" style="-fx-background-color: blue;" text="Show members Status" textFill="WHITE" />
       <Label layoutX="310.0" layoutY="338.0" />
       <Button layoutX="127.0" layoutY="557.0" mnemonicParsing="false" onAction="#GenerateLibraryCardsAndExport" prefHeight="26.0" prefWidth="320.0" text="Generate Library Cards And Export" />
+      <Button layoutX="32.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="54.0" text="Back" />
    </children>
 </AnchorPane>

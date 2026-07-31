@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="905.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.RegisterMemberViewController">
+<AnchorPane fx:id="registerMemberMainPane" prefHeight="905.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.RegisterMemberViewController">
    <children>
       <Label layoutX="261.0" layoutY="55.0" text="Register Member">
          <font>
@@ -31,5 +31,6 @@
       <TextField fx:id="enterAddress" layoutX="465.0" layoutY="250.0" />
       <Button layoutX="167.0" layoutY="334.0" mnemonicParsing="false" onAction="#registerNewMemberAndGenerateIdButton" text="Register New Member  and Generate Membership ID" />
       <Label fx:id="showMembershipId" layoutX="546.0" layoutY="316.0" prefHeight="63.0" prefWidth="95.0" style="-fx-background-color: blue;" text="Membership ID" textFill="WHITE" />
+      <Button layoutX="50.0" layoutY="54.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="66.0" text="Back" />
    </children>
 </AnchorPane>
