@@ -5,6 +5,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class RegisterMemberViewController
 {
@@ -26,6 +27,8 @@ public class RegisterMemberViewController
     private Label showMembershipId;
     @javafx.fxml.FXML
     private TextField enterEmailAddress;
+    @javafx.fxml.FXML
+    private AnchorPane registerMemberMainPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -33,5 +36,9 @@ public class RegisterMemberViewController
 
     @javafx.fxml.FXML
     public void registerNewMemberAndGenerateIdButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

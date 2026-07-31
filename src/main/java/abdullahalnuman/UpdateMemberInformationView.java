@@ -3,6 +3,7 @@ package abdullahalnuman;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class UpdateMemberInformationView
 {
@@ -24,6 +25,8 @@ public class UpdateMemberInformationView
     private Label showAddress;
     @javafx.fxml.FXML
     private TextField updateName;
+    @javafx.fxml.FXML
+    private AnchorPane memberInformationMainPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -35,5 +38,9 @@ public class UpdateMemberInformationView
 
     @javafx.fxml.FXML
     public void searchMemberButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

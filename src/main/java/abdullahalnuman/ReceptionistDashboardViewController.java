@@ -1,9 +1,13 @@
 package abdullahalnuman;
 
 import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class ReceptionistDashboardViewController
 {
+    @javafx.fxml.FXML
+    private AnchorPane receptionistMainPane;
+
     @javafx.fxml.FXML
     public void initialize() {
     }

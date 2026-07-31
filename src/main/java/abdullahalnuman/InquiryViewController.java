@@ -3,6 +3,7 @@ package abdullahalnuman;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class InquiryViewController
 {
@@ -12,6 +13,8 @@ public class InquiryViewController
     private Label showMemberOrVisitorStatus;
     @javafx.fxml.FXML
     private TextField enterMemberIdorVisitorPass;
+    @javafx.fxml.FXML
+    private AnchorPane inquiryMainPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -23,5 +26,9 @@ public class InquiryViewController
 
     @javafx.fxml.FXML
     public void searchMemberOrVisitorButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

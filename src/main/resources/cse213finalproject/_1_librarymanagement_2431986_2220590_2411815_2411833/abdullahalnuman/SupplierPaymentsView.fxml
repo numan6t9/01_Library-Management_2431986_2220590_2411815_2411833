@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="870.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.SupplierPaymentsViewController">
+<AnchorPane fx:id="supplierPaymentsMainPane" prefHeight="870.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.SupplierPaymentsViewController">
    <children>
-      <Label alignment="CENTER" prefHeight="56.0" prefWidth="802.0" style="-fx-background-color: grey;" text="Suppler Payments">
+      <Label alignment="CENTER" prefHeight="56.0" prefWidth="802.0" style="-fx-background-color: grey;" text="Supplier Payments">
          <font>
             <Font name="DejaVu Serif Bold" size="17.0" />
          </font>
@@ -29,5 +29,6 @@
       <Label layoutX="137.0" layoutY="661.0" text="Selecte an Invoice ID from the list" />
       <TextField fx:id="selectInvoiceFromListForProccedPayment" layoutX="423.0" layoutY="657.0" />
       <Button layoutX="294.0" layoutY="767.0" mnemonicParsing="false" onAction="#paySupplierButton" prefHeight="26.0" prefWidth="205.0" text="PaySupplier" />
+      <Button layoutX="21.0" layoutY="15.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="99.0" text="Back" />
    </children>
 </AnchorPane>

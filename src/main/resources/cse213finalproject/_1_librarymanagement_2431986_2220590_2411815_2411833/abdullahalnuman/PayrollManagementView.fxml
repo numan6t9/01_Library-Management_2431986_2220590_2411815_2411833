@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="869.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.PayrollManagementViewController">
+<AnchorPane fx:id="payrollMainPane" prefHeight="869.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.PayrollManagementViewController">
    <children>
       <Label layoutX="226.0" layoutY="38.0" prefHeight="47.0" prefWidth="149.0" text="Payroll Mangement">
          <font>
@@ -32,5 +31,6 @@
       <Button layoutX="447.0" layoutY="379.0" mnemonicParsing="false" onAction="#calculateNetSalaryAndShow" text="Calculate net Salary and Show" />
       <Label fx:id="showNetSalary" layoutX="312.0" layoutY="455.0" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: blue;" text="Show net Salary" textFill="WHITE" />
       <Button layoutX="253.0" layoutY="564.0" mnemonicParsing="false" onAction="#paySalaryAndGenerateReportButton" text="Pay salary And generate Receipt" />
+      <Button layoutX="33.0" layoutY="49.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="60.0" text="Back" />
    </children>
 </AnchorPane>

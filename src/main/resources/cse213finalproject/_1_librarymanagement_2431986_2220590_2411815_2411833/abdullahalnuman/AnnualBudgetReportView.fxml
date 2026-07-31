@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="905.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.AnnualBudgetReportViewController">
+<AnchorPane fx:id="annualBudgetMainPane" prefHeight="905.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.AnnualBudgetReportViewController">
    <children>
       <Label layoutX="237.0" layoutY="44.0" prefHeight="61.0" prefWidth="210.0" text="Annual Budget Report">
          <font>
@@ -26,5 +26,6 @@
           <TableColumn prefWidth="225.0" text="C2" />
         </columns>
       </TableView>
+      <Button layoutX="22.0" layoutY="56.0" mnemonicParsing="false" onAction="#backButton" prefHeight="37.0" prefWidth="129.0" text="Back" />
    </children>
 </AnchorPane>

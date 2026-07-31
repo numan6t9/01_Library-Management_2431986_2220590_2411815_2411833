@@ -3,6 +3,7 @@ package abdullahalnuman;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class CheckBookAvailabilityViewController
 {
@@ -10,6 +11,8 @@ public class CheckBookAvailabilityViewController
     private Label showAvailableBooks;
     @javafx.fxml.FXML
     private TextField enterBookTitle;
+    @javafx.fxml.FXML
+    private AnchorPane bookAvailabilityMainPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -17,5 +20,9 @@ public class CheckBookAvailabilityViewController
 
     @javafx.fxml.FXML
     public void showAvailableBooksButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="813.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.MembershipRenewalFeeViewController">
+<AnchorPane fx:id="renewalFeeMainPane" prefHeight="813.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.MembershipRenewalFeeViewController">
    <children>
       <Label layoutX="187.0" layoutY="39.0" text="Membership Renewal Fee">
          <font>
@@ -39,5 +38,6 @@
       <Label layoutX="57.0" layoutY="713.0" text="Enter Payment Info" />
       <TextField fx:id="enterpaymentInformation" layoutX="203.0" layoutY="709.0" />
       <Button layoutX="117.0" layoutY="763.0" mnemonicParsing="false" onAction="#updateMemberStatusAndGenerateRenewalReport" text="Update member Status and generate renewal fee receipt" />
+      <Button layoutX="36.0" layoutY="37.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
    </children>
 </AnchorPane>
