@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="672.0" prefWidth="725.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberDashboardViewControlller">
+<AnchorPane fx:id="memberDasboardMainPanel" prefHeight="672.0" prefWidth="725.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberDashboardViewControlller">
    <children>
       <HBox layoutX="-5.0" prefHeight="60.0" prefWidth="746.0" style="-fx-background-color: gray;">
          <children>
@@ -26,32 +26,32 @@
                </font>
             </Label>
             <Region prefHeight="78.0" prefWidth="258.0" style="-fx-background-color: teal;" />
-            <Button mnemonicParsing="false" onAction="#logoutButton" prefHeight="87.0" prefWidth="130.0" text="Logout" />
+            <Button mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="87.0" prefWidth="130.0" text="Logout" />
          </children>
       </HBox>
       <VBox layoutX="33.0" layoutY="131.0" prefHeight="428.0" prefWidth="200.0">
          <children>
-            <Label alignment="CENTER" prefHeight="64.0" prefWidth="206.0" text="Manu">
+            <Label fx:id="manuLB" alignment="CENTER" prefHeight="64.0" prefWidth="206.0" text="Manu">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Line endX="100.0" startX="-100.0" />
-            <Button mnemonicParsing="false" onAction="#homeButton" text="🏠 Home " />
-            <Button mnemonicParsing="false" onAction="#searchButton" text="📚 Search Books  " />
-            <Button mnemonicParsing="false" onAction="#borrowedBooksbutton" text="📖 Borrowed Books" />
-            <Button mnemonicParsing="false" onAction="#renewBooksButton" text="🔄 Renew Books " />
-            <Button mnemonicParsing="false" onAction="#borrowHistoryButton" text="📜 Borrow History " />
-            <Button mnemonicParsing="false" onAction="#reservedBooksButton" text="🔖 Reserved Books  " />
+            <Button mnemonicParsing="false" onAction="#homeButtonOnAction" text="🏠 Home " />
+            <Button mnemonicParsing="false" onAction="#searchButtonOnAction" text="📚 Search Books  " />
+            <Button mnemonicParsing="false" onAction="#borrowedBooksButtonOnAction" text="📖 Borrowed Books" />
+            <Button mnemonicParsing="false" onAction="#renewBooksButtonOnAction" text="🔄 Renew Books " />
+            <Button mnemonicParsing="false" onAction="#borrowHistoryButtonOnAction" text="📜 Borrow History " />
+            <Button mnemonicParsing="false" onAction="#reservedBooksButtonOnAction" text="🔖 Reserved Books  " />
             <Button mnemonicParsing="false" onAction="#payfineOnActionButton" text="Pay Fine" />
-            <Button mnemonicParsing="false" onAction="#profileButton" text="👤 Profile   " />
-            <Button mnemonicParsing="false" onAction="#settingsButton" text="⚙ Settings  " />
-            <Button mnemonicParsing="false" onAction="#logoutbutton" text="🚪 Logout " />
+            <Button mnemonicParsing="false" onAction="#profileButtonOnAction" text="👤 Profile   " />
+            <Button mnemonicParsing="false" onAction="#settingsButtonOnActon" text="⚙ Settings  " />
+            <Button mnemonicParsing="false" onAction="#logoutButtonOnAction" text="🚪 Logout " />
          </children>
       </VBox>
       <VBox layoutX="239.0" layoutY="128.0" prefHeight="480.0" prefWidth="461.0">
          <children>
-            <Label alignment="CENTER" prefHeight="67.0" prefWidth="461.0" text="Dashboard">
+            <Label fx:id="dashboardLB" alignment="CENTER" prefHeight="67.0" prefWidth="461.0" text="Dashboard">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -76,25 +76,25 @@
                   <Label text="  Total Borrowed" />
                   <Label text="  Reserve Book" GridPane.rowIndex="1" />
                   <Label text="  Fine" GridPane.rowIndex="2" />
-                  <TextField fx:id="borrowNumber" GridPane.columnIndex="1" />
-                  <TextField fx:id="reserveBook" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="fine" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="borrowNumberTF" GridPane.columnIndex="1" />
+                  <TextField fx:id="reserveBookTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="fineTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <Line endX="355.29290771484375" endY="-0.7071006894111633" startX="-100.0" />
             <Label prefHeight="58.0" prefWidth="129.0" text="Recently Borrowed list" />
             <TableView fx:id="recentlyBorrowedList" prefHeight="131.0" prefWidth="458.0">
               <columns>
-                <TableColumn fx:id="bookid" prefWidth="90.4000244140625" text="Book ID" />
-                <TableColumn fx:id="title" prefWidth="92.79998779296875" text="Title" />
-                  <TableColumn fx:id="borrowDate" prefWidth="96.0" text="Borrow Date" />
-                  <TableColumn fx:id="dueDate" prefWidth="88.0" text="Due Date" />
-                  <TableColumn fx:id="status" prefWidth="90.4000244140625" text="Status" />
+                <TableColumn fx:id="bookidTC" prefWidth="90.4000244140625" text="Book ID" />
+                <TableColumn fx:id="titleTC" prefWidth="92.79998779296875" text="Title" />
+                  <TableColumn fx:id="borrowDateTC" prefWidth="96.0" text="Borrow Date" />
+                  <TableColumn fx:id="dueDateTC" prefWidth="88.0" text="Due Date" />
+                  <TableColumn fx:id="statusTC" prefWidth="90.4000244140625" text="Status" />
               </columns>
             </TableView>
             <Line endX="356.09295654296875" endY="1.6928809881210327" startX="-100.0" />
             <Label prefHeight="30.0" prefWidth="122.0" text="Notifications" />
-            <ListView fx:id="notifications" prefHeight="45.0" prefWidth="458.0" />
+            <ListView fx:id="notificationLV" prefHeight="45.0" prefWidth="458.0" />
          </children>
       </VBox>
       <Line endX="-81.0" endY="501.0" layoutX="320.0" layoutY="99.0" startX="-81.0" startY="37.80000305175781" />

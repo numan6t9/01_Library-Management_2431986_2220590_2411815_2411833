@@ -1,52 +1,64 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class ProcessBookReturnsViewController {
     @javafx.fxml.FXML
     private TableView tblBooks;
     @javafx.fxml.FXML
-    private TableColumn colIssueDate;
-    @javafx.fxml.FXML
-    private RadioButton rbGood;
-    @javafx.fxml.FXML
     private Button btnSearch;
-    @javafx.fxml.FXML
-    private RadioButton rbLost;
-    @javafx.fxml.FXML
-    private TextField txtBookID;
-    @javafx.fxml.FXML
-    private RadioButton rbDamaged;
     @javafx.fxml.FXML
     private Label lblStatus;
     @javafx.fxml.FXML
-    private TableColumn colBookID;
+    private TextField bookIDTF;
     @javafx.fxml.FXML
-    private TextField txtDueDate;
+    private TableColumn dueDateTC;
     @javafx.fxml.FXML
-    private TableColumn colDueDate;
+    private TextField dueDateTF;
     @javafx.fxml.FXML
-    private TextField txtFine;
+    private DatePicker returnDateDP;
     @javafx.fxml.FXML
-    private DatePicker dpReturnDate;
+    private TableColumn bookIDTC;
     @javafx.fxml.FXML
-    private TableColumn colTitle;
+    private TextField fineTF;
     @javafx.fxml.FXML
-    private TextField memberID;
+    private TextField issueDateTF;
     @javafx.fxml.FXML
-    private TableColumn colStatus;
+    private TableColumn issueDateTC;
     @javafx.fxml.FXML
-    private TextField txtTitle;
+    private RadioButton lostRB;
     @javafx.fxml.FXML
-    private TextField txtIssueDate;
+    private AnchorPane processBookReturnMainPanel;
+    @javafx.fxml.FXML
+    private TextField memberIDTF;
+    @javafx.fxml.FXML
+    private RadioButton damagedRB;
+    @javafx.fxml.FXML
+    private TableColumn titleTC;
+    @javafx.fxml.FXML
+    private TableColumn statusTC;
+    @javafx.fxml.FXML
+    private TextField titleTF;
+    @javafx.fxml.FXML
+    private RadioButton goodRB;
 
     @javafx.fxml.FXML
     public void searchIssuedBooks(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void backOnActionButton(ActionEvent actionEvent) {
+    public void backOnActionButton(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+        processBookReturnMainPanel.getChildren().setAll(node);
+
+
     }
 
     @javafx.fxml.FXML

@@ -1,27 +1,47 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 public class ManageLostorDamagedBooksViewController {
-    @javafx.fxml.FXML
-    private TextField MemberID;
-    @javafx.fxml.FXML
-    private TextField BookID;
-    @javafx.fxml.FXML
-    private TextArea Remarks;
-    @javafx.fxml.FXML
-    private TextField Author;
-    @javafx.fxml.FXML
-    private DatePicker IssueDate;
-    @javafx.fxml.FXML
-    private DatePicker ReportDate;
-    @javafx.fxml.FXML
-    private TextField BookTitle;
 
     @javafx.fxml.FXML
+    private TableColumn fineTC;
+    @javafx.fxml.FXML
+    private TextField BookTitleTF;
+    @javafx.fxml.FXML
+    private TableColumn bookIDTC;
+    @javafx.fxml.FXML
+    private TextField BookIDTF;
+    @javafx.fxml.FXML
+    private TextArea RemarksTA;
+    @javafx.fxml.FXML
+    private TableColumn conditionTC;
+    @javafx.fxml.FXML
+    private ComboBox bookconditionCB;
+    @javafx.fxml.FXML
+    private TableColumn memberIdTC;
+    @javafx.fxml.FXML
+    private DatePicker ReportDateDP;
+    @javafx.fxml.FXML
+    private TableColumn titleTC;
+    @javafx.fxml.FXML
+    private AnchorPane lostordamagedBooksMainPanel;
+    @javafx.fxml.FXML
+    private TextField AuthorTF;
+    @javafx.fxml.FXML
+    private TableColumn statusTC;
+    @javafx.fxml.FXML
+    private TextField fineperDayTF;
+    @javafx.fxml.FXML
+    private DatePicker IssueDateDP;
+    @javafx.fxml.FXML
+    private TextField MemberIDTF;
+
+    @Deprecated
     public void ClearRecords(ActionEvent actionEvent) {
     }
 
@@ -33,11 +53,32 @@ public class ManageLostorDamagedBooksViewController {
     public void SearchDamageorLostBook(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void SaveRecords(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void CalculateFineButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void ClearRecordOnACtionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void SaveRecordOnActionBitton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void CalculateFineOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent)throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+        lostordamagedBooksMainPanel.getChildren().setAll(node);
+
+
     }
 }

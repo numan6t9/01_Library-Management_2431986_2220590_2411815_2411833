@@ -26,3 +26,4 @@ public class CheckBookAvailabilityViewController
     public void backButton(ActionEvent actionEvent) {
     }
 }
+

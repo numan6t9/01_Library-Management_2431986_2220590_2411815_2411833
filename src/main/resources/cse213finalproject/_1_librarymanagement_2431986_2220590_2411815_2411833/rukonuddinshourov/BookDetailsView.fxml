@@ -10,24 +10,23 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="615.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.BookDetailsViewController">
+<AnchorPane fx:id="bookDetailsMainPanel" prefHeight="615.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.BookDetailsViewController">
    <children>
-      <Label alignment="CENTER" prefHeight="66.0" prefWidth="662.0" style="-fx-background-color: teal;" text="Book Details ">
+      <Label fx:id="bookDetailslabel" alignment="CENTER" prefHeight="66.0" prefWidth="662.0" style="-fx-background-color: teal;" text="Book Details ">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="99.0" prefHeight="37.0" prefWidth="117.0" text="Book Name " />
       <Button layoutX="374.0" layoutY="108.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="38.0" prefWidth="90.0" style="-fx-background-color: green;" text="Search" />
-      <TextField fx:id="bookNameTitle" layoutX="89.0" layoutY="105.0" />
+      <TextField fx:id="bookNameTF" layoutX="89.0" layoutY="105.0" />
       <TableView layoutX="14.0" layoutY="327.0" onSort="#bookListTable" prefHeight="200.0" prefWidth="482.0">
         <columns>
-          <TableColumn fx:id="bookId" prefWidth="75.0" text=" Book ID " />
-          <TableColumn fx:id="title" prefWidth="88.0" text=" Title  " />
-            <TableColumn fx:id="author" prefWidth="117.60005187988281" text="Author" />
-            <TableColumn fx:id="bookcategory" prefWidth="75.199951171875" text="Category  " />
-            <TableColumn fx:id="availablity" prefWidth="127.20001220703125" text="Availablity" />
+          <TableColumn fx:id="bookIdTC" prefWidth="75.0" text=" Book ID " />
+          <TableColumn fx:id="titleTC" prefWidth="88.0" text=" Title  " />
+            <TableColumn fx:id="authorTC" prefWidth="117.60005187988281" text="Author" />
+            <TableColumn fx:id="bookcategoryTC" prefWidth="75.199951171875" text="Category  " />
+            <TableColumn fx:id="availablityTC" prefWidth="127.20001220703125" text="Availablity" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="159.0" prefHeight="37.0" prefWidth="117.0" text="Book List " />
@@ -38,16 +37,16 @@
          </font>
       </Button>
       <Label layoutX="27.0" layoutY="197.0" prefHeight="38.0" prefWidth="81.0" text="Title           " />
-      <Label layoutX="27.0" layoutY="235.0" text="Author          " />
+      <Label layoutX="27.0" layoutY="244.0" text="Author          " />
       <Label layoutX="26.0" layoutY="282.0" text="Publisher       " />
       <Label layoutX="352.0" layoutY="178.0" text="Category        " />
       <Label layoutX="360.0" layoutY="216.0" text="ISBN            " />
       <Label layoutX="346.0" layoutY="252.0" text="Availability    " />
-      <TextField fx:id="bookTitle" layoutX="83.0" layoutY="204.0" />
-      <TextField fx:id="authorName" layoutX="84.0" layoutY="240.0" />
-      <TextField fx:id="Publisher" layoutX="84.0" layoutY="278.0" />
-      <TextField fx:id="availablityOntheList" layoutX="421.0" layoutY="248.0" />
-      <ComboBox fx:id="category" layoutX="421.0" layoutY="174.0" prefWidth="150.0" />
+      <TextField fx:id="bookTitleTF" layoutX="83.0" layoutY="204.0" />
+      <TextField fx:id="authorTF" layoutX="84.0" layoutY="240.0" />
+      <TextField fx:id="PublisherTF" layoutX="84.0" layoutY="278.0" />
+      <TextField fx:id="availablityTF" layoutX="421.0" layoutY="248.0" />
+      <ComboBox fx:id="categoryCB" layoutX="421.0" layoutY="174.0" prefWidth="150.0" />
       <TextField fx:id="isbn" layoutX="421.0" layoutY="212.0" />
       <Button layoutX="32.0" layoutY="560.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="38.0" prefWidth="82.0" text="Back">
          <font>

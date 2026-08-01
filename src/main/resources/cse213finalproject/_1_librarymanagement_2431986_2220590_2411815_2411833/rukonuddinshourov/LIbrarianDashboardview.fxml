@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="635.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.LibrarianDashboardViewcontroller">
+<AnchorPane fx:id="librarianDashboardMainPanel" prefHeight="635.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.LibrarianDashboardViewcontroller">
    <children>
       <Label alignment="CENTER" layoutX="4.0" prefHeight="83.0" prefWidth="865.0" text="Librarian Dashboard">
          <font>
@@ -14,18 +13,18 @@
          </font>
       </Label>
       <Label layoutX="-5.0" layoutY="140.0" prefHeight="539.0" prefWidth="874.0" style="-fx-background-color: gray;" />
-      <Button layoutX="309.0" layoutY="202.0" mnemonicParsing="false" onAction="#MemberRegistrationButton" prefHeight="50.0" prefWidth="213.0" text="Member Registration" />
-      <Button layoutX="36.0" layoutY="321.0" mnemonicParsing="false" onAction="#ManageOverdueBooksandFinesButton" prefHeight="50.0" prefWidth="206.0" text="Manage Overdue Books and Fines" />
-      <Button layoutX="618.0" layoutY="140.0" mnemonicParsing="false" onAction="#UpdateLibraryCatalogButton" prefHeight="50.0" prefWidth="213.0" text="Update Library Catalog" />
-      <Button layoutX="618.0" layoutY="227.0" mnemonicParsing="false" onAction="#GenerateLibraryReportsButton" prefHeight="50.0" prefWidth="213.0" text="Generate Library Reports" />
-      <Button layoutX="618.0" layoutY="321.0" mnemonicParsing="false" onAction="#ProcessBookReturnsButton" prefHeight="50.0" prefWidth="213.0" text="Process Book Returns" />
-      <Button layoutX="36.0" layoutY="140.0" mnemonicParsing="false" onAction="#ManageLostorDamagedBooksButton" prefHeight="50.0" prefWidth="206.0" text="Manage Lost or Damaged Books" />
-      <Button layoutX="312.0" layoutY="371.0" mnemonicParsing="false" onAction="#CreateNewAnnouncementButton" prefHeight="50.0" prefWidth="206.0" text="Create  New Announcement" />
-      <Button layoutX="639.0" layoutY="558.0" mnemonicParsing="false" onAction="#LogoutFOrLibrarianButton" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: black;" text="Logout">
+      <Button layoutX="307.0" layoutY="216.0" mnemonicParsing="false" onAction="#MemberRegistrationButton" prefHeight="50.0" prefWidth="213.0" text="Member Registration" />
+      <Button layoutX="36.0" layoutY="371.0" mnemonicParsing="false" onAction="#ManageOverdueBooksandFinesButton" prefHeight="50.0" prefWidth="206.0" text="Manage Overdue Books and Fines" />
+      <Button layoutX="618.0" layoutY="159.0" mnemonicParsing="false" onAction="#UpdateLibraryCatalogButton" prefHeight="50.0" prefWidth="213.0" text="Update Library Catalog" />
+      <Button layoutX="618.0" layoutY="260.0" mnemonicParsing="false" onAction="#GenerateLibraryReportsButton" prefHeight="50.0" prefWidth="213.0" text="Generate Library Reports" />
+      <Button layoutX="618.0" layoutY="359.0" mnemonicParsing="false" onAction="#ProcessBookReturnsButton" prefHeight="50.0" prefWidth="213.0" text="Process Book Returns" />
+      <Button layoutX="35.0" layoutY="159.0" mnemonicParsing="false" onAction="#ManageLostorDamagedBooksButton" prefHeight="50.0" prefWidth="206.0" text="Manage Lost or Damaged Books" />
+      <Button layoutX="311.0" layoutY="421.0" mnemonicParsing="false" onAction="#CreateNewAnnouncementOnActionButton" prefHeight="50.0" prefWidth="206.0" text="Create  New Announcement" />
+      <Button layoutX="639.0" layoutY="558.0" mnemonicParsing="false" onAction="#LogoutFOrLibrarianButton" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: red;" text="Logout">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Button>
-      <Button layoutX="36.0" layoutY="235.0" mnemonicParsing="false" onAction="#IssueBookButton" prefHeight="50.0" prefWidth="206.0" text=" Issue Books to Members" />
+      <Button layoutX="36.0" layoutY="260.0" mnemonicParsing="false" onAction="#IssueBookButton" prefHeight="50.0" prefWidth="206.0" text=" Issue Books to Members" />
    </children>
 </AnchorPane>

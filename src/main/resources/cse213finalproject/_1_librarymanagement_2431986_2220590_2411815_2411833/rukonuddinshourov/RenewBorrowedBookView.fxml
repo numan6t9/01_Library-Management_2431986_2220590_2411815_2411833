@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="650.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.RenewBorrowedBookViewController">
+<BorderPane fx:id="renewBorrowedBooksMainPanel" prefHeight="626.0" prefWidth="905.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.RenewBorrowedBookViewController">
 
     <!-- Header -->
     <top>

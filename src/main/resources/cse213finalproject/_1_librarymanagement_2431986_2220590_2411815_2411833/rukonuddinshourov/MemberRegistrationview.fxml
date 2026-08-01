@@ -14,24 +14,26 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberRegistrationviewController">
+<BorderPane fx:id="memberRegistrasionMainPanel" prefHeight="605.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberRegistrationviewController">
 
     <top>
-        <VBox alignment="CENTER" spacing="10" BorderPane.alignment="CENTER">
+        <VBox alignment="CENTER" prefHeight="104.0" prefWidth="636.0" spacing="10" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="15" top="15" />
             </padding>
 
-            <Label style="-fx-font-size:24px; -fx-font-weight:bold;" text="LIBRARY MANAGEMENT SYSTEM" />
-
-            <Label style="-fx-font-size:18px;" text="Librarian  Member Registration" />
+            <Label alignment="CENTER" prefHeight="98.0" prefWidth="636.0" style="-fx-font-size:24px; -fx-font-weight:bold;" text="  Member Registration">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font></Label>
         </VBox>
     </top>
 
     <center>
 
-        <GridPane hgap="15" vgap="12">
+        <GridPane hgap="15" prefHeight="453.0" prefWidth="630.0" vgap="12">
 
             <padding>
                 <Insets bottom="20" left="30" right="30" top="20" />
@@ -39,46 +41,49 @@
 
             <Label text="Librarian ID :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-            <Label text="Full Name :" GridPane.rowIndex="2" />
+            <Label text="Full Name :" GridPane.rowIndex="4" />
 
-            <Label text="Email :" GridPane.rowIndex="4" />
+            <Label text="Email :" GridPane.rowIndex="6" />
 
-            <Label text="Phone :" GridPane.rowIndex="5" />
+            <Label text="Phone :" GridPane.rowIndex="7" />
 
-            <Label text="Username :" GridPane.rowIndex="9" />
+            <Label text="Username :" GridPane.rowIndex="11" />
 
-            <Label text="Password :" GridPane.rowIndex="10" />
-            <PasswordField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="Password :" GridPane.rowIndex="12" />
+            <PasswordField fx:id="PasswordPF" GridPane.columnIndex="1" GridPane.rowIndex="12" />
 
-            <Label text="Confirm Password :" GridPane.rowIndex="11" />
-            <PasswordField fx:id="txtConfirmPassword" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label text="Confirm Password :" GridPane.rowIndex="13" />
+            <PasswordField fx:id="ConfirmPasswordPF" GridPane.columnIndex="1" GridPane.rowIndex="13" />
 
-            <Label text="Gender :" GridPane.rowIndex="12" />
+            <Label text="Gender :" GridPane.rowIndex="14" />
 
-            <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="12">
+            <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="14">
 
-                <RadioButton fx:id="rbMale" text="Male" />
-                <RadioButton fx:id="rbFemale" text="Female" />
-                <RadioButton fx:id="rbOther" text="Other" />
+                <RadioButton fx:id="maleRB" text="Male" />
+                <RadioButton fx:id="femaleRB" text="Female" />
+                <RadioButton fx:id="otherRB" text="Other" />
 
             </HBox>
 
-            <Label text="Date of Birth :" GridPane.rowIndex="13" />
-            <DatePicker fx:id="dpBirthDate" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label text="Date of Birth :" GridPane.rowIndex="15" />
+            <DatePicker fx:id="birthDateDP" GridPane.columnIndex="1" GridPane.rowIndex="15" />
 
-            <Label text="Address :" GridPane.rowIndex="14" />
-            <TextArea fx:id="txtAddress" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-         <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
-         <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-         <TextField GridPane.columnIndex="1" />
-         <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-         <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Address :" GridPane.rowIndex="16" />
+            <TextArea fx:id="addressTA" prefRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+         <TextField fx:id="userNameTF" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         <TextField fx:id="librarianNameTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <TextField fx:id="librarianIdTF" GridPane.columnIndex="1" />
+         <TextField fx:id="fullNameTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <TextField fx:id="emailTF" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         <TextField fx:id="phoneTF" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <Label text="Librarian Name" GridPane.rowIndex="2" />
          <columnConstraints>
             <ColumnConstraints />
             <ColumnConstraints />
          </columnConstraints>
          <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
             <RowConstraints />
             <RowConstraints />
             <RowConstraints />
