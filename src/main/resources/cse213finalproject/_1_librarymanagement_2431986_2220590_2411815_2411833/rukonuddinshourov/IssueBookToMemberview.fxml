@@ -9,10 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="599.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.IssueBooksToMembersViewController">
+<AnchorPane fx:id="issueBookspanelMainPanel" prefHeight="539.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.IssueBooksToMembersViewController">
    <children>
-      <Label alignment="CENTER" layoutX="-4.0" prefHeight="59.0" prefWidth="951.0" style="-fx-background-color: gray;" text="Issue Books  panel">
+      <Label fx:id="issueBooksPanaellabel" alignment="CENTER" prefHeight="59.0" prefWidth="947.0" style="-fx-background-color: gray;" text="Issue Books  panel">
          <font>
             <Font name="System Bold" size="41.0" />
          </font>
@@ -22,42 +21,47 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="memberId" layoutX="159.0" layoutY="161.0" />
-      <TextField fx:id="memberName" layoutX="148.0" layoutY="214.0" />
+      <TextField fx:id="memberIdTF" layoutX="159.0" layoutY="161.0" />
+      <TextField fx:id="memberNameTF" layoutX="148.0" layoutY="214.0" />
       <Label layoutX="37.0" layoutY="194.0" prefHeight="59.0" prefWidth="103.0" text="Member Name :">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
       <Label layoutX="446.0" layoutY="153.0" prefHeight="37.0" prefWidth="119.0" text="Search Book :" />
-      <TextField fx:id="searchBook" layoutX="541.0" layoutY="161.0" />
-      <Button fx:id="updateIssued" layoutX="29.0" layoutY="487.0" mnemonicParsing="false" onAction="#UpdateToIssue" prefHeight="38.0" prefWidth="119.0" text="Update to issued">
+      <TextField fx:id="searchBookTF" layoutX="541.0" layoutY="161.0" />
+      <Button layoutX="656.0" layoutY="409.0" mnemonicParsing="false" onAction="#UpdateToIssuedButtonOnAction" prefHeight="38.0" prefWidth="119.0" text="Update to issued">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Button>
-      <Button fx:id="confirmBookIssue" layoutX="784.0" layoutY="526.0" mnemonicParsing="false" onAction="#ConfirmIssueBook" text="Confirm">
+      <Button fx:id="confirmBookIssue" layoutX="737.0" layoutY="487.0" mnemonicParsing="false" onAction="#ConfirmButtonAction" text="Confirm">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Button>
-      <TableView layoutX="197.0" layoutY="300.0" prefHeight="200.0" prefWidth="446.0">
+      <TableView layoutX="124.0" layoutY="282.0" prefHeight="218.0" prefWidth="519.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Book Name" />
-          <TableColumn prefWidth="75.0" text="Member Id" />
-            <TableColumn prefWidth="100.79998779296875" text="Member Name " />
-            <TableColumn prefWidth="84.800048828125" text="Issue date" />
-            <TableColumn prefWidth="105.5999755859375" text="Availability" />
+          <TableColumn fx:id="bookNameTC" prefWidth="157.6000213623047" text="Book Name" />
+          <TableColumn fx:id="memberIdTC" prefWidth="78.39996337890625" text="Member Id" />
+            <TableColumn fx:id="memberNameTC" prefWidth="100.00006103515625" text="Member Name " />
+            <TableColumn fx:id="issuedateTC" prefWidth="92.0" text="Issue date" />
+            <TableColumn fx:id="availablityTC" prefWidth="88.0" text="Availability" />
         </columns>
       </TableView>
       <Label layoutX="446.0" layoutY="195.0" prefHeight="37.0" prefWidth="119.0" text="Issued Date :" />
-      <Button fx:id="checkBookAvailablity" layoutX="375.0" layoutY="512.0" mnemonicParsing="false" onAction="#SearchBookAvaiablity" style="-fx-background-color: gray;" text="Search Book ">
+      <Button layoutX="435.0" layoutY="505.0" mnemonicParsing="false" onAction="#SearchBookAvaiablity" style="-fx-background-color: gray;" text="Search Book ">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Button>
-      <DatePicker fx:id="issueDate" layoutX="541.0" layoutY="201.0" />
+      <DatePicker fx:id="issueDateDP" layoutX="541.0" layoutY="201.0" />
       <Label layoutX="449.0" layoutY="231.0" prefHeight="26.0" prefWidth="82.0" text="Title  / ISBN" />
-      <TextField fx:id="isbnTitle" layoutX="541.0" layoutY="231.0" />
+      <TextField fx:id="isbnTitleTF" layoutX="541.0" layoutY="231.0" />
+      <Button layoutX="29.0" layoutY="513.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="38.0" prefWidth="94.0" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

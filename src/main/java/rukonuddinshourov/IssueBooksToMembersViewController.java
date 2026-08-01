@@ -1,37 +1,66 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+
 
 public class IssueBooksToMembersViewController {
     @javafx.fxml.FXML
     private Button confirmBookIssue;
     @javafx.fxml.FXML
-    private Button checkBookAvailablity;
+    private TextField memberNameTF;
     @javafx.fxml.FXML
-    private Button updateIssued;
+    private TextField searchBookTF;
     @javafx.fxml.FXML
-    private TextField isbnTitle;
+    private TableColumn memberNameTC;
     @javafx.fxml.FXML
-    private TextField memberName;
+    private TableColumn bookNameTC;
     @javafx.fxml.FXML
-    private DatePicker issueDate;
+    private TableColumn availablityTC;
     @javafx.fxml.FXML
-    private TextField searchBook;
+    private TextField memberIdTF;
     @javafx.fxml.FXML
-    private TextField memberId;
+    private DatePicker issueDateDP;
+    @javafx.fxml.FXML
+    private AnchorPane issueBookspanelMainPanel;
+    @javafx.fxml.FXML
+    private TableColumn memberIdTC;
+    @javafx.fxml.FXML
+    private TableColumn issuedateTC;
+    @javafx.fxml.FXML
+    private Label issueBooksPanaellabel;
+    @javafx.fxml.FXML
+    private TextField isbnTitleTF;
 
     @javafx.fxml.FXML
     public void SearchBookAvaiablity(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void UpdateToIssue(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void ConfirmIssueBook(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void UpdateToIssuedButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void ConfirmButtonAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+
+        issueBookspanelMainPanel.getChildren().setAll(node);
+
     }
 }

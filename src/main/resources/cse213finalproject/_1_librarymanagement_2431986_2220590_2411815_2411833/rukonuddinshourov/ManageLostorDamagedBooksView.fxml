@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="711.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageLostorDamagedBooksViewController">
+<AnchorPane fx:id="lostordamagedBooksMainPanel" prefHeight="711.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageLostorDamagedBooksViewController">
    <children>
       <Label alignment="CENTER" layoutY="2.0" prefHeight="55.0" prefWidth="920.0" text="Lost or Damaged Books">
          <font>
@@ -23,33 +22,33 @@
       <Label layoutX="79.0" layoutY="129.0" text="Member ID" />
       <Label layoutX="79.0" layoutY="97.0" text="Book ID" />
       <Label layoutX="500.0" layoutY="180.0" />
-      <TextField fx:id="BookID" layoutX="197.0" layoutY="93.0" />
-      <TextField fx:id="MemberID" layoutX="197.0" layoutY="134.0" />
-      <TextField fx:id="Author" layoutX="578.0" layoutY="176.0" />
-      <Button layoutX="196.0" layoutY="579.0" mnemonicParsing="false" onAction="#SearchDamageorLostBook" prefHeight="41.0" prefWidth="106.0" text="Search">
+      <TextField fx:id="BookIDTF" layoutX="197.0" layoutY="93.0" />
+      <TextField fx:id="MemberIDTF" layoutX="197.0" layoutY="134.0" />
+      <TextField fx:id="AuthorTF" layoutX="578.0" layoutY="176.0" />
+      <Button layoutX="525.0" layoutY="461.0" mnemonicParsing="false" onAction="#SearchDamageorLostBook" prefHeight="41.0" prefWidth="106.0" text="Search">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Label layoutX="488.0" layoutY="89.0" text="Issue Date" />
       <Label layoutX="488.0" layoutY="121.0" text="Report Date" />
-      <DatePicker fx:id="IssueDate" layoutX="558.0" layoutY="85.0" />
-      <DatePicker fx:id="ReportDate" layoutX="559.0" layoutY="117.0" />
+      <DatePicker fx:id="IssueDateDP" layoutX="558.0" layoutY="85.0" />
+      <DatePicker fx:id="ReportDateDP" layoutX="559.0" layoutY="117.0" />
       <Label layoutX="80.0" layoutY="233.0" text="Book Condition" />
-      <ComboBox layoutX="196.0" layoutY="229.0" prefWidth="150.0" />
+      <ComboBox fx:id="bookconditionCB" layoutX="196.0" layoutY="229.0" prefWidth="150.0" />
       <Label layoutX="95.0" layoutY="282.0" text="Remarks" />
-      <TextArea fx:id="Remarks" layoutX="162.0" layoutY="272.0" prefHeight="55.0" prefWidth="200.0" />
+      <TextArea fx:id="RemarksTA" layoutX="162.0" layoutY="272.0" prefHeight="55.0" prefWidth="200.0" />
       <TableView layoutX="38.0" layoutY="368.0" prefHeight="200.0" prefWidth="447.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Book ID" />
-          <TableColumn prefWidth="75.0" text=" Member ID " />
-            <TableColumn prefWidth="75.0" text="Title " />
-            <TableColumn prefWidth="75.0" text="Condition " />
-            <TableColumn prefWidth="75.0" text="Fine " />
-            <TableColumn prefWidth="75.0" text="Status " />
+          <TableColumn fx:id="bookIDTC" prefWidth="75.0" text="Book ID" />
+          <TableColumn fx:id="memberIdTC" prefWidth="75.0" text=" Member ID " />
+            <TableColumn fx:id="titleTC" prefWidth="75.0" text="Title " />
+            <TableColumn fx:id="conditionTC" prefWidth="75.0" text="Condition " />
+            <TableColumn fx:id="fineTC" prefWidth="75.0" text="Fine " />
+            <TableColumn fx:id="statusTC" prefWidth="75.0" text="Status " />
         </columns>
       </TableView>
-      <Button layoutX="578.0" layoutY="312.0" mnemonicParsing="false" onAction="#CalculateFineButton" text="Calculate Fine">
+      <Button layoutX="579.0" layoutY="285.0" mnemonicParsing="false" onAction="#CalculateFineOnActionButton" text="Calculate Fine">
          <font>
             <Font size="14.0" />
          </font>
@@ -59,17 +58,20 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="21.0" layoutY="636.0" mnemonicParsing="false" onAction="#ClearRecords" text=" Clear ">
+      <Button layoutX="21.0" layoutY="636.0" mnemonicParsing="false" onAction="#ClearRecordOnACtionButton" text=" Clear ">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="415.0" layoutY="636.0" mnemonicParsing="false" onAction="#SaveRecords" text="Save ">
+      <Button layoutX="474.0" layoutY="630.0" mnemonicParsing="false" onAction="#SaveRecordOnActionBitton" text="Save ">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="BookTitle" layoutX="197.0" layoutY="176.0" />
+      <TextField fx:id="BookTitleTF" layoutX="197.0" layoutY="176.0" />
       <Label layoutX="484.0" layoutY="180.0" prefHeight="18.0" prefWidth="70.0" text="Author" />
+      <Label layoutX="480.0" layoutY="241.0" prefHeight="18.0" prefWidth="70.0" text="Fine Per Day" />
+      <TextField fx:id="fineperDayTF" layoutX="578.0" layoutY="238.0" />
+      <Button layoutX="196.0" layoutY="632.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="37.0" prefWidth="82.0" text="Back" />
    </children>
 </AnchorPane>

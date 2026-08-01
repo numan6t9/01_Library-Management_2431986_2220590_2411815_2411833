@@ -9,82 +9,87 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="712.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.UpdateLibraryCatalogViewController">
+<AnchorPane fx:id="libraryCatalogMainPanel" prefHeight="662.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.UpdateLibraryCatalogViewController">
    <children>
       <Label alignment="CENTER" layoutX="-2.0" prefHeight="60.0" prefWidth="862.0" text="Library Catalog">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="-90.0" layoutY="80.0" prefHeight="646.0" prefWidth="803.0" style="-fx-background-color: gray;" />
-      <Label layoutX="33.0" layoutY="77.0" prefHeight="32.0" prefWidth="117.0" text="Book Id">
+      <Label layoutX="-1.0" layoutY="65.0" prefHeight="586.0" prefWidth="862.0" style="-fx-background-color: gray;" />
+      <Label layoutX="32.0" layoutY="105.0" prefHeight="32.0" prefWidth="117.0" text="Book Id">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="33.0" layoutY="119.0" prefHeight="32.0" prefWidth="118.0" text="ISBN">
+      <Label layoutX="32.0" layoutY="155.0" prefHeight="32.0" prefWidth="118.0" text="ISBN">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="33.0" layoutY="158.0" prefHeight="32.0" prefWidth="118.0" text="Title">
+      <Label layoutX="32.0" layoutY="197.0" prefHeight="32.0" prefWidth="118.0" text="Title">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="37.0" layoutY="198.0" prefHeight="26.0" prefWidth="66.0" text="Author">
+      <Label layoutX="36.0" layoutY="255.0" prefHeight="26.0" prefWidth="66.0" text="Author">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="33.0" layoutY="237.0" prefHeight="26.0" prefWidth="118.0" text="Category">
+      <Label layoutX="341.0" layoutY="255.0" prefHeight="26.0" prefWidth="118.0" text="Category">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="229.0" layoutY="591.0" mnemonicParsing="false" onAction="#Searchbutton" style="-fx-background-color: green;" text="Search" />
-      <Button layoutX="388.0" layoutY="591.0" mnemonicParsing="false" onAction="#refreshButton" style="-fx-background-color: aqua;" text="Refresh" />
-      <Button layoutX="42.0" layoutY="591.0" mnemonicParsing="false" onAction="#updateButton" style="-fx-background-color: aqua;" text="Update" />
-      <TextField fx:id="ISBN" layoutX="163.0" layoutY="122.0" />
-      <TextField fx:id="Title" layoutX="163.0" layoutY="157.0" />
-      <TextField fx:id="bookId" layoutX="163.0" layoutY="80.0" />
-      <TextField fx:id="Author" layoutX="163.0" layoutY="201.0" />
-      <Label layoutX="357.0" layoutY="92.0" prefHeight="26.0" prefWidth="118.0" text="Status">
+      <Button layoutX="139.0" layoutY="591.0" mnemonicParsing="false" onAction="#Searchbutton" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: green;" text="Search" />
+      <Button layoutX="375.0" layoutY="591.0" mnemonicParsing="false" onAction="#refreshButton" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: aqua;" text="Refresh" />
+      <Button layoutX="42.0" layoutY="591.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: aqua;" text="Update" />
+      <TextField fx:id="ISBNTF" layoutX="163.0" layoutY="154.0" />
+      <TextField fx:id="TitleTF" layoutX="163.0" layoutY="199.0" />
+      <TextField fx:id="bookIdTF" layoutX="163.0" layoutY="108.0" />
+      <TextField fx:id="AuthorTF" layoutX="163.0" layoutY="255.0" />
+      <Label layoutX="341.0" layoutY="105.0" prefHeight="26.0" prefWidth="118.0" text="Status">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="Status" layoutX="440.0" layoutY="93.0" prefWidth="150.0" />
-      <ComboBox fx:id="category" layoutX="162.0" layoutY="237.0" prefWidth="150.0" />
-      <Label layoutX="341.0" layoutY="145.0" prefHeight="26.0" prefWidth="118.0" text="Quantity">
+      <ComboBox fx:id="StatusCB" layoutX="444.0" layoutY="108.0" prefWidth="150.0" />
+      <ComboBox fx:id="categoryCB" layoutX="452.0" layoutY="256.0" prefWidth="150.0" />
+      <Label layoutX="341.0" layoutY="157.0" prefHeight="26.0" prefWidth="118.0" text="Quantity">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="Quantity" layoutX="441.0" layoutY="145.0" />
-      <Label layoutX="341.0" layoutY="185.0" prefHeight="26.0" prefWidth="118.0" text="Shelf Location">
+      <TextField fx:id="QuantityTF" layoutX="445.0" layoutY="157.0" />
+      <Label layoutX="341.0" layoutY="199.0" prefHeight="26.0" prefWidth="118.0" text="Shelf Location">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="shelfLocation" layoutX="441.0" layoutY="188.0" />
-      <TableView layoutX="94.0" layoutY="342.0" prefHeight="200.0" prefWidth="526.0">
+      <TextField fx:id="shelfLocationTF" layoutX="445.0" layoutY="200.0" />
+      <TableView layoutX="97.0" layoutY="343.0" prefHeight="200.0" prefWidth="526.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Book ID" />
-          <TableColumn prefWidth="75.0" text="ISBN" />
-            <TableColumn prefWidth="75.0" text="Title" />
-            <TableColumn prefWidth="75.0" text="Author" />
-            <TableColumn prefWidth="75.0" text="Category" />
-            <TableColumn prefWidth="75.0" text="Qty" />
-            <TableColumn prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="bookIdTC" prefWidth="75.0" text="Book ID" />
+          <TableColumn fx:id="isbnTC" prefWidth="75.0" text="ISBN" />
+            <TableColumn fx:id="titleTC" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="authorTC" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="categoryTC" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="quantityTC" prefWidth="75.0" text="Qty" />
+            <TableColumn fx:id="statusTC" prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="490.0" layoutY="591.0" mnemonicParsing="false" onAction="#RemoveButton" text="Remove" />
-      <BottomNavigationButton alignment="CENTER" layoutX="593.0" layoutY="652.0" onAction="#confirmUpdateButton" prefHeight="46.0" prefWidth="200.0" text="Confirm update">
+      <Button layoutX="468.0" layoutY="591.0" mnemonicParsing="false" onAction="#RemoveButton" prefHeight="39.0" prefWidth="83.0" text="Remove" />
+<!--      <BottomNavigationButton alignment="CENTER" layoutX="593.0" layoutY="652.0" onAction="#confirmUpdateButton" prefHeight="46.0" prefWidth="200.0" text="Confirm update">-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="22.0" />-->
+<!--         </font>-->
+<!--      </BottomNavigationButton>-->
+      <Button layoutX="609.0" layoutY="591.0" mnemonicParsing="false" onAction="#confirmOnActionbutton" prefHeight="39.0" prefWidth="83.0" text="Confirm" />
+      <Button layoutX="255.0" layoutY="591.0" mnemonicParsing="false" onAction="#backOnACtionButton" prefHeight="39.0" prefWidth="90.0" text="Back">
          <font>
-            <Font name="System Bold" size="22.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
-      </BottomNavigationButton>
-      <Button layoutX="635.0" layoutY="647.0" mnemonicParsing="false" onAction="#confirmOnActionbutton" text="Confirm" />
+      </Button>
    </children>
 </AnchorPane>

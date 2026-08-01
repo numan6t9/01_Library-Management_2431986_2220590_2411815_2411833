@@ -1,29 +1,50 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
+
+import java.io.IOException;
 
 public class MemberRegistrationviewController {
-    @javafx.fxml.FXML
-    private RadioButton rbOther;
-    @javafx.fxml.FXML
-    private RadioButton rbFemale;
-    @javafx.fxml.FXML
-    private PasswordField txtConfirmPassword;
-    @javafx.fxml.FXML
-    private TextArea txtAddress;
-    @javafx.fxml.FXML
-    private DatePicker dpBirthDate;
-    @javafx.fxml.FXML
-    private RadioButton rbMale;
-    @javafx.fxml.FXML
-    private PasswordField txtPassword;
 
     @javafx.fxml.FXML
-    public void backOnActionButton(ActionEvent actionEvent) {
+    private TextArea addressTA;
+    @javafx.fxml.FXML
+    private TextField fullNameTF;
+    @javafx.fxml.FXML
+    private TextField phoneTF;
+    @javafx.fxml.FXML
+    private PasswordField PasswordPF;
+    @javafx.fxml.FXML
+    private TextField userNameTF;
+    @javafx.fxml.FXML
+    private TextField librarianNameTF;
+    @javafx.fxml.FXML
+    private RadioButton femaleRB;
+    @javafx.fxml.FXML
+    private BorderPane memberRegistrasionMainPanel;
+    @javafx.fxml.FXML
+    private RadioButton otherRB;
+    @javafx.fxml.FXML
+    private TextField emailTF;
+    @javafx.fxml.FXML
+    private RadioButton maleRB;
+    @javafx.fxml.FXML
+    private DatePicker birthDateDP;
+    @javafx.fxml.FXML
+    private TextField librarianIdTF;
+    @javafx.fxml.FXML
+    private PasswordField ConfirmPasswordPF;
+
+    @javafx.fxml.FXML
+    public void backOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+        memberRegistrasionMainPanel.getChildren().setAll(node);
+
     }
 
     @javafx.fxml.FXML

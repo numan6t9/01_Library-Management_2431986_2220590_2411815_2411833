@@ -1,47 +1,91 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 public class CreateNewAnnouncementViewController {
     @javafx.fxml.FXML
-    private DatePicker StartingDate;
-    @javafx.fxml.FXML
-    private DatePicker EndingDate;
-    @javafx.fxml.FXML
-    private ComboBox Category;
-    @javafx.fxml.FXML
-    private TextField attachment;
-    @javafx.fxml.FXML
     private Label createNewAnnouncement;
     @javafx.fxml.FXML
-    private TextArea optionalAttachmentView;
+    private DatePicker EndingDateDP;
     @javafx.fxml.FXML
-    private TextArea AnnouncementTitle;
+    private TextField attachmentTF;
     @javafx.fxml.FXML
-    private ComboBox TargetAudiance;
+    private ComboBox CategoryCB;
+    @javafx.fxml.FXML
+    private TextArea AnnouncementTitleTA;
+    @javafx.fxml.FXML
+    private TextArea optionalAttachmentTA;
+    @javafx.fxml.FXML
+    private DatePicker StartingDateDP;
+    @javafx.fxml.FXML
+    private ComboBox TargetAudianceCB;
+    @javafx.fxml.FXML
+    private AnchorPane createNewAnnouncementMainPanel;
+
+//    @Deprecated
+//    public void cancelButton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void previewButton(ActionEvent actionEvent) {
+//    }
+
+//    @Deprecated
+//    public void publishButton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void browseButton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void resetButton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void saveDraftButton(ActionEvent actionEvent) {
+//    }
 
     @javafx.fxml.FXML
-    public void cancelButton(ActionEvent actionEvent) {
+    public void cancelButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void previewButton(ActionEvent actionEvent) {
+    public void browseButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void publishButton(ActionEvent actionEvent) {
+    public void resetButtonOnACtion(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void browseButton(ActionEvent actionEvent) {
+    public void previewButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void resetButton(ActionEvent actionEvent) {
+    public void saveDraftButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void backBurronOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void saveDraftButton(ActionEvent actionEvent) {
+    public void publishButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) throws Exception{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+
+        createNewAnnouncementMainPanel.getChildren().setAll(node);
+
+
+
     }
 }

@@ -1,30 +1,40 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class MemberpersonalprofileupdateViewController {
+
     @javafx.fxml.FXML
-    private TextField firstName;
+    private ComboBox genderCB;
     @javafx.fxml.FXML
-    private TextField lastName;
+    private TextField lastNameTF;
     @javafx.fxml.FXML
-    private TextField phoneNumber;
+    private TextField emailIdTF;
     @javafx.fxml.FXML
-    private PasswordField passsword;
+    private DatePicker dateOfBirthDP;
     @javafx.fxml.FXML
-    private ComboBox gender;
+    private TextField phoneNumberTF;
     @javafx.fxml.FXML
-    private TextField emailzid;
+    private TextField adressTF;
     @javafx.fxml.FXML
-    private DatePicker dateOfBirth;
+    private PasswordField passswordPF;
     @javafx.fxml.FXML
-    private TextField adress;
+    private PasswordField confirmPasswordPF;
     @javafx.fxml.FXML
-    private TextField memberId;
+    private AnchorPane memberprofileUpdateMainPanel;
+    @javafx.fxml.FXML
+    private TextField firstNameTF;
+    @javafx.fxml.FXML
+    private TextField memberIdTF;
 
     @javafx.fxml.FXML
     public void cancelButtonOnAction(ActionEvent actionEvent) {
@@ -34,11 +44,19 @@ public class MemberpersonalprofileupdateViewController {
     public void updateButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void confirmButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void savechangeButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+        memberprofileUpdateMainPanel.getChildren().setAll(node);
+
     }
 }

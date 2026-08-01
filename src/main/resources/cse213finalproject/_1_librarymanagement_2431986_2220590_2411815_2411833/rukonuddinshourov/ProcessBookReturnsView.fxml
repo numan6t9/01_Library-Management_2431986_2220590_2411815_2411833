@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ProcessBookReturnsViewController">
+<AnchorPane fx:id="processBookReturnMainPanel" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ProcessBookReturnsViewController">
 
     <children>
 
@@ -31,7 +31,7 @@
 
                 <Label text="Member ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextField fx:id="memberID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="memberIDTF" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                 <Button fx:id="btnSearch" onAction="#searchIssuedBooks" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="0" />
             <columnConstraints>
@@ -49,15 +49,15 @@
 
                 <columns>
 
-                    <TableColumn fx:id="colBookID" prefWidth="100" text="Book ID" />
+                    <TableColumn fx:id="bookIDTC" prefWidth="100" text="Book ID" />
 
-                    <TableColumn fx:id="colTitle" prefWidth="250" text="Title" />
+                    <TableColumn fx:id="titleTC" prefWidth="250" text="Title" />
 
-                    <TableColumn fx:id="colIssueDate" prefWidth="150" text="Issue Date" />
+                    <TableColumn fx:id="issueDateTC" prefWidth="150" text="Issue Date" />
 
-                    <TableColumn fx:id="colDueDate" prefWidth="150" text="Due Date" />
+                    <TableColumn fx:id="dueDateTC" prefWidth="150" text="Due Date" />
 
-                    <TableColumn fx:id="colStatus" prefWidth="120" text="Status" />
+                    <TableColumn fx:id="statusTC" prefWidth="155.99993896484375" text="Status" />
 
                 </columns>
 
@@ -67,27 +67,27 @@
 
                 <Label text="Book ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextField fx:id="txtBookID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="bookIDTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                 <Label text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-                <TextField fx:id="txtTitle" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="titleTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                 <Label text="Issue Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
-                <TextField fx:id="txtIssueDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="issueDateTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                 <Label text="Due Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
 
-                <TextField fx:id="txtDueDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="dueDateTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
                 <Label text="Return Date" GridPane.columnIndex="0" GridPane.rowIndex="4" />
 
-                <DatePicker fx:id="dpReturnDate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <DatePicker fx:id="returnDateDP" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
                 <Label text="Fine ($)" GridPane.columnIndex="0" GridPane.rowIndex="5" />
 
-                <TextField fx:id="txtFine" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="fineTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <columnConstraints>
                <ColumnConstraints />
                <ColumnConstraints />
@@ -109,11 +109,11 @@
 
                     <HBox spacing="20">
 
-                        <RadioButton fx:id="rbGood" text="Good" />
+                        <RadioButton fx:id="goodRB" text="Good" />
 
-                        <RadioButton fx:id="rbDamaged" text="Damaged" />
+                        <RadioButton fx:id="damagedRB" text="Damaged" />
 
-                        <RadioButton fx:id="rbLost" text="Lost" />
+                        <RadioButton fx:id="lostRB" text="Lost" />
 
                     </HBox>
 
@@ -121,15 +121,18 @@
 
             </TitledPane>
 
-            <HBox spacing="15">
+            <HBox prefHeight="46.0" prefWidth="810.0" spacing="15">
 
-                <Button onAction="#calculateFineOnActionButton" text="Calculate Fine" />
+                <Button onAction="#calculateFineOnActionButton" prefHeight="35.0" prefWidth="124.0" text="Calculate Fine" />
 
-                <Button onAction="#returnBookOnActionButton" text="Return Book" />
+                <Button onAction="#returnBookOnActionButton" prefHeight="69.0" prefWidth="192.0" text="Return Book" />
 
-                <Button onAction="#clearOnActionButton" text="Clear" />
+                <Button onAction="#backOnActionButton" prefHeight="26.0" prefWidth="162.0" text="Back" />
 
-                <Button onAction="#backOnActionButton" text="Back" />
+                <Button onAction="#clearOnActionButton" prefHeight="26.0" prefWidth="158.0" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
 
             </HBox>
 

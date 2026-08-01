@@ -1,73 +1,147 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class MemberDashboardViewControlller {
     @javafx.fxml.FXML
-    private TextField borrowNumber;
-    @javafx.fxml.FXML
-    private TextField reserveBook;
-    @javafx.fxml.FXML
-    private TextField fine;
-    @javafx.fxml.FXML
-    private TableColumn dueDate;
-    @javafx.fxml.FXML
     private Label memberDashboard;
     @javafx.fxml.FXML
-    private TableColumn title;
-    @javafx.fxml.FXML
-    private TableColumn borrowDate;
-    @javafx.fxml.FXML
-    private ListView notifications;
-    @javafx.fxml.FXML
-    private TableColumn bookid;
-    @javafx.fxml.FXML
-    private TableColumn status;
-    @javafx.fxml.FXML
     private TableView recentlyBorrowedList;
+    @javafx.fxml.FXML
+    private TableColumn dueDateTC;
+    @javafx.fxml.FXML
+    private TextField fineTF;
+    @javafx.fxml.FXML
+    private TableColumn borrowDateTC;
+    @javafx.fxml.FXML
+    private AnchorPane memberDasboardMainPanel;
+    @javafx.fxml.FXML
+    private ListView notificationLV;
+    @javafx.fxml.FXML
+    private TextField borrowNumberTF;
+    @javafx.fxml.FXML
+    private Label dashboardLB;
+    @javafx.fxml.FXML
+    private TableColumn titleTC;
+    @javafx.fxml.FXML
+    private TableColumn bookidTC;
+    @javafx.fxml.FXML
+    private TableColumn statusTC;
+    @javafx.fxml.FXML
+    private TextField reserveBookTF;
+    @javafx.fxml.FXML
+    private Label manuLB;
+
+
 
     @javafx.fxml.FXML
-    public void searchButton(ActionEvent actionEvent) {
+    public void payfineOnActionButton(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberPayFinesView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void settingsButton(ActionEvent actionEvent) {
+    public void profileButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberRegistrationView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
     }
 
     @javafx.fxml.FXML
-    public void borrowHistoryButton(ActionEvent actionEvent) {
+    public void borrowedBooksButtonOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/BorrowingHistoryView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void borrowedBooksbutton(ActionEvent actionEvent) {
+    public void homeButtonOnAction(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) {
+    public void logoutButtonOnAction(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LoginView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void profileButton(ActionEvent actionEvent) {
+    public void reservedBooksButtonOnAction(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/ReserveBookMemberView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void renewBooksButton(ActionEvent actionEvent) {
+    public void borrowHistoryButtonOnAction(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/BorrowingHistoryView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
     }
 
     @javafx.fxml.FXML
-    public void logoutbutton(ActionEvent actionEvent) {
+    public void renewBooksButtonOnAction(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/RenewBorrowedBookView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void reservedBooksButton(ActionEvent actionEvent) {
+    public void settingsButtonOnActon(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberRegistrationView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
+
+
+
+
+
     }
 
     @javafx.fxml.FXML
-    public void homeButton(ActionEvent actionEvent) {
-    }
+    public void searchButtonOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/SearchBookView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPanel.getChildren().setAll(node);
 
-    @javafx.fxml.FXML
-    public void payfineOnActionButton(ActionEvent actionEvent) {
-    }
+
+
+
+
+
+        }
 }

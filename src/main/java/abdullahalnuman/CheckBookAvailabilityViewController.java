@@ -33,3 +33,4 @@ public class CheckBookAvailabilityViewController
         bookAvailabilityMainPane.getChildren().setAll(node);
     }
 }
+

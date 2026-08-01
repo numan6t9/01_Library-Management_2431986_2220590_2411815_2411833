@@ -10,49 +10,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="689.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.GenerateLibraryReportsViewController">
+<AnchorPane fx:id="generateLibraryReportsMainPanel" prefHeight="689.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.GenerateLibraryReportsViewController">
    <children>
-      <Label alignment="CENTER" layoutX="-2.0" layoutY="2.0" prefHeight="73.0" prefWidth="600.0" style="-fx-background-color: tan;" text="Generate Library Reports" />
+      <Label alignment="CENTER" layoutX="-1.0" prefHeight="74.0" prefWidth="607.0" style="-fx-background-color: tan;" text="Generate Library Reports" />
       <Label layoutX="28.0" layoutY="107.0" prefHeight="34.0" prefWidth="87.0" text="Report Type" />
       <Label layoutX="28.0" layoutY="141.0" prefHeight="34.0" prefWidth="87.0" text="Category" />
       <Label layoutX="28.0" layoutY="175.0" prefHeight="34.0" prefWidth="87.0" text="From Date" />
       <Label layoutX="28.0" layoutY="209.0" prefHeight="34.0" prefWidth="95.0" text="To Date" />
-      <ComboBox fx:id="category" layoutX="115.0" layoutY="145.0" prefWidth="150.0" />
-      <ComboBox fx:id="reportType" layoutX="115.0" layoutY="112.0" prefWidth="150.0" />
-      <DatePicker fx:id="fromDate" layoutX="108.0" layoutY="180.0" />
-      <DatePicker fx:id="toDate" layoutX="108.0" layoutY="213.0" />
-      <TableView layoutX="15.0" layoutY="329.0" prefHeight="200.0" prefWidth="574.0">
+      <ComboBox fx:id="categoryCB" layoutX="115.0" layoutY="145.0" prefWidth="150.0" />
+      <ComboBox fx:id="reportTypeCB" layoutX="115.0" layoutY="112.0" prefWidth="150.0" />
+      <DatePicker fx:id="fromDateDP" layoutX="108.0" layoutY="180.0" />
+      <DatePicker fx:id="toDateDP" layoutX="108.0" layoutY="213.0" />
+      <TableView layoutX="13.0" layoutY="307.0" prefHeight="200.0" prefWidth="574.0">
         <columns>
-          <TableColumn fx:id="memberId" prefWidth="87.20001029968262" text="Member ID" />
-          <TableColumn fx:id="bookTitle" prefWidth="90.39997100830078" text="Book Title" />
-            <TableColumn fx:id="categoryBooks" prefWidth="80.800048828125" text="Category" />
-            <TableColumn fx:id="borrowedDate" prefWidth="108.0" text="Borrowed Date" />
-            <TableColumn fx:id="returned" prefWidth="108.0" text="Returned" />
-            <TableColumn fx:id="date" prefWidth="91.19992065429688" text="Date" />
+          <TableColumn fx:id="memberIdTC" prefWidth="87.20001029968262" text="Member ID" />
+          <TableColumn fx:id="bookTitleTC" prefWidth="90.39997100830078" text="Book Title" />
+            <TableColumn fx:id="categoryBooksTC" prefWidth="80.800048828125" text="Category" />
+            <TableColumn fx:id="borrowedDateTC" prefWidth="108.0" text="Borrowed Date" />
+            <TableColumn fx:id="returnedTC" prefWidth="108.0" text="Returned" />
+            <TableColumn fx:id="dateTC" prefWidth="91.19992065429688" text="Date" />
         </columns>
       </TableView>
-      <Label layoutX="28.0" layoutY="563.0" prefHeight="34.0" prefWidth="95.0" text="Total Record" />
-      <Label layoutX="28.0" layoutY="598.0" prefHeight="34.0" prefWidth="116.0" text="Generated on " />
-      <Label layoutX="28.0" layoutY="632.0" prefHeight="34.0" prefWidth="78.0" text="Status" />
-      <Button layoutX="480.0" layoutY="623.0" mnemonicParsing="false" onAction="#generateButton" prefHeight="53.0" prefWidth="116.0" text="Generate">
+      <Label layoutX="28.0" layoutY="519.0" prefHeight="34.0" prefWidth="95.0" text="Total Record" />
+      <Label layoutX="28.0" layoutY="554.0" prefHeight="34.0" prefWidth="116.0" text="Generated on " />
+      <Label layoutX="28.0" layoutY="588.0" prefHeight="34.0" prefWidth="78.0" text="Status" />
+      <Button layoutX="480.0" layoutY="623.0" mnemonicParsing="false" onAction="#generateButtonOnAction" prefHeight="53.0" prefWidth="116.0" text="Generate">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="totalRecord" layoutX="116.0" layoutY="568.0" />
-      <TextField fx:id="status" layoutX="121.0" layoutY="636.0" />
-      <DatePicker fx:id="generatedDate" layoutX="116.0" layoutY="602.0" />
-      <Button layoutX="325.0" layoutY="636.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="34.0" prefWidth="102.0" text="Clear">
+      <TextField fx:id="totalRecordTF" layoutX="116.0" layoutY="524.0" />
+      <TextField fx:id="statusTF" layoutX="121.0" layoutY="592.0" />
+      <DatePicker fx:id="generateDP" layoutX="116.0" layoutY="558.0" />
+      <Button layoutX="325.0" layoutY="636.0" mnemonicParsing="false" onAction="#clearButtonOnAction" prefHeight="34.0" prefWidth="102.0" text="Clear">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="350.0" layoutY="556.0" mnemonicParsing="false" onAction="#exportPdfButton" text="Export PDF">
+      <Button layoutX="367.0" layoutY="533.0" mnemonicParsing="false" onAction="#exportPdfButtonOnAction" text="Export PDF">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Label layoutX="44.0" layoutY="265.0" prefHeight="42.0" prefWidth="184.0" text="Report Summery" />
+      <Button layoutX="228.0" layoutY="641.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="78.0" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

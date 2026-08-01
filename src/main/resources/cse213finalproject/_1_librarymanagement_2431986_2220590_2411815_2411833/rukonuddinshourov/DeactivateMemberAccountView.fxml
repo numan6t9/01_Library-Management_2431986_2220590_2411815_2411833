@@ -9,10 +9,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="695.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.DeactivateMemberAccountViewController">
+<AnchorPane fx:id="deactivateAccountMainPanel" prefHeight="678.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.DeactivateMemberAccountViewController">
    <children>
-      <Label alignment="CENTER" prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: gray;" text="Deactivate  / Delete Account ">
+      <Label fx:id="deactivatelabell" alignment="CENTER" prefHeight="62.0" prefWidth="708.0" style="-fx-background-color: gray;" text="Deactivate  / Delete Account ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -21,9 +20,9 @@
       <Label layoutX="33.0" layoutY="136.0" prefHeight="31.0" prefWidth="100.0" text="Member Name" />
       <Label layoutX="33.0" layoutY="165.0" prefHeight="31.0" prefWidth="100.0" text="Email" />
       <Label layoutX="33.0" layoutY="196.0" prefHeight="41.0" prefWidth="107.0" text="Account Status :" />
-      <TextField fx:id="memberId" layoutX="114.0" layoutY="105.0" />
-      <TextField fx:id="memberName" layoutX="115.0" layoutY="139.0" />
-      <TextField fx:id="email" layoutX="116.0" layoutY="168.0" />
+      <TextField fx:id="memberIdTF" layoutX="114.0" layoutY="105.0" />
+      <TextField fx:id="memberNameTF" layoutX="115.0" layoutY="139.0" />
+      <TextField fx:id="emailTF" layoutX="116.0" layoutY="168.0" />
       <Label layoutX="133.0" layoutY="201.0" prefHeight="31.0" prefWidth="100.0" text="Active" />
       <Button layoutX="25.0" layoutY="252.0" mnemonicParsing="false" onAction="#deactivateAccountOnActionButton" style="-fx-background-color: red;" text="Deactivate Account">
          <font>
@@ -36,16 +35,16 @@
          </font>
       </Button>
       <Label layoutX="36.0" layoutY="310.0" prefHeight="42.0" prefWidth="107.0" text="Warning" />
-      <TextArea layoutX="16.0" layoutY="341.0" prefHeight="69.0" prefWidth="200.0" />
+      <TextArea fx:id="warningTA" layoutX="16.0" layoutY="341.0" prefHeight="69.0" prefWidth="200.0" />
       <Label layoutX="32.0" layoutY="352.0" text="Disable access to library system" />
       <Label layoutX="26.0" layoutY="383.0" text="Cancel your current login session" />
       <Label layoutX="36.0" layoutY="426.0" text="Are you sure want to continue ?" />
-      <RadioButton layoutX="50.0" layoutY="457.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" text="Yes" />
-      <RadioButton layoutX="133.0" layoutY="457.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="No" />
+      <RadioButton fx:id="yesRB" layoutX="50.0" layoutY="457.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" text="Yes" />
+      <RadioButton fx:id="noRB" layoutX="133.0" layoutY="457.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="62.0" text="No" />
       <Line endX="488.0" layoutX="112.0" layoutY="488.0" startX="-100.0" />
       <Label layoutX="56.0" layoutY="505.0" text="Password / OTP verifications" />
       <Label layoutX="69.0" layoutY="538.0" text="Password / OTP :" />
-      <TextField fx:id="password" layoutX="164.0" layoutY="534.0" />
+      <TextField fx:id="passwordTF" layoutX="164.0" layoutY="534.0" />
       <Button layoutX="114.0" layoutY="583.0" mnemonicParsing="false" onAction="#confirmOnActionButton" style="-fx-background-color: teal;" text="Confirm">
          <font>
             <Font name="System Bold" size="13.0" />

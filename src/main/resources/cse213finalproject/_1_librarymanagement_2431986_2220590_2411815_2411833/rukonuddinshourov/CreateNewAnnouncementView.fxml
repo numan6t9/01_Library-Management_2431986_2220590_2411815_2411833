@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="641.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.CreateNewAnnouncementViewController">
+<AnchorPane fx:id="createNewAnnouncementMainPanel" prefHeight="550.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.CreateNewAnnouncementViewController">
    <children>
       <Label fx:id="createNewAnnouncement" alignment="CENTER" layoutY="-3.0" prefHeight="54.0" prefWidth="918.0" style="-fx-background-color: teal;" text="Create  New Announcement">
          <font>
@@ -18,43 +17,48 @@
          </font>
       </Label>
       <Label layoutX="59.0" layoutY="112.0" text="Announcement Title" />
-      <TextArea fx:id="AnnouncementTitle" layoutX="41.0" layoutY="142.0" prefHeight="66.0" prefWidth="235.0" />
+      <TextArea fx:id="AnnouncementTitleTA" layoutX="41.0" layoutY="142.0" prefHeight="66.0" prefWidth="235.0" />
       <Label layoutX="474.0" layoutY="146.0" text="Target Audiance" />
-      <ComboBox fx:id="TargetAudiance" layoutX="585.0" layoutY="142.0" prefWidth="150.0" />
-      <ComboBox fx:id="Category" layoutX="585.0" layoutY="190.0" prefWidth="150.0" />
+      <ComboBox fx:id="TargetAudianceCB" layoutX="585.0" layoutY="142.0" prefWidth="150.0" />
+      <ComboBox fx:id="CategoryCB" layoutX="585.0" layoutY="190.0" prefWidth="150.0" />
       <Label layoutX="482.0" layoutY="194.0" text="Category" />
       <Label layoutX="41.0" layoutY="238.0" text="Starting Date" />
-      <DatePicker fx:id="StartingDate" layoutX="38.0" layoutY="260.0" />
+      <DatePicker fx:id="StartingDateDP" layoutX="38.0" layoutY="260.0" />
       <Label layoutX="294.0" layoutY="238.0" text="Ending Date" />
-      <DatePicker fx:id="EndingDate" layoutX="251.0" layoutY="260.0" />
+      <DatePicker fx:id="EndingDateDP" layoutX="251.0" layoutY="260.0" />
       <Label layoutX="41.0" layoutY="312.0" text="Attachment" />
-      <TextField fx:id="attachment" layoutX="38.0" layoutY="344.0" />
-      <Button layoutX="260.0" layoutY="344.0" mnemonicParsing="false" onAction="#browseButton" prefHeight="26.0" prefWidth="107.0" text="Browse" />
+      <TextField fx:id="attachmentTF" layoutX="38.0" layoutY="344.0" />
+      <Button layoutX="260.0" layoutY="344.0" mnemonicParsing="false" onAction="#browseButtonOnAction" prefHeight="26.0" prefWidth="107.0" text="Browse" />
       <Label layoutX="57.0" layoutY="392.0" text="Optional Attachment view" />
-      <TextArea fx:id="optionalAttachmentView" layoutX="57.0" layoutY="416.0" prefHeight="66.0" prefWidth="235.0" text="No file Attach" />
-      <Button layoutX="759.0" layoutY="560.0" mnemonicParsing="false" onAction="#publishButton" prefHeight="30.0" prefWidth="138.0" text="Publish">
+      <TextArea fx:id="optionalAttachmentTA" layoutX="57.0" layoutY="416.0" prefHeight="66.0" prefWidth="235.0" text="No file Attach" />
+      <Button layoutX="759.0" layoutY="560.0" mnemonicParsing="false" onAction="#publishButtonOnAction" prefHeight="30.0" prefWidth="138.0" text="Publish">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="264.0" layoutY="552.0" mnemonicParsing="false" onAction="#previewButton" prefHeight="30.0" prefWidth="107.0" text="preview">
+      <Button layoutX="264.0" layoutY="552.0" mnemonicParsing="false" onAction="#previewButtonOnAction" prefHeight="30.0" prefWidth="107.0" text="preview">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="786.0" layoutY="482.0" mnemonicParsing="false" onAction="#saveDraftButton" prefHeight="30.0" prefWidth="107.0" text="Save Draft">
+      <Button layoutX="786.0" layoutY="482.0" mnemonicParsing="false" onAction="#saveDraftButtonOnAction" prefHeight="30.0" prefWidth="107.0" text="Save Draft">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="72.0" layoutY="552.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="30.0" prefWidth="107.0" text="Cancel">
+      <Button layoutX="72.0" layoutY="552.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="30.0" prefWidth="107.0" text="Cancel">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="454.0" layoutY="549.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="18.0" prefWidth="107.0" text="Reset">
+      <Button layoutX="454.0" layoutY="549.0" mnemonicParsing="false" onAction="#resetButtonOnACtion" prefHeight="18.0" prefWidth="107.0" text="Reset">
          <font>
             <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="646.0" layoutY="547.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="30.0" prefWidth="70.0" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
    </children>

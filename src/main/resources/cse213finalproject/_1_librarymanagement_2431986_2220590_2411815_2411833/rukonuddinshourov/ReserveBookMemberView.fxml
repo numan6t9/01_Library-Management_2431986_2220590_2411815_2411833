@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ReserveBookMemberviewController">
+<AnchorPane fx:id="reserveBookMainPanel" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ReserveBookMemberviewController">
 
     <children>
 
@@ -29,11 +29,11 @@
 
                 <Label text="Member ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextField fx:id="MemberID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="memberIDTC" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                 <Label text="Search Book:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-                <TextField fx:id="searchbook" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="searchbookTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                 <Button fx:id="btnSearch" onAction="#searchBook" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <columnConstraints>
@@ -52,31 +52,31 @@
 
                 <columns>
 
-                    <TableColumn fx:id="bookidreserve" prefWidth="100" text="Book ID" />
+                    <TableColumn fx:id="booIdTC" prefWidth="100" text="Book ID" />
 
-                    <TableColumn fx:id="Titlebook" prefWidth="250" text="Title" />
+                    <TableColumn fx:id="TitlebookTC" prefWidth="250" text="Title" />
 
-                    <TableColumn fx:id="Author" prefWidth="200" text="Author" />
+                    <TableColumn fx:id="AuthorTC" prefWidth="200" text="Author" />
 
-                    <TableColumn fx:id="Status" prefWidth="120" text="Status" />
+                    <TableColumn fx:id="StatusTC" prefWidth="120" text="Status" />
 
                 </columns>
 
             </TableView>
 
-            <GridPane hgap="10" vgap="10">
+            <GridPane fx:id="reserveDateDP" hgap="10" vgap="10">
 
                 <Label text="Book ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextField fx:id="BookID" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="BookIDTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                 <Label text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
-                <TextField fx:id="Title" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="TitleTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                 <Label text="Availability" GridPane.columnIndex="0" GridPane.rowIndex="2" />
 
-                <TextField fx:id="Availability" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="AvailabilityTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
                 <Label text="Reservation Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
 
@@ -96,11 +96,11 @@
 
             <HBox spacing="15">
 
-                <Button fx:id="btnReserve" onAction="#reserveBookOnActionButton" text="Reserve Book" />
+                <Button onAction="#reserveBookOnActionButton" prefHeight="38.0" prefWidth="215.0" text="Reserve Book" />
 
-                <Button onAction="#clearButtonOnAction" text="Clear" />
+                <Button onAction="#clearButtonOnAction" prefHeight="39.0" prefWidth="170.0" text="Clear" />
 
-                <Button onAction="#backButtonOnAction" text="Back" />
+                <Button onAction="#backButtonOnAction" prefHeight="50.0" prefWidth="154.0" text="Back" />
 
             </HBox>
 

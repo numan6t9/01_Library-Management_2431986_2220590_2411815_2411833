@@ -8,38 +8,43 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="769.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageOverdueBooksandFinesViewController">
+<AnchorPane fx:id="manageoverduebooksAndFinesMainPanel" prefHeight="709.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageOverdueBooksandFinesViewController">
     <children>
         <Label layoutX="163.0" layoutY="14.0" prefHeight="58.0" prefWidth="273.0" text="Manage Overdue Books And Fines ">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font></Label>
         <Label layoutX="55.0" layoutY="150.0" text="Enter Member ID" />
-        <TextField fx:id="enterMemberId" layoutX="196.0" layoutY="146.0" />
-        <Button layoutX="411.0" layoutY="146.0" mnemonicParsing="false" onAction="#searchMemberButton" text="SearchMember" />
+        <TextField fx:id="enterMemberIdTF" layoutX="196.0" layoutY="146.0" />
+        <Button layoutX="418.0" layoutY="146.0" mnemonicParsing="false" onAction="#searchMemberOnActionButton" text="SearchMember" />
         <TableView fx:id="fineCollectionTableView" layoutX="84.0" layoutY="211.0" prefHeight="200.0" prefWidth="431.0">
             <columns>
-                <TableColumn fx:id="borrowedBookTableView" prefWidth="146.0" text="Borrowed Books" />
-                <TableColumn fx:id="bookReturnDateTableView" prefWidth="143.0" text="Book Return Date" />
-            <TableColumn fx:id="bookReturnDateTableView1" prefWidth="143.0" text="Book issue Date" />
+                <TableColumn fx:id="borrowedBookTC" prefWidth="146.0" text="Borrowed Books" />
+                <TableColumn fx:id="bookReturnDateTC" prefWidth="143.0" text="Book Return Date" />
+            <TableColumn fx:id="bookReturnTC" prefWidth="143.0" text="Book issue Date" />
             </columns>
         </TableView>
         <Label layoutX="55.0" layoutY="436.0" text="Fine Per Day" />
-        <TextField fx:id="finePerDay" layoutX="249.0" layoutY="432.0" />
+        <TextField fx:id="finePerDayTF" layoutX="249.0" layoutY="432.0" />
         <Label layoutX="55.0" layoutY="531.0" text="Total overdue days" />
-        <TextField fx:id="overdueDays" layoutX="249.0" layoutY="527.0" />
-        <Button layoutX="434.0" layoutY="431.0" mnemonicParsing="false" onAction="#calculateFineButton" prefHeight="26.0" prefWidth="148.0" text="Calculate Fine" />
-        <Label fx:id="showTotalFine" alignment="CENTER" layoutX="440.0" layoutY="502.0" prefHeight="58.0" prefWidth="137.0" style="-fx-background-color: blue;" text="Fine to pay" textFill="WHITE">
+        <TextField fx:id="overdueDaysTF" layoutX="249.0" layoutY="527.0" />
+        <Button layoutX="434.0" layoutY="431.0" mnemonicParsing="false" onAction="#calculateFineOnActionButton" prefHeight="26.0" prefWidth="148.0" text="Calculate Fine" />
+        <Label fx:id="finetoPayLB" alignment="CENTER" layoutX="440.0" layoutY="502.0" prefHeight="58.0" prefWidth="137.0" style="-fx-background-color: blue;" text="Fine to pay" textFill="WHITE">
             <font>
                 <Font name="FreeSerif Bold" size="14.0" />
             </font>
         </Label>
         <Label layoutX="55.0" layoutY="598.0" text="Enter Payment Information" />
-        <TextField fx:id="enterPaymentInformation" layoutX="249.0" layoutY="594.0" />
+        <TextField fx:id="enterPaymentInformationTF" layoutX="249.0" layoutY="594.0" />
         <Button layoutX="440.0" layoutY="594.0" mnemonicParsing="false" onAction="#payFineNowButton" prefHeight="26.0" prefWidth="148.0" text="Pay Now" />
-        <Button layoutX="217.0" layoutY="665.0" mnemonicParsing="false" onAction="#generateFineReceiptButton" prefHeight="33.0" prefWidth="231.0" text="Generate  overdue and fine  Receipt" />
-      <Button layoutX="13.0" layoutY="714.0" mnemonicParsing="false" onAction="#notificationSendToMember" text="Send Notifications to Member" />
+        <Button layoutX="283.0" layoutY="652.0" mnemonicParsing="false" onAction="#generateFineReceiptOnActionButton" prefHeight="33.0" prefWidth="231.0" text="Generate  overdue and fine  Receipt" />
+      <Button layoutX="10.0" layoutY="656.0" mnemonicParsing="false" onAction="#notificationSendToMemberOnActionButton" text="Send Notifications to Member" />
       <Label layoutX="55.0" layoutY="480.0" text="Payment  Status" />
-      <TextField fx:id="paymentStatus" layoutX="249.0" layoutY="476.0" />
+      <TextField fx:id="paymentStatusTF" layoutX="249.0" layoutY="476.0" />
+      <Button layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
