@@ -26,29 +26,6 @@ public class CreateNewAnnouncementViewController {
     @javafx.fxml.FXML
     private AnchorPane createNewAnnouncementMainPanel;
 
-//    @Deprecated
-//    public void cancelButton(ActionEvent actionEvent) {
-//    }
-//
-//    @Deprecated
-//    public void previewButton(ActionEvent actionEvent) {
-//    }
-
-//    @Deprecated
-//    public void publishButton(ActionEvent actionEvent) {
-//    }
-//
-//    @Deprecated
-//    public void browseButton(ActionEvent actionEvent) {
-//    }
-//
-//    @Deprecated
-//    public void resetButton(ActionEvent actionEvent) {
-//    }
-//
-//    @Deprecated
-//    public void saveDraftButton(ActionEvent actionEvent) {
-//    }
 
     @javafx.fxml.FXML
     public void cancelButtonOnAction(ActionEvent actionEvent) {
