@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -20,18 +21,28 @@ public class LoginViewController
     private TextField enterUserName;
     @javafx.fxml.FXML
     private AnchorPane loginMainPane;
-
+    @javafx.fxml.FXML
+    private ComboBox<String> userTypeComboBox;
     @javafx.fxml.FXML
     public void initialize() {
+        userTypeComboBox.getItems().addAll("Member","Accountant","Receptionist","Librarian","Visitor","Catalog Officer","Acquisition Officer");
     }
 
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("abdullahalnuman/AccountantDashboardView.fxml"));
-        Node node = fxmlLoader.load();
-        loginMainPane.getChildren().setAll(node);
 
+        if (userTypeComboBox.getValue().equals("Accountant")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("abdullahalnuman/AccountantDashboardView.fxml"));
+            Node node = fxmlLoader.load();
+            loginMainPane.getChildren().setAll(node);
+        }
 
+        if (userTypeComboBox.getValue().equals("Receptionist")){
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("abdullahalnuman/ReceptionistDashboardView.fxml"));
+            Node node = fxmlLoader.load();
+            loginMainPane.getChildren().setAll(node);
+
+        }
 
 
 

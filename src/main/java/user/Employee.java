@@ -6,11 +6,13 @@ public class Employee extends User{
     private float salary;
     private LocalDate dateOfJoining;
 
-    public Employee(LocalDate dateOfBirth, String userEmail, String userId, String userName, LocalDate dateOfJoining, float salary) {
-        super(dateOfBirth, userEmail, userId, userName);
+    public Employee(LocalDate dateOfBirth, String userEmail, String userId, String userName, String userPassword, LocalDate dateOfJoining, float salary) {
+        super(dateOfBirth, userEmail, userId, userName, userPassword);
         this.dateOfJoining = dateOfJoining;
         this.salary = salary;
     }
+
+
 
     public LocalDate getDateOfJoining() {
         return dateOfJoining;

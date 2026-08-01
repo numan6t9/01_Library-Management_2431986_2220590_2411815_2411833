@@ -49,11 +49,13 @@ public class AccountantDashboardViewController
     }
 
 
-    @javafx.fxml.FXML
+   @javafx.fxml.FXML
     public void LogoutButtonForAccountant(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/LoginView.fxml"));
         Node node = fxmlLoader.load();
         accountantMainPane.getChildren().setAll(node);
+
+
 
 
 
