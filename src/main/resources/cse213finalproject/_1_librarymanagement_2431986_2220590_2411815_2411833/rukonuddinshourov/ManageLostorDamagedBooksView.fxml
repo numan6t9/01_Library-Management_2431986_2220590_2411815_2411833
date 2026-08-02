@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="lostordamagedBooksMainPanel" prefHeight="711.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageLostorDamagedBooksViewController">
+<AnchorPane fx:id="lostordamagedBooksMainPane" prefHeight="711.0" prefWidth="918.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.ManageLostorDamagedBooksViewController">
    <children>
-      <Label alignment="CENTER" layoutY="2.0" prefHeight="55.0" prefWidth="920.0" text="Lost or Damaged Books">
+      <Label alignment="CENTER" layoutY="2.0" prefHeight="55.0" prefWidth="920.0" text="Lost / Damaged Books">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

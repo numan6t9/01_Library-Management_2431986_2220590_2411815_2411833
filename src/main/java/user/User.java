@@ -4,14 +4,15 @@ import java.time.LocalDate;
 
 public abstract class User {
     protected final String userId, userName;
-    protected String userEmail;
+    protected String userPassword,userEmail;
     protected LocalDate dateOfBirth;
 
-    public User(LocalDate dateOfBirth, String userEmail, String userId, String userName) {
+    public User(LocalDate dateOfBirth, String userEmail, String userId, String userName, String userPassword) {
         this.dateOfBirth = dateOfBirth;
         this.userEmail = userEmail;
         this.userId = userId;
         this.userName = userName;
+        this.userPassword = userPassword;
     }
 
     public LocalDate getDateOfBirth() {
@@ -38,12 +39,21 @@ public abstract class User {
         return userName;
     }
 
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "dateOfBirth=" + dateOfBirth +
                 ", userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
                 ", userEmail='" + userEmail + '\'' +
                 '}';
     }
