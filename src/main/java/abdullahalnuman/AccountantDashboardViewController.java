@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -30,8 +31,17 @@ public class AccountantDashboardViewController
     @javafx.fxml.FXML
     public void FinancialStatementButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/abdullahalnuman/FinancialStatementView.fxml"));
+        /*
+        Stage nextStage =
+                (Node)actionEvent.getSource().getScene().getWindow(); node is an object of getScene
+
+         */
+
+
         Node node = fxmlLoader.load();
         accountantMainPane.getChildren().setAll(node);
+
+
     }
 
     @javafx.fxml.FXML
