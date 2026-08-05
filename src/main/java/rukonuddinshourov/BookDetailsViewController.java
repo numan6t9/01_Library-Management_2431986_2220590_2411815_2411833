@@ -22,8 +22,6 @@ public class BookDetailsViewController {
     @javafx.fxml.FXML
     private TextField bookNameTF;
     @javafx.fxml.FXML
-    private AnchorPane bookDetailsMainPanel;
-    @javafx.fxml.FXML
     private TableColumn bookcategoryTC;
     @javafx.fxml.FXML
     private TextField availablityTF;
@@ -39,6 +37,8 @@ public class BookDetailsViewController {
     private TextField bookTitleTF;
     @javafx.fxml.FXML
     private ComboBox categoryCB;
+    @javafx.fxml.FXML
+    private AnchorPane bookDetailsMainPane;
 
     @javafx.fxml.FXML
     public void searchInTheListButtonOnAction(ActionEvent actionEvent) {
@@ -61,7 +61,7 @@ public class BookDetailsViewController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
 
-        bookDetailsMainPanel.getChildren().setAll(node);
+        bookDetailsMainPane.getChildren().setAll(node);
 
     }
 
