@@ -22,7 +22,7 @@
       <TextField fx:id="enterEventVenue" layoutX="174.0" layoutY="160.0" />
       <Label layoutX="411.0" layoutY="164.0" text="Event Organizer" />
       <TextField fx:id="enterEventorganizer" layoutX="533.0" layoutY="160.0" />
-      <Button layoutX="255.0" layoutY="250.0" mnemonicParsing="false" onAction="#createEventButton" prefHeight="47.0" prefWidth="238.0" text="Create Event " />
+      <Button layoutX="255.0" layoutY="250.0" mnemonicParsing="false" onAction="#createEventAndViewEventButton" prefHeight="47.0" prefWidth="238.0" text="Create Event and View" />
       <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButton" prefHeight="36.0" prefWidth="110.0" text="Back" />
    </children>
 </AnchorPane>

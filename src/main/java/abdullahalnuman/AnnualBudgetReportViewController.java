@@ -23,4 +23,8 @@ public class AnnualBudgetReportViewController
         annualBudgetMainPane.getChildren().setAll(node);
 
     }
+
+    @javafx.fxml.FXML
+    public void retrieveFinancialRecords(ActionEvent actionEvent) {
+    }
 }

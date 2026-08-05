@@ -19,8 +19,8 @@
       <DatePicker layoutX="185.0" layoutY="153.0" />
       <DatePicker layoutX="447.0" layoutY="153.0" />
       <Label layoutX="399.0" layoutY="157.0" text="TO" />
-      <Button layoutX="250.0" layoutY="234.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="210.0" text="Retrieve financial records" />
-      <TableView layoutX="121.0" layoutY="353.0" prefHeight="203.0" prefWidth="482.0">
+      <Button layoutX="250.0" layoutY="234.0" mnemonicParsing="false" onAction="#retrieveFinancialRecords" prefHeight="69.0" prefWidth="210.0" text="Retrieve financial records" />
+      <TableView layoutX="121.0" layoutY="353.0" prefHeight="203.0" prefWidth="439.0">
         <columns>
           <TableColumn prefWidth="214.0" text="C1" />
           <TableColumn prefWidth="225.0" text="C2" />

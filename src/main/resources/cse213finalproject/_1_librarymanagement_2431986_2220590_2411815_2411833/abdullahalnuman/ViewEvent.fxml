@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="eventInformationMainPane" prefHeight="824.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.ViewEventController">
+   <children>
+      <Label alignment="CENTER" layoutX="213.0" layoutY="27.0" prefHeight="35.0" prefWidth="174.0" text="Event Information">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="eventViewTable" layoutX="16.0" layoutY="181.0" prefHeight="208.0" prefWidth="568.0">
+        <columns>
+          <TableColumn fx:id="eventNameTableView" prefWidth="98.0" text="Event Name" />
+          <TableColumn fx:id="eventScheduleTableView" prefWidth="156.0" text="Event Schedule" />
+            <TableColumn fx:id="venueTableView" prefWidth="156.0" text="Venue" />
+            <TableColumn fx:id="eventOrganizerTableView" prefWidth="156.0" text="Event Organizer" />
+        </columns>
+      </TableView>
+      <Button layoutX="258.0" layoutY="453.0" mnemonicParsing="false" onAction="#viewEventButton" text="View Event" />
+      <Button layoutX="30.0" layoutY="32.0" mnemonicParsing="false" onAction="#backPreviousPageButton" text="Back" />
+   </children>
+</AnchorPane>

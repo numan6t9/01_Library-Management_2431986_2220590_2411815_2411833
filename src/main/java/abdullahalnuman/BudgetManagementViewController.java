@@ -21,8 +21,6 @@ public class BudgetManagementViewController
     @javafx.fxml.FXML
     private Label showTotalExpenses;
     @javafx.fxml.FXML
-    private ComboBox chooseBudgetComboBox;
-    @javafx.fxml.FXML
     private DatePicker fromBudgetPeriod;
     @javafx.fxml.FXML
     private Label showRemainingButton;
@@ -61,6 +59,8 @@ public class BudgetManagementViewController
 
     @javafx.fxml.FXML
     public void showAvailableBudgetButton(ActionEvent actionEvent) {
+
+
     }
 
     @javafx.fxml.FXML
