@@ -37,13 +37,13 @@ public class MemberRegistrationviewController {
     @javafx.fxml.FXML
     private PasswordField ConfirmPasswordPF;
     @javafx.fxml.FXML
-    private BorderPane memberRegistrasionMainPane;
+    private BorderPane memberRegistrationMainPane;
 
     @javafx.fxml.FXML
     public void backOnActionButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/LibrarianDashboardview.fxml"));
         Node node = fxmlLoader.load();
-        memberRegistrasionMainPane.getChildren().setAll(node);
+        memberRegistrationMainPane.getChildren().setAll(node);
 
     }
 

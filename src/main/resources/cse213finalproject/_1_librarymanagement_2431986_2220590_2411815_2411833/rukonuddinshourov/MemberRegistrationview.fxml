@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="memberRegistrasionMainPane" prefHeight="605.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberRegistrationviewController">
+<BorderPane fx:id="memberRegistrationMainPane" prefHeight="605.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberRegistrationviewController">
 
     <top>
         <VBox alignment="CENTER" prefHeight="104.0" prefWidth="636.0" spacing="10" BorderPane.alignment="CENTER">
