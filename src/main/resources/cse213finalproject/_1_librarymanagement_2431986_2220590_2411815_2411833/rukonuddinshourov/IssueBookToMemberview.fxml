@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="issueBookspanelMainPane" prefHeight="539.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.IssueBooksToMembersViewController">
    <children>
-      <Label fx:id="issueBooksPanaellabel" alignment="CENTER" prefHeight="59.0" prefWidth="947.0" style="-fx-background-color: gray;" text="Issue Books  panel">
+      <Label fx:id="issueBookslabel" alignment="CENTER" prefHeight="59.0" prefWidth="947.0" style="-fx-background-color: gray;" text="Issue Books  panel">
          <font>
             <Font name="System Bold" size="41.0" />
          </font>

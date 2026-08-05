@@ -30,11 +30,11 @@ public class MemberpersonalprofileupdateViewController {
     @javafx.fxml.FXML
     private PasswordField confirmPasswordPF;
     @javafx.fxml.FXML
-    private AnchorPane memberprofileUpdateMainPanel;
-    @javafx.fxml.FXML
     private TextField firstNameTF;
     @javafx.fxml.FXML
     private TextField memberIdTF;
+    @javafx.fxml.FXML
+    private AnchorPane memberprofileUpdateMainPane;
 
     @javafx.fxml.FXML
     public void cancelButtonOnAction(ActionEvent actionEvent) {
@@ -56,7 +56,7 @@ public class MemberpersonalprofileupdateViewController {
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        memberprofileUpdateMainPanel.getChildren().setAll(node);
+        memberprofileUpdateMainPane.getChildren().setAll(node);
 
     }
 }

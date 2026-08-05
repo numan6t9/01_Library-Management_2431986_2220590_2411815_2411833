@@ -49,15 +49,17 @@
 
                 <columns>
 
-                    <TableColumn fx:id="bookIDTC" prefWidth="100" text="Book ID" />
+                    <TableColumn fx:id="bookIDTC" prefWidth="100.0" text="Book ID" maxWidth="1000.0" minWidth="30.0"/>
 
-                    <TableColumn fx:id="titleTC" prefWidth="250" text="Title" />
+                    <TableColumn fx:id="titleTC" prefWidth="250.0" text="Title" maxWidth="2500.0" minWidth="30.0"/>
 
-                    <TableColumn fx:id="issueDateTC" prefWidth="150" text="Issue Date" />
+                    <TableColumn fx:id="issueDateTC" prefWidth="150.0" text="Issue Date" maxWidth="1500.0"
+                                 minWidth="30.0"/>
 
-                    <TableColumn fx:id="dueDateTC" prefWidth="150" text="Due Date" />
+                    <TableColumn fx:id="dueDateTC" prefWidth="150.0" text="Due Date" maxWidth="1500.0" minWidth="30.0"/>
 
-                    <TableColumn fx:id="statusTC" prefWidth="155.99993896484375" text="Status" />
+                    <TableColumn fx:id="statusTC" prefWidth="155.99993896484375" text="Status"
+                                 maxWidth="1559.9993896484375" minWidth="30.0"/>
 
                 </columns>
 

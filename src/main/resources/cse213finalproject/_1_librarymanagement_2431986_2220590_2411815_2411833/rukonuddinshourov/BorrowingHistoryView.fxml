@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="borrowingHistoryMainPanel" prefHeight="516.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.BorrowingHistoryViewController">
+<AnchorPane fx:id="borrowingHistoryMainPane" prefHeight="516.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.BorrowingHistoryViewController">
    <children>
       <Label fx:id="borrowingHistoryLB" alignment="CENTER" prefHeight="55.0" prefWidth="709.0" style="-fx-background-color: coral;" text="Borrowing History">
          <font>

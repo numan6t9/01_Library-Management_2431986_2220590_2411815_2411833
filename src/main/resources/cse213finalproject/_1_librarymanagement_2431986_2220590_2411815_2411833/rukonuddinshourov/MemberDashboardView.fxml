@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="memberDasboardMainPanel" prefHeight="672.0" prefWidth="725.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberDashboardViewControlller">
+<AnchorPane fx:id="memberDasboardMainPane" prefHeight="672.0" prefWidth="725.0" style="-fx-background-color: tan;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberDashboardViewControlller">
    <children>
       <HBox layoutX="-5.0" prefHeight="60.0" prefWidth="746.0" style="-fx-background-color: gray;">
          <children>
