@@ -29,8 +29,6 @@ public class ManageLostorDamagedBooksViewController {
     @javafx.fxml.FXML
     private TableColumn titleTC;
     @javafx.fxml.FXML
-    private AnchorPane lostordamagedBooksMainPanel;
-    @javafx.fxml.FXML
     private TextField AuthorTF;
     @javafx.fxml.FXML
     private TableColumn statusTC;
@@ -40,6 +38,8 @@ public class ManageLostorDamagedBooksViewController {
     private DatePicker IssueDateDP;
     @javafx.fxml.FXML
     private TextField MemberIDTF;
+    @javafx.fxml.FXML
+    private AnchorPane lostordamagedBooksMainPane;
 
     @Deprecated
     public void ClearRecords(ActionEvent actionEvent) {
@@ -75,9 +75,9 @@ public class ManageLostorDamagedBooksViewController {
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent)throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/LibrarianDashboardview.fxml"));
         Node node = fxmlLoader.load();
-        lostordamagedBooksMainPanel.getChildren().setAll(node);
+        lostordamagedBooksMainPane.getChildren().setAll(node);
 
 
     }

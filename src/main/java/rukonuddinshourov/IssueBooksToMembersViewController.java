@@ -25,8 +25,6 @@ public class IssueBooksToMembersViewController {
     @javafx.fxml.FXML
     private DatePicker issueDateDP;
     @javafx.fxml.FXML
-    private AnchorPane issueBookspanelMainPanel;
-    @javafx.fxml.FXML
     private TableColumn memberIdTC;
     @javafx.fxml.FXML
     private TableColumn issuedateTC;
@@ -34,6 +32,8 @@ public class IssueBooksToMembersViewController {
     private Label issueBooksPanaellabel;
     @javafx.fxml.FXML
     private TextField isbnTitleTF;
+    @javafx.fxml.FXML
+    private AnchorPane issueBookspanelMainPane;
 
     @javafx.fxml.FXML
     public void SearchBookAvaiablity(ActionEvent actionEvent) {
@@ -57,10 +57,9 @@ public class IssueBooksToMembersViewController {
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/LibrarianDashboardview.fxml"));
         Node node = fxmlLoader.load();
-
-        issueBookspanelMainPanel.getChildren().setAll(node);
+        issueBookspanelMainPane.getChildren().setAll(node);
 
     }
 }
