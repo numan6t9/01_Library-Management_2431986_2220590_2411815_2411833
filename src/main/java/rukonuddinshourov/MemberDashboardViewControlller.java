@@ -104,13 +104,6 @@ public class MemberDashboardViewControlller {
         memberDasboardMainPane.getChildren().setAll(node);
     }
 
-    @javafx.fxml.FXML
-    public void manageOverdueAbdFinesButtonOnAction(ActionEvent actionEvent) throws IOException{
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/MemberPayFinesView.fxml"));
-        Node node = fxmlLoader.load();
-        memberDasboardMainPane.getChildren().setAll(node);
-    }
 
     @javafx.fxml.FXML
     public void borrowingHistoryButtonOnAction(ActionEvent actionEvent)throws IOException {
@@ -126,10 +119,11 @@ public class MemberDashboardViewControlller {
         memberDasboardMainPane.getChildren().setAll(node);
     }
 
-    @javafx.fxml.FXML
-    public void settingsButtonOnAction(ActionEvent actionEvent) throws IOException{
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/MemberpersonalprofileUpdateView.fxml"));
+    @javafx.fxml.FXML
+    public void manageOverdueandFinesButtonOnAction(ActionEvent actionEvent)throws  IOException {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/MemberPayFinesView.fxml"));
         Node node = fxmlLoader.load();
         memberDasboardMainPane.getChildren().setAll(node);
     }

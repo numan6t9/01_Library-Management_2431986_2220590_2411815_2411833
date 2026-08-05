@@ -45,8 +45,7 @@
                 <Button mnemonicParsing="false" onAction="#deactivateButtonOnAction" text="Deactivate Account" />
                 <Button mnemonicParsing="false" onAction="#personalInformationButtonOnAction" text="Personal Information" />
                 <Button mnemonicParsing="false" onAction="#renewBorrowedBooksButtonOnAction" text="Renew Borrowed Book" />
-                <Button mnemonicParsing="false" onAction="#manageOverdueAbdFinesButtonOnAction" text="ManageOverdue And Fines" />
-                <Button mnemonicParsing="false" onAction="#settingsButtonOnAction" text="Settings" />
+                <Button mnemonicParsing="false" onAction="#manageOverdueandFinesButtonOnAction" text="ManageOverdue And Fines" />
                 <Button mnemonicParsing="false" onAction="#logoutButtonOnAction" text="Logout" />
             </children>
         </VBox>
