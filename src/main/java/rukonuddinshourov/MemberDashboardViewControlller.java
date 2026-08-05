@@ -20,8 +20,6 @@ public class MemberDashboardViewControlller {
     @javafx.fxml.FXML
     private TableColumn borrowDateTC;
     @javafx.fxml.FXML
-    private AnchorPane memberDasboardMainPanel;
-    @javafx.fxml.FXML
     private ListView notificationLV;
     @javafx.fxml.FXML
     private TextField borrowNumberTF;
@@ -37,14 +35,15 @@ public class MemberDashboardViewControlller {
     private TextField reserveBookTF;
     @javafx.fxml.FXML
     private Label manuLB;
-
+    @javafx.fxml.FXML
+    private AnchorPane memberDasboardMainPane;
 
 
     @javafx.fxml.FXML
     public void payfineOnActionButton(ActionEvent actionEvent) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberPayFinesView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -55,7 +54,7 @@ public class MemberDashboardViewControlller {
     public void profileButtonOnAction(ActionEvent actionEvent) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberRegistrationView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
     }
@@ -64,7 +63,7 @@ public class MemberDashboardViewControlller {
     public void borrowedBooksButtonOnAction(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/BorrowingHistoryView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -74,7 +73,7 @@ public class MemberDashboardViewControlller {
     public void homeButtonOnAction(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -84,7 +83,7 @@ public class MemberDashboardViewControlller {
     public void logoutButtonOnAction(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LoginView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -94,7 +93,7 @@ public class MemberDashboardViewControlller {
     public void reservedBooksButtonOnAction(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/ReserveBookMemberView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -105,7 +104,7 @@ public class MemberDashboardViewControlller {
     public void borrowHistoryButtonOnAction(ActionEvent actionEvent) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/BorrowingHistoryView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
     }
@@ -114,7 +113,7 @@ public class MemberDashboardViewControlller {
     public void renewBooksButtonOnAction(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/RenewBorrowedBookView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -124,7 +123,7 @@ public class MemberDashboardViewControlller {
     public void settingsButtonOnActon(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberRegistrationView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 
@@ -136,7 +135,7 @@ public class MemberDashboardViewControlller {
     public void searchButtonOnAction(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/SearchBookView.fxml"));
         Node node = fxmlLoader.load();
-        memberDasboardMainPanel.getChildren().setAll(node);
+        memberDasboardMainPane.getChildren().setAll(node);
 
 
 

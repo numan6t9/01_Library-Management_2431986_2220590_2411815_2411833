@@ -16,8 +16,6 @@ public class MemberPayFinesViewController {
     @javafx.fxml.FXML
     private TextField booktitleTF;
     @javafx.fxml.FXML
-    private AnchorPane memberPayFinesMainPanel;
-    @javafx.fxml.FXML
     private TextField cardmobileNumberTF;
     @javafx.fxml.FXML
     private TextField fineIdTF;
@@ -37,6 +35,8 @@ public class MemberPayFinesViewController {
     private TextField dayslateTF;
     @javafx.fxml.FXML
     private RadioButton cashRB;
+    @javafx.fxml.FXML
+    private AnchorPane memberPayFinesMainPane;
 
     @javafx.fxml.FXML
     public void printReceiptOnActionButton(ActionEvent actionEvent) {
@@ -62,7 +62,7 @@ public class MemberPayFinesViewController {
     public void backButtonOnAction(ActionEvent actionEvent) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        memberPayFinesMainPanel.getChildren().setAll(node);
+        memberPayFinesMainPane.getChildren().setAll(node);
 
 
     }

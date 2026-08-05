@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="deactivateAccountMainPanel" prefHeight="678.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.DeactivateMemberAccountViewController">
+<AnchorPane fx:id="deactivateAccountMainPane" prefHeight="678.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.DeactivateMemberAccountViewController">
    <children>
       <Label fx:id="deactivatelabell" alignment="CENTER" prefHeight="62.0" prefWidth="708.0" style="-fx-background-color: gray;" text="Deactivate  / Delete Account ">
          <font>

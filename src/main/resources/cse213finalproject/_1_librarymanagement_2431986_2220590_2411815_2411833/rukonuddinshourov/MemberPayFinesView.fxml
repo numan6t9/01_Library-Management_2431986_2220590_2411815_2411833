@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="memberPayFinesMainPanel" prefHeight="667.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberPayFinesViewController">
+<AnchorPane fx:id="memberPayFinesMainPane" prefHeight="667.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberPayFinesViewController">
    <children>
       <Label alignment="CENTER" prefHeight="63.0" prefWidth="630.0" style="-fx-background-color: gray;" text="Member Pay Fines">
          <font>

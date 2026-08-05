@@ -29,11 +29,11 @@ public class IssueBooksToMembersViewController {
     @javafx.fxml.FXML
     private TableColumn issuedateTC;
     @javafx.fxml.FXML
-    private Label issueBooksPanaellabel;
-    @javafx.fxml.FXML
     private TextField isbnTitleTF;
     @javafx.fxml.FXML
     private AnchorPane issueBookspanelMainPane;
+    @javafx.fxml.FXML
+    private Label issueBookslabel;
 
     @javafx.fxml.FXML
     public void SearchBookAvaiablity(ActionEvent actionEvent) {

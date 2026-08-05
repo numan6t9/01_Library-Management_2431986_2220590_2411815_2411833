@@ -24,13 +24,13 @@ public class BorrowingHistoryViewController {
     @javafx.fxml.FXML
     private TableColumn statusTC;
     @javafx.fxml.FXML
-    private AnchorPane borrowingHistoryMainPanel;
-    @javafx.fxml.FXML
     private TextField bookSearchTF;
     @javafx.fxml.FXML
     private ComboBox statusTF;
     @javafx.fxml.FXML
     private TableColumn borrowTC;
+    @javafx.fxml.FXML
+    private AnchorPane borrowingHistoryMainPane;
 
     @javafx.fxml.FXML
     public void searchOnActionButton(ActionEvent actionEvent) {
@@ -53,7 +53,7 @@ public class BorrowingHistoryViewController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
 
-        borrowingHistoryMainPanel.getChildren().setAll(node);
+        borrowingHistoryMainPane.getChildren().setAll(node);
 
 
     }

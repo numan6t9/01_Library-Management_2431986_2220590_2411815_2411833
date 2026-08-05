@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="memberprofileUpdateMainPanel" prefHeight="649.0" prefWidth="600.0" style="-fx-background-color: offwhite;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberpersonalprofileupdateViewController">
+<AnchorPane fx:id="memberprofileUpdateMainPane" prefHeight="649.0" prefWidth="600.0" style="-fx-background-color: offwhite;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.MemberpersonalprofileupdateViewController">
    <children>
       <Label alignment="CENTER" prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: teal;" text="MemberPersonalProfileUpdate">
          <font>

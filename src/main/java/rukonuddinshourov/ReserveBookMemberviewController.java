@@ -19,8 +19,6 @@ public class ReserveBookMemberviewController {
     @javafx.fxml.FXML
     private DatePicker ReservationDate;
     @javafx.fxml.FXML
-    private AnchorPane reserveBookMainPanel;
-    @javafx.fxml.FXML
     private GridPane reserveDateDP;
     @javafx.fxml.FXML
     private TableColumn booIdTC;
@@ -40,6 +38,8 @@ public class ReserveBookMemberviewController {
     private TextField searchbookTF;
     @javafx.fxml.FXML
     private TableColumn AuthorTC;
+    @javafx.fxml.FXML
+    private AnchorPane reserveBookMainPane;
 
     @javafx.fxml.FXML
     public void reserveBookOnActionButton(ActionEvent actionEvent) {
@@ -53,7 +53,7 @@ public class ReserveBookMemberviewController {
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        reserveBookMainPanel.getChildren().setAll(node);
+        reserveBookMainPane.getChildren().setAll(node);
 
     }
 

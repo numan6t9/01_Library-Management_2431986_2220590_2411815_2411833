@@ -38,7 +38,7 @@ public class RenewBorrowedBookViewController {
     @javafx.fxml.FXML
     private Button btnRenew;
     @javafx.fxml.FXML
-    private BorderPane renewBorrowedBooksMainPanel;
+    private BorderPane renewBorrowedBooksMainPane;
 
     @javafx.fxml.FXML
     public void logoutOnActionButton(ActionEvent actionEvent) {
@@ -48,7 +48,7 @@ public class RenewBorrowedBookViewController {
     public void backOnActionButton(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        renewBorrowedBooksMainPanel.getChildren().setAll(node);
+        renewBorrowedBooksMainPane.getChildren().setAll(node);
 
     }
 
