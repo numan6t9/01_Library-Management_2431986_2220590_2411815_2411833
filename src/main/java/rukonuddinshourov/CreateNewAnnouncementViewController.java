@@ -6,6 +6,8 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
+
 public class CreateNewAnnouncementViewController {
     @javafx.fxml.FXML
     private Label createNewAnnouncement;
@@ -24,7 +26,7 @@ public class CreateNewAnnouncementViewController {
     @javafx.fxml.FXML
     private ComboBox TargetAudianceCB;
     @javafx.fxml.FXML
-    private AnchorPane createNewAnnouncementMainPanel;
+    private AnchorPane createNewAnnouncementMainPane;
 
 
     @javafx.fxml.FXML
@@ -47,22 +49,19 @@ public class CreateNewAnnouncementViewController {
     public void saveDraftButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void backBurronOnAction(ActionEvent actionEvent) {
-    }
+//    @Deprecated
+//    public void backBurronOnAction(ActionEvent actionEvent) {
+//    }
 
     @javafx.fxml.FXML
     public void publishButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void backButtonOnAction(ActionEvent actionEvent) throws Exception{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+    public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/LibrarianDashboardview.fxml"));
         Node node = fxmlLoader.load();
-
-        createNewAnnouncementMainPanel.getChildren().setAll(node);
-
-
+        createNewAnnouncementMainPane.getChildren().setAll(node);
 
     }
 }

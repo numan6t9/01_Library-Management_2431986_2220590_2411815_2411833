@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="libraryCatalogMainPanel" prefHeight="662.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.UpdateLibraryCatalogViewController">
+<AnchorPane fx:id="libraryCatalogMainPane" prefHeight="662.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.UpdateLibraryCatalogViewController">
    <children>
-      <Label alignment="CENTER" layoutX="-2.0" prefHeight="60.0" prefWidth="862.0" text="Library Catalog">
+      <Label fx:id="libraryCataloglabel" alignment="CENTER" layoutX="-2.0" prefHeight="60.0" prefWidth="862.0" text="Library Catalog">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
@@ -42,8 +42,8 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="139.0" layoutY="591.0" mnemonicParsing="false" onAction="#Searchbutton" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: green;" text="Search" />
-      <Button layoutX="375.0" layoutY="591.0" mnemonicParsing="false" onAction="#refreshButton" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: aqua;" text="Refresh" />
+      <Button layoutX="139.0" layoutY="591.0" mnemonicParsing="false" onAction="#SearchbuttonOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: green;" text="Search" />
+      <Button layoutX="375.0" layoutY="591.0" mnemonicParsing="false" onAction="#refreshButtonOAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: aqua;" text="Refresh" />
       <Button layoutX="42.0" layoutY="591.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: aqua;" text="Update" />
       <TextField fx:id="ISBNTF" layoutX="163.0" layoutY="154.0" />
       <TextField fx:id="TitleTF" layoutX="163.0" layoutY="199.0" />
@@ -68,7 +68,7 @@
          </font>
       </Label>
       <TextField fx:id="shelfLocationTF" layoutX="445.0" layoutY="200.0" />
-      <TableView layoutX="97.0" layoutY="343.0" prefHeight="200.0" prefWidth="526.0">
+      <TableView fx:id="bookTableView" layoutX="97.0" layoutY="343.0" prefHeight="200.0" prefWidth="526.0">
         <columns>
           <TableColumn fx:id="bookIdTC" prefWidth="75.0" text="Book ID" />
           <TableColumn fx:id="isbnTC" prefWidth="75.0" text="ISBN" />
@@ -79,14 +79,14 @@
             <TableColumn fx:id="statusTC" prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="468.0" layoutY="591.0" mnemonicParsing="false" onAction="#RemoveButton" prefHeight="39.0" prefWidth="83.0" text="Remove" />
+      <Button layoutX="468.0" layoutY="591.0" mnemonicParsing="false" onAction="#removeButtononAction" prefHeight="39.0" prefWidth="83.0" text="Remove" />
 <!--      <BottomNavigationButton alignment="CENTER" layoutX="593.0" layoutY="652.0" onAction="#confirmUpdateButton" prefHeight="46.0" prefWidth="200.0" text="Confirm update">-->
 <!--         <font>-->
 <!--            <Font name="System Bold" size="22.0" />-->
 <!--         </font>-->
 <!--      </BottomNavigationButton>-->
       <Button layoutX="609.0" layoutY="591.0" mnemonicParsing="false" onAction="#confirmOnActionbutton" prefHeight="39.0" prefWidth="83.0" text="Confirm" />
-      <Button layoutX="255.0" layoutY="591.0" mnemonicParsing="false" onAction="#backOnACtionButton" prefHeight="39.0" prefWidth="90.0" text="Back">
+      <Button layoutX="255.0" layoutY="591.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="90.0" text="Back">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
