@@ -54,7 +54,7 @@ public class MemberpersonalprofileupdateViewController {
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
         memberprofileUpdateMainPane.getChildren().setAll(node);
 
