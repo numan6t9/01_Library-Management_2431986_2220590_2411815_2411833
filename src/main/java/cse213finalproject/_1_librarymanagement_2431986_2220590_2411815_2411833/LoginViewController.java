@@ -43,6 +43,19 @@ public class LoginViewController
             loginMainPane.getChildren().setAll(node);
 
         }
+        if (userTypeComboBox.getValue().equals("Member")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rukonuddinshourov/memberDashboardView.fxml"));
+            Node node = fxmlLoader.load();
+            loginMainPane.getChildren().setAll(node);
+
+
+        }
+        if (userTypeComboBox.getValue().equals("Librarian")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("rukonuddinshourov/LibrarianDashboardView.fxml"));
+            Node node = fxmlLoader.load();
+            loginMainPane.getChildren().setAll(node);
+
+        }
 
     }
 }
