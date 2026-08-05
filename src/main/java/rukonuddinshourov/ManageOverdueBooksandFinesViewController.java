@@ -20,8 +20,6 @@ public class ManageOverdueBooksandFinesViewController
     @javafx.fxml.FXML
     private TableColumn bookReturnTC;
     @javafx.fxml.FXML
-    private AnchorPane manageoverduebooksAndFinesMainPanel;
-    @javafx.fxml.FXML
     private Label finetoPayLB;
     @javafx.fxml.FXML
     private TableColumn bookReturnDateTC;
@@ -33,6 +31,8 @@ public class ManageOverdueBooksandFinesViewController
     private TextField overdueDaysTF;
     @javafx.fxml.FXML
     private TextField enterPaymentInformationTF;
+    @javafx.fxml.FXML
+    private AnchorPane manageoverduebooksAndFinesMainPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -78,7 +78,7 @@ public class ManageOverdueBooksandFinesViewController
     public void backButtonOnAction(ActionEvent actionEvent)throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        manageoverduebooksAndFinesMainPanel.getChildren().setAll(node);
+        manageoverduebooksAndFinesMainPane.getChildren().setAll(node);
 
     }
 }

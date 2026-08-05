@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="createNewAnnouncementMainPanel" prefHeight="550.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.CreateNewAnnouncementViewController">
+<AnchorPane fx:id="createNewAnnouncementMainPane" prefHeight="550.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.CreateNewAnnouncementViewController">
    <children>
       <Label fx:id="createNewAnnouncement" alignment="CENTER" layoutY="-3.0" prefHeight="54.0" prefWidth="918.0" style="-fx-background-color: teal;" text="Create  New Announcement">
          <font>

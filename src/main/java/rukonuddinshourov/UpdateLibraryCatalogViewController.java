@@ -3,9 +3,7 @@ package rukonuddinshourov;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -43,27 +41,31 @@ public class UpdateLibraryCatalogViewController {
     @javafx.fxml.FXML
     private TableColumn quantityTC;
     @javafx.fxml.FXML
-    private AnchorPane libraryCatalogMainPanel;
+    private AnchorPane libraryCatalogMainPane;
+    @javafx.fxml.FXML
+    private Label libraryCataloglabel;
+    @javafx.fxml.FXML
+    private TableView bookTableView;
 
 //    @javafx.fxml.FXML
 //    public void confirmUpdateButton(ActionEvent actionEvent) {
 //    }
-
-    @javafx.fxml.FXML
-    public void refreshButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void Searchbutton(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void updateButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void RemoveButton(ActionEvent actionEvent) {
-    }
+//
+//    @Deprecated
+//    public void refreshButton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void Searchbutton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void updateButton(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void RemoveButton(ActionEvent actionEvent) {
+//    }
 
 //    @Deprecated
 //    public void ConfirmUpdateButton(ActionEvent actionEvent) {
@@ -85,12 +87,31 @@ public class UpdateLibraryCatalogViewController {
 //    public void confirmUpdateButton(ActionEvent actionEvent) {
 //    }
 
+//    @Deprecated
+//    public void backOnACtionButton(ActionEvent actionEvent) throws IOException {
+//        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+//        Node node = fxmlLoader.load();
+//        libraryCatalogMainPane.getChildren().setAll(node);
+//
+//
+//    }
+
     @javafx.fxml.FXML
-    public void backOnACtionButton(ActionEvent actionEvent) throws IOException {
+    public void removeButtononAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent)throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
         Node node = fxmlLoader.load();
-        libraryCatalogMainPanel.getChildren().setAll(node);
+        libraryCatalogMainPane.getChildren().setAll(node);
+    }
 
+    @javafx.fxml.FXML
+    public void refreshButtonOAction(ActionEvent actionEvent) {
+    }
 
+    @javafx.fxml.FXML
+    public void SearchbuttonOnAction(ActionEvent actionEvent) {
     }
 }
