@@ -34,8 +34,6 @@ public class ProcessBookReturnsViewController {
     @javafx.fxml.FXML
     private RadioButton lostRB;
     @javafx.fxml.FXML
-    private AnchorPane processBookReturnMainPanel;
-    @javafx.fxml.FXML
     private TextField memberIDTF;
     @javafx.fxml.FXML
     private RadioButton damagedRB;
@@ -47,6 +45,8 @@ public class ProcessBookReturnsViewController {
     private TextField titleTF;
     @javafx.fxml.FXML
     private RadioButton goodRB;
+    @javafx.fxml.FXML
+    private AnchorPane processBookReturnMainPane;
 
     @javafx.fxml.FXML
     public void searchIssuedBooks(ActionEvent actionEvent) {
@@ -54,9 +54,9 @@ public class ProcessBookReturnsViewController {
 
     @javafx.fxml.FXML
     public void backOnActionButton(ActionEvent actionEvent)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/LibrarianDashboardview.fxml"));
         Node node = fxmlLoader.load();
-        processBookReturnMainPanel.getChildren().setAll(node);
+        processBookReturnMainPane.getChildren().setAll(node);
 
 
     }

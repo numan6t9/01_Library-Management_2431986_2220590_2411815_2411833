@@ -15,7 +15,7 @@ public class LibrarianDashboardViewcontroller {
 
     @javafx.fxml.FXML
     public void MemberRegistrationButton(ActionEvent actionEvent) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/MemberRegistrationView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/MemberRegistrationView.fxml"));
         Node node = fxmlLoader.load();
         librarianDashboardMainPane.getChildren().setAll(node);
 
@@ -24,15 +24,7 @@ public class LibrarianDashboardViewcontroller {
 
     @javafx.fxml.FXML
     public void ManageLostorDamagedBooksButton(ActionEvent actionEvent)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/ManageLostorDamageedBooksView.fxml"));
-        Node node = fxmlLoader.load();
-        librarianDashboardMainPane.getChildren().setAll(node);
-
-
-    }
-    @Deprecated
-    public void CreateNewAnnouncementButton(ActionEvent actionEvent)throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/CreateNewAnnouncementView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/ManageLostorDamagedBooksView.fxml"));
         Node node = fxmlLoader.load();
         librarianDashboardMainPane.getChildren().setAll(node);
 
@@ -41,7 +33,7 @@ public class LibrarianDashboardViewcontroller {
 
     @javafx.fxml.FXML
     public void ProcessBookReturnsButton(ActionEvent actionEvent)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/ProcessBookReturnsView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/ProcessBookReturnsView.fxml"));
         Node node = fxmlLoader.load();
         librarianDashboardMainPane.getChildren().setAll(node);
 
@@ -52,10 +44,9 @@ public class LibrarianDashboardViewcontroller {
 
     @javafx.fxml.FXML
     public void UpdateLibraryCatalogButton(ActionEvent actionEvent)throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/UpdateLibraryCatalogView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/UpdateLibraryCatalogView.fxml"));
         Node node = fxmlLoader.load();
         librarianDashboardMainPane.getChildren().setAll(node);
-
 
     }
 
@@ -69,7 +60,7 @@ public class LibrarianDashboardViewcontroller {
 
     @javafx.fxml.FXML
     public void GenerateLibraryReportsButton(ActionEvent actionEvent)throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/GenerateLibraryReportsView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/GenerateLibraryReportsView.fxml"));
         Node node = fxmlLoader.load();
         librarianDashboardMainPane.getChildren().setAll(node);
 

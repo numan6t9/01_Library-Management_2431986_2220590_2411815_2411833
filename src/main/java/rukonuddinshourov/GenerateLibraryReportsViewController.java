@@ -24,8 +24,6 @@ public class GenerateLibraryReportsViewController {
     @javafx.fxml.FXML
     private TableColumn memberIdTC;
     @javafx.fxml.FXML
-    private AnchorPane generateLibraryReportsMainPanel;
-    @javafx.fxml.FXML
     private TextField totalRecordTF;
     @javafx.fxml.FXML
     private DatePicker fromDateDP;
@@ -39,6 +37,8 @@ public class GenerateLibraryReportsViewController {
     private TextField statusTF;
     @javafx.fxml.FXML
     private TableColumn borrowedDateTC;
+    @javafx.fxml.FXML
+    private AnchorPane generateLibraryReportsMainPane;
 
     @Deprecated
     public void clearButton(ActionEvent actionEvent) {
@@ -66,10 +66,9 @@ public class GenerateLibraryReportsViewController {
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent)throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonudddinshourov/LibrarianDashboardView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/LibrarianDashboardview.fxml"));
         Node node = fxmlLoader.load();
-
-        generateLibraryReportsMainPanel.getChildren().setAll(node);
+        generateLibraryReportsMainPane.getChildren().setAll(node);
 
 
     }
