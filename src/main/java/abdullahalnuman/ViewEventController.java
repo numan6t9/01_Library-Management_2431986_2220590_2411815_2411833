@@ -6,7 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -24,7 +24,6 @@ public class ViewEventController
     private TableView<Event> eventViewTable;
     @javafx.fxml.FXML
     private TableColumn <Event, LocalDate>eventScheduleTableView;
-    ArrayList <Event> toReceive;
     @javafx.fxml.FXML
     private AnchorPane eventInformationMainPane;
 
@@ -47,9 +46,29 @@ public class ViewEventController
     @javafx.fxml.FXML
     public void viewEventButton(ActionEvent actionEvent) {
 
-        for (Event e:toReceive){
-            eventViewTable.getItems().addAll(e);
+        File f = new File("Event.bin");
+        try {
+            FileInputStream fis = new FileInputStream(f);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            while(true){
+                try {
+                    Event e = (Event) ois.readObject();
+                    eventViewTable.getItems().add(e);
+                }
+                catch (EOFException e){
+                    ois.close();
+                    break;
+                }
+            }
+
         }
+        catch (Exception e ){
+            e.printStackTrace();
+        }
+
+
+
 
 
     }

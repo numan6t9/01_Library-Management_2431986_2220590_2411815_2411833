@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="registerMemberMainPane" prefHeight="905.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.RegisterMemberViewController">
    <children>
-      <Label layoutX="261.0" layoutY="55.0" text="Register Member">
+      <Label layoutX="250.0" layoutY="30.0" text="Register Member">
          <font>
             <Font name="Liberation Mono Bold" size="18.0" />
          </font>
