@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="memberlistMainPane" prefHeight="767.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdullahalnuman.viewMemberListController">
+   <children>
+      <Button layoutX="23.0" layoutY="30.0" mnemonicParsing="false" onAction="#backPreviousPage" text="Back" />
+      <TableView fx:id="memberListTableView" layoutX="35.0" layoutY="175.0" prefHeight="200.0" prefWidth="532.0">
+        <columns>
+          <TableColumn fx:id="memberNameTableView" prefWidth="153.0" text="Member Name" />
+          <TableColumn fx:id="memberAgeTableView" prefWidth="114.0" text="Member Age" />
+            <TableColumn fx:id="genderTableView" prefWidth="114.0" text="Gender" />
+            <TableColumn fx:id="emailAddressTableView" prefWidth="150.0" text="Email Address" />
+        </columns>
+      </TableView>
+      <Button layoutX="248.0" layoutY="111.0" mnemonicParsing="false" onAction="#loadMemberListTable" text="Load Member" />
+   </children>
+</AnchorPane>

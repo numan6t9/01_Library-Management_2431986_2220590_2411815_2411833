@@ -30,7 +30,9 @@
       <Label layoutX="381.0" layoutY="254.0" text="Address" />
       <TextField fx:id="enterAddress" layoutX="465.0" layoutY="250.0" />
       <Button layoutX="167.0" layoutY="334.0" mnemonicParsing="false" onAction="#registerNewMemberAndGenerateIdButton" text="Register New Member  and Generate Membership ID" />
-      <Label fx:id="showMembershipId" layoutX="546.0" layoutY="316.0" prefHeight="63.0" prefWidth="95.0" style="-fx-background-color: blue;" text="Membership ID" textFill="WHITE" />
-      <Button layoutX="50.0" layoutY="54.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="66.0" text="Back" />
+      <Label fx:id="showMembershipId" alignment="CENTER" layoutX="248.0" layoutY="413.0" prefHeight="63.0" prefWidth="189.0" style="-fx-background-color: blue;" text="Membership ID" textFill="WHITE" />
+      <Button layoutX="17.0" layoutY="29.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="66.0" text="Back" />
+      <Label layoutX="315.0" layoutY="435.0" />
+      <Button fx:id="viewMemberListButton" layoutX="263.0" layoutY="518.0" mnemonicParsing="false" onAction="#viewMemberList" prefHeight="26.0" prefWidth="153.0" text="View Member List" />
    </children>
 </AnchorPane>
