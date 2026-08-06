@@ -81,14 +81,6 @@ public class MemberDashboardViewControlller {
     }
 
     @javafx.fxml.FXML
-    public void renewBorrowedBooksButtonOnAction(ActionEvent actionEvent)throws IOException {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/RenewBorrowedBookView.fxml"));
-        Node node = fxmlLoader.load();
-        memberDasboardMainPane.getChildren().setAll(node);
-    }
-
-    @javafx.fxml.FXML
     public void reserveBookButtonOnAction(ActionEvent actionEvent)throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/ReserveBookMemberView.fxml"));
@@ -126,5 +118,15 @@ public class MemberDashboardViewControlller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/MemberPayFinesView.fxml"));
         Node node = fxmlLoader.load();
         memberDasboardMainPane.getChildren().setAll(node);
+    }
+
+
+
+    @javafx.fxml.FXML
+    public void renewBorrowedButtonOnAction(ActionEvent actionEvent)throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/RenewBorrowedBookView.fxml"));
+        Node node = fxmlLoader.load();
+        memberDasboardMainPane.getChildren().setAll(node);
+
     }
 }

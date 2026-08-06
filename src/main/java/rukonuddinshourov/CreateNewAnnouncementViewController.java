@@ -1,6 +1,7 @@
 package rukonuddinshourov;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
@@ -24,34 +25,35 @@ public class CreateNewAnnouncementViewController {
     @javafx.fxml.FXML
     private DatePicker StartingDateDP;
     @javafx.fxml.FXML
-    private ComboBox TargetAudianceCB;
+    private ComboBox<String> TargetAudianceCB;
     @javafx.fxml.FXML
     private AnchorPane createNewAnnouncementMainPane;
 
 
-    @javafx.fxml.FXML
-    public void cancelButtonOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void initialize() {
+
+        TargetAudianceCB.getItems().addAll("Visitor", "Staff", "All Member");
+        CategoryCB.getItems().addAll("General","Alart","Event","New Arrival");
     }
+
 
     @javafx.fxml.FXML
     public void browseButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void resetButtonOnACtion(ActionEvent actionEvent) {
+    public void resetButtonOnACtion(ActionEvent actionEvent)throws IOException {
+        attachmentTF.clear();
+        TargetAudianceCB.getSelectionModel().clearSelection();
+        CategoryCB.getSelectionModel().clearSelection();
+        optionalAttachmentTA.clear();
+        StartingDateDP.setValue(null);
+        EndingDateDP.setValue(null);
+        AnnouncementTitleTA.clear();
     }
 
-    @javafx.fxml.FXML
-    public void previewButtonOnAction(ActionEvent actionEvent) {
-    }
 
-    @javafx.fxml.FXML
-    public void saveDraftButtonOnAction(ActionEvent actionEvent) {
-    }
-
-//    @Deprecated
-//    public void backBurronOnAction(ActionEvent actionEvent) {
-//    }
 
     @javafx.fxml.FXML
     public void publishButtonOnAction(ActionEvent actionEvent) {
