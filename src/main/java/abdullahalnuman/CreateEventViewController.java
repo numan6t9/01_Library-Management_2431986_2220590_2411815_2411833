@@ -47,6 +47,7 @@ public class CreateEventViewController
                 enterEventVenue.getText(),
                 enterEventorganizer.getText()
         );
+
         File f = new File("Event.bin");
         FileOutputStream fos;
         ObjectOutputStream oos;
