@@ -3,11 +3,10 @@ package rukonuddinshourov;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class BorrowingHistoryViewController {
 
@@ -26,11 +25,16 @@ public class BorrowingHistoryViewController {
     @javafx.fxml.FXML
     private TextField bookSearchTF;
     @javafx.fxml.FXML
-    private ComboBox statusTF;
-    @javafx.fxml.FXML
     private TableColumn borrowTC;
     @javafx.fxml.FXML
     private AnchorPane borrowingHistoryMainPane;
+    @javafx.fxml.FXML
+    private TableView borrowHistoryTableView;
+    @javafx.fxml.FXML
+    private ComboBox statusCB;
+
+
+
 
     @javafx.fxml.FXML
     public void searchOnActionButton(ActionEvent actionEvent) {
@@ -40,12 +44,13 @@ public class BorrowingHistoryViewController {
     public void printOnActionButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void closeOnActionButton(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
-    public void refreshOnActionButton(ActionEvent actionEvent) {
+    public void refreshOnActionButton(ActionEvent actionEvent) throws IOException {
+        bookSearchTF.clear();
+        statusCB.getSelectionModel().clearSelection();
+
+
     }
 
     @javafx.fxml.FXML

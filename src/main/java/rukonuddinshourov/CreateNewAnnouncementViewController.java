@@ -57,6 +57,7 @@ public class CreateNewAnnouncementViewController {
 
     @javafx.fxml.FXML
     public void publishButtonOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
