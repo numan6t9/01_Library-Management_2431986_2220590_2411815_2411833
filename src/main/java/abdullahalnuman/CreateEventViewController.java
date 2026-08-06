@@ -8,7 +8,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import nonuser.Event;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class CreateEventViewController
@@ -24,7 +27,6 @@ public class CreateEventViewController
     @javafx.fxml.FXML
     private
     AnchorPane eventManagementMainPane;
-    ArrayList<Event> eventList = new ArrayList<Event>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -45,11 +47,37 @@ public class CreateEventViewController
                 enterEventVenue.getText(),
                 enterEventorganizer.getText()
         );
-        eventList.add(event);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/abdullahalnuman/ViewEvent.fxml"));
-        Node node = fxmlLoader.load();
-        ViewEventController controller = fxmlLoader.getController();
-        controller.toReceive = eventList;
-        eventManagementMainPane.getChildren().setAll(node);
+        File f = new File("Event.bin");
+        FileOutputStream fos;
+        ObjectOutputStream oos;
+        try {
+
+            if (f.exists()) {
+                fos = new FileOutputStream(f,true);
+                oos = new AppendableObjectOutputStream(fos);
+            }
+            else {
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+
+            }
+            oos.writeObject(event);
+            oos.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void goNextPage(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/abdullahalnuman/ViewEvent.fxml"));
+            Node node = fxmlLoader.load();
+            eventManagementMainPane.getChildren().setAll(node);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

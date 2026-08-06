@@ -1,8 +1,9 @@
 package nonuser;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Event {
+public class Event implements Serializable {
 
     private String eventName,organizerName,eventVenue;
     private LocalDate eventSchedule;

@@ -36,10 +36,14 @@ public class RegisterMemberViewController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+
     }
 
     @javafx.fxml.FXML
     public void registerNewMemberAndGenerateIdButton(ActionEvent actionEvent) {
+
+
     }
 
     @javafx.fxml.FXML
