@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -48,9 +49,18 @@ public class ProcessBookReturnsViewController {
     @javafx.fxml.FXML
     private AnchorPane processBookReturnMainPane;
 
+
+//    public void initialize() {
+//        bookIDTC.setCellValueFactory(new PropertyValueFactory<"">());
+//
+//    }
+
+
     @javafx.fxml.FXML
-    public void searchIssuedBooks(ActionEvent actionEvent) {
+    public void searchIssuedBooks(ActionEvent actionEvent)throws IOException {
+
     }
+
 
     @javafx.fxml.FXML
     public void backOnActionButton(ActionEvent actionEvent)throws IOException {
@@ -72,4 +82,6 @@ public class ProcessBookReturnsViewController {
     @javafx.fxml.FXML
     public void returnBookOnActionButton(ActionEvent actionEvent) {
     }
+
+
 }
