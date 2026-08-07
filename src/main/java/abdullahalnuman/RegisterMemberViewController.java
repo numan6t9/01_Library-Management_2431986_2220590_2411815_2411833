@@ -45,7 +45,6 @@ public class RegisterMemberViewController
         genderFemaleRadioButton.setToggleGroup(genderGroup);
     }
 
-
     private String generateMemberId() {
         Random random = new Random();
         return "Member" + (100000 + random.nextInt(900000));
@@ -59,6 +58,8 @@ public class RegisterMemberViewController
         else{
             gender += "Male";
         }
+        String memberId = generateMemberId();
+
 
         RegisterMember member = new RegisterMember(
                 enterAddress.getText(),
@@ -66,8 +67,10 @@ public class RegisterMemberViewController
                 dateOfBirthOfTheMember.getValue(),
                 enterEmailAddress.getText(),
                 gender,
-                enterMemberName.getText()
+                enterMemberName.getText(),
+                memberId
         );
+        showMembershipId.setText(memberId);
         enterAddress.clear();
         enterMemberAge.clear();
         dateOfBirthOfTheMember.setValue(null);
@@ -92,8 +95,7 @@ public class RegisterMemberViewController
         catch (Exception e){
             e.printStackTrace();
         }
-        String memberId = generateMemberId();
-        showMembershipId.setText(memberId);
+
     }
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
