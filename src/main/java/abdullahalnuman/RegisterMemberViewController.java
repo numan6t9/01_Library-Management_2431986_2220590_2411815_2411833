@@ -6,14 +6,13 @@ import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import nonuser.RegisterMember;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
-
 public class RegisterMemberViewController
 {
     @javafx.fxml.FXML
@@ -45,6 +44,12 @@ public class RegisterMemberViewController
         genderMaleRadioButton.setToggleGroup(genderGroup);
         genderFemaleRadioButton.setToggleGroup(genderGroup);
     }
+
+
+    private String generateMemberId() {
+        Random random = new Random();
+        return "Member" + (100000 + random.nextInt(900000));
+    }
     @javafx.fxml.FXML
     public void registerNewMemberAndGenerateIdButton(ActionEvent actionEvent) {
         String gender = "";
@@ -54,6 +59,7 @@ public class RegisterMemberViewController
         else{
             gender += "Male";
         }
+
         RegisterMember member = new RegisterMember(
                 enterAddress.getText(),
                 Integer.parseInt(enterMemberAge.getText()),
@@ -62,9 +68,12 @@ public class RegisterMemberViewController
                 gender,
                 enterMemberName.getText()
         );
+        enterAddress.clear();
+        enterMemberAge.clear();
+        dateOfBirthOfTheMember.setValue(null);
+        enterMemberName.clear();
 
         File f = new File("Member.bin");
-
         FileOutputStream fos;
         ObjectOutputStream oos;
 
@@ -83,6 +92,8 @@ public class RegisterMemberViewController
         catch (Exception e){
             e.printStackTrace();
         }
+        String memberId = generateMemberId();
+        showMembershipId.setText(memberId);
     }
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
