@@ -56,28 +56,6 @@ public class viewMemberListController
             e.printStackTrace();
         }
 
-       /* File f = new File("Member.bin");
-        try{
-            FileInputStream fis = new FileInputStream(f);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-
-            while(true){
-                try {
-                    RegisterMember m = (RegisterMember) ois.readObject();
-                    memberListTableView.getItems().add(m);
-                }
-                catch (EOFException e) {
-                    ois.close();
-                    break;
-                }
-            }
-
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-
-        */
     }
 
     @javafx.fxml.FXML

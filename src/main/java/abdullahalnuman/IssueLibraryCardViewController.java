@@ -25,6 +25,7 @@ public class IssueLibraryCardViewController
     public void initialize() {
     }
 
+
     private boolean isValid(){
         if (enterMemberId.getText().isEmpty()){
             return false;
@@ -33,8 +34,6 @@ public class IssueLibraryCardViewController
     }
     @javafx.fxml.FXML
     public void GenerateLibraryCardsAndExport(ActionEvent actionEvent) {
-
-
 
     }
 
