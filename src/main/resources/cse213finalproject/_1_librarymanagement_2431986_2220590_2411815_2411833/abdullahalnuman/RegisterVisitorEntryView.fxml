@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -22,7 +24,16 @@
       <Label layoutX="405.0" layoutY="155.0" text="Purpose Of Visit" />
       <TextField fx:id="enterPurposeOfVisit" layoutX="523.0" layoutY="151.0" />
       <Button layoutX="214.0" layoutY="244.0" mnemonicParsing="false" onAction="#registerVisitorAndGenerateVisitorPassButton" prefHeight="26.0" prefWidth="286.0" text="Register Visitor and Generate Visitor Pass" />
-      <Label fx:id="showVisitorPass" layoutX="539.0" layoutY="322.0" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: green;" text="Show Visitor Pass" textFill="WHITE" />
+      <Label fx:id="showVisitorPass" layoutX="567.0" layoutY="244.0" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: green;" text="Show Visitor Pass" textFill="WHITE" />
       <Button layoutX="28.0" layoutY="15.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="60.0" text="Back" />
+      <TableView fx:id="visitorTableView" layoutX="51.0" layoutY="376.0" prefHeight="200.0" prefWidth="655.0">
+        <columns>
+          <TableColumn fx:id="nameTableView" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="nidTableView" prefWidth="132.0" text="NID" />
+            <TableColumn fx:id="phoneNumberTableView" prefWidth="223.0" text="Phone Number" />
+            <TableColumn fx:id="visitorPassTableView" prefWidth="223.0" text="Visitor Pass" />
+        </columns>
+      </TableView>
+      <Button layoutX="349.0" layoutY="630.0" mnemonicParsing="false" onAction="#loadVisitorButton" prefHeight="26.0" prefWidth="115.0" text="Load Visitors" />
    </children>
 </AnchorPane>
