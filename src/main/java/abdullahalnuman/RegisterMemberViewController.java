@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import nonuser.ReadAndWriteHelper;
 import nonuser.RegisterMember;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -52,10 +53,9 @@ public class RegisterMemberViewController
     @javafx.fxml.FXML
     public void registerNewMemberAndGenerateIdButton(ActionEvent actionEvent) {
         String gender = "";
-        if (genderFemaleRadioButton.isSelected()){
+        if (genderFemaleRadioButton.isSelected()) {
             gender += "Female";
-        }
-        else{
+        } else {
             gender += "Male";
         }
         String memberId = generateMemberId();
@@ -76,26 +76,8 @@ public class RegisterMemberViewController
         dateOfBirthOfTheMember.setValue(null);
         enterMemberName.clear();
 
-        File f = new File("Member.bin");
-        FileOutputStream fos;
-        ObjectOutputStream oos;
 
-        try {
-            if(f.exists()){
-                fos = new FileOutputStream(f,true);
-                oos = new AppendableObjectOutputStream(fos);
-            }
-            else{
-                fos = new FileOutputStream(f);
-                oos = new ObjectOutputStream(fos);
-            }
-            oos.writeObject(member);
-            oos.close();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-
+        ReadAndWriteHelper.write(member, "Member.bin");
     }
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
@@ -115,4 +97,5 @@ public class RegisterMemberViewController
             e.printStackTrace();
         }
     }
+
 }
