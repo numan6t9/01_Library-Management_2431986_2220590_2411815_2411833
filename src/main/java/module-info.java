@@ -12,5 +12,6 @@ module cse213finalproject._1_librarymanagement_2431986_2220590_2411815_2411833 {
     opens rukonuddinshourov to javafx.fxml;
     exports rukonuddinshourov;
     opens nonuser to javafx.base;
+    opens user to javafx.base;
 
 }
