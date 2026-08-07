@@ -3,17 +3,22 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class RegisterMember implements Serializable {
-    private String memberName,memberEmailAddress,memberAddress,memberGender;
+    private String memberName,memberEmailAddress,memberAddress,memberGender, memberId;
     private int memberAge;
     private LocalDate memberDOB;
 
-    public RegisterMember(String memberAddress, int memberAge, LocalDate memberDOB, String memberEmailAddress, String memberGender, String memberName) {
+    public RegisterMember(String memberAddress, int memberAge, LocalDate memberDOB, String memberEmailAddress, String memberGender, String memberName, String memberId) {
         this.memberAddress = memberAddress;
         this.memberAge = memberAge;
         this.memberDOB = memberDOB;
         this.memberEmailAddress = memberEmailAddress;
         this.memberGender = memberGender;
         this.memberName = memberName;
+        this.memberId = memberId;
+    }
+
+    public String getMemberId() {
+        return memberId;
     }
 
     public String getMemberAddress() {

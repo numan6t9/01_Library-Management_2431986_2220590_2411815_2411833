@@ -1,8 +1,9 @@
 package nonuser;
 
 import java.io.IOException;
+import java.io.Serializable;
 
-public class Book {
+public class Book implements Serializable {
 
     private String bookId;
     private String title;
