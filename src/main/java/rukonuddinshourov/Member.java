@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public class Member implements Serializable {
 
-    private int memberId;
+    private String memberId;
     private String name;
     private String phone;
     private String email;
@@ -15,99 +15,114 @@ public class Member implements Serializable {
     private String firstName;
     private String lastName;
     private  String password;
+    public String status;
 
-    public Member(int memberId, String name, String phone, String email, String adress, LocalDate dateOfBirth,String gender,String firstName, String lastName, String password) {
+    public Member(String memberId, String name, String phone, String email, String adress, LocalDate dateOfBirth, String gender, String firstName, String lastName, String password, String status) {
         this.memberId = memberId;
         this.name = name;
         this.phone = phone;
         this.email = email;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public void setAdress(String adress) {
         this.adress = adress;
-    }
-
-    public void setGender(String gender) {
+        this.dateOfBirth = dateOfBirth;
         this.gender = gender;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.status = status;
     }
 
-    public String getAdress() {
-        return adress;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setMemberId(int memberId) {
-        this.memberId = memberId;
-
-    }
-
-    public int getMemberId() {
+    public String getMemberId() {
         return memberId;
+    }
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getPhone() {
         return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
-                "memberId=" + memberId +
+                "memberId='" + memberId + '\'' +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
@@ -117,6 +132,7 @@ public class Member implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +
+                ", status='" + status + '\'' +
                 '}';
     }
 }
