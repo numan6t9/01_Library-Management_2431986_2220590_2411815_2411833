@@ -29,7 +29,7 @@
 
                 <Label text="Member ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
 
-                <TextField fx:id="memberIDTC" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField fx:id="memberIDTC"  GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                 <Label text="Search Book:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 

@@ -67,7 +67,7 @@ public class MemberpersonalprofileupdateViewController {
     private void loadMemberData()throws IOException {
 
         for (Member m : loadMembers()) {
-            if (m.getMemberId() == Integer.parseInt(loggedInMemberId)){
+            if (m.getMemberId().equals(loggedInMemberId)){
 
                 firstNameTF.setText(m.getFirstName());
                 lastNameTF.setText(m.getLastName());
@@ -102,7 +102,7 @@ public class MemberpersonalprofileupdateViewController {
         List<Member> list = loadMembers();
 
         for (Member m : list) {
-            if (m.getMemberId() == Integer.parseInt(loggedInMemberId)){
+            if (m.getMemberId().equals(loggedInMemberId)){
 
                 m.setFirstName(firstNameTF.getText());
                 m.setLastName(lastNameTF.getText());
