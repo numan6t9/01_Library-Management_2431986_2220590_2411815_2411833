@@ -314,7 +314,6 @@ public class DeactivateMemberAccountViewController {
         boolean found = false;
 
         for (Member member : memberList) {
-            // যদি মেম্বার আইডি int হয় তবে String.valueOf(member.getMemberId()) ব্যবহার করুন
             if (String.valueOf(member.getMemberId()).equals(memberIdText)) {
                 memberNameTF.setText(member.getName());
                 emailTF.setText(member.getEmail());

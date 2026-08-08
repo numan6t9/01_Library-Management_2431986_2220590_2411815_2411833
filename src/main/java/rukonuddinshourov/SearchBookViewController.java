@@ -37,7 +37,7 @@ public class SearchBookViewController implements Initializable {
     @FXML
     private TableColumn<Book, String> availablityTC;
 
-    // Dummy Database for testing
+
     private ObservableList<Book> masterData = FXCollections.observableArrayList();
     @FXML
     private TextField bookNameTF;
