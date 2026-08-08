@@ -101,7 +101,6 @@ public class BookDetailsViewController implements Initializable {
 
     @FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws Exception {
-        // Event-8: Return view to catalog/dashboard
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/cse213finalproject/_1_librarymanagement_2431986_2220590_2411815_2411833/rukonuddinshourov/MemberDashboardView.fxml"));
         Node node = fxmlLoader.load();
         bookDetailsMainPane.getChildren().setAll(node);
