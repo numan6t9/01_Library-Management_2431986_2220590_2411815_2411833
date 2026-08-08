@@ -44,7 +44,6 @@ public class SearchBookViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // 1. Setup Table Columns (match with Book class variable names)
         bookidTC.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         titleTC.setCellValueFactory(new PropertyValueFactory<>("title"));
         authorTC.setCellValueFactory(new PropertyValueFactory<>("author"));

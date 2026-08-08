@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="bookDetailsMainPane" prefHeight="615.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.BookDetailsViewController">
+<AnchorPane fx:id="bookDetailsMainPane" prefHeight="615.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.BookDetailsViewController">
    <children>
       <Label fx:id="bookDetailslabel" alignment="CENTER" prefHeight="66.0" prefWidth="662.0" style="-fx-background-color: teal;" text="Book Details ">
          <font>
