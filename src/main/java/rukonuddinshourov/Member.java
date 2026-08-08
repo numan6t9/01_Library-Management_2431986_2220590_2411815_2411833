@@ -7,7 +7,7 @@ public class Member implements Serializable {
 
     private String memberId;
     private String name;
-    private String age;
+    private Integer age;
     private String email;
     private String adress;
     private LocalDate dateOfBirth;
@@ -17,7 +17,7 @@ public class Member implements Serializable {
     private  String password;
     public String status;
 
-    public Member(String memberId, String name, String age, String email, String adress, LocalDate dateOfBirth, String gender, String firstName, String lastName, String password, String status) {
+    public Member(String memberId, String name, Integer age, String email, String adress, LocalDate dateOfBirth, String gender, String firstName, String lastName, String password, String status) {
         this.memberId = memberId;
         this.name = name;
         this.age = age;
@@ -47,12 +47,12 @@ public class Member implements Serializable {
         this.name = name;
     }
 
-    public String getPhone() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setPhone(String phone) {
-        this.age = phone;
+    public void setPhone(Integer phone) {
+        this.age = age;
     }
 
     public String getEmail() {
