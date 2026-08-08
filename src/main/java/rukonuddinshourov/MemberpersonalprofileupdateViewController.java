@@ -73,7 +73,7 @@ public class MemberpersonalprofileupdateViewController {
                 lastNameTF.setText(m.getLastName());
                 memberIdTF.setText(String.valueOf(m.getMemberId()));
                 emailIdTF.setText(m.getEmail());
-                phoneNumberTF.setText(m.getPhone());
+//                phoneNumberTF.setText(m.getAge());
                 adressTF.setText(m.getAdress());
                 genderCB.setValue(m.getGender());
                 dateOfBirthDP.setValue(m.getDateOfBirth());
@@ -107,7 +107,7 @@ public class MemberpersonalprofileupdateViewController {
                 m.setFirstName(firstNameTF.getText());
                 m.setLastName(lastNameTF.getText());
                 m.setEmail(emailIdTF.getText());
-                m.setPhone(phoneNumberTF.getText());
+//                m.setPhone(phoneNumberTF.getText());
                 m.setAdress(adressTF.getText());
                 m.setGender(genderCB.getValue());
                 m.setDateOfBirth(dateOfBirthDP.getValue());

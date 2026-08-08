@@ -40,7 +40,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Button>
-      <TableView layoutX="124.0" layoutY="282.0" prefHeight="218.0" prefWidth="519.0">
+      <TableView fx:id="issedTableTV" layoutX="124.0" layoutY="282.0" prefHeight="218.0" prefWidth="519.0">
         <columns>
           <TableColumn fx:id="bookNameTC" prefWidth="157.6000213623047" text="Book Name" />
           <TableColumn fx:id="memberIdTC" prefWidth="78.39996337890625" text="Member Id" />

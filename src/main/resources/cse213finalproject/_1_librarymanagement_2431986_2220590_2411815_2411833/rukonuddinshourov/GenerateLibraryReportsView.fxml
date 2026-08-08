@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="libraryReportMainPane" prefHeight="689.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.GenerateLibraryReportsViewController">
+<AnchorPane fx:id="libraryReportMainPane" prefHeight="689.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rukonuddinshourov.GenerateLibraryReportsViewController">
    <children>
       <Label alignment="CENTER" layoutX="-1.0" prefHeight="74.0" prefWidth="607.0" style="-fx-background-color: tan;" text="Generate Library Reports" />
       <Label layoutX="28.0" layoutY="107.0" prefHeight="34.0" prefWidth="87.0" text="Report Type" />
@@ -21,7 +21,7 @@
       <ComboBox fx:id="reportTypeCB" layoutX="115.0" layoutY="112.0" prefWidth="150.0" />
       <DatePicker fx:id="fromDateDP" layoutX="108.0" layoutY="180.0" />
       <DatePicker fx:id="toDateDP" layoutX="108.0" layoutY="213.0" />
-      <TableView layoutX="13.0" layoutY="307.0" prefHeight="200.0" prefWidth="574.0">
+      <TableView fx:id="reportTableView" layoutX="13.0" layoutY="307.0" prefHeight="200.0" prefWidth="574.0">
         <columns>
           <TableColumn fx:id="memberIdTC" prefWidth="87.20001029968262" text="Member ID" />
           <TableColumn fx:id="bookTitleTC" prefWidth="90.39997100830078" text="Book Title" />

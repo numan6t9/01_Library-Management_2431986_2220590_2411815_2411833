@@ -38,7 +38,7 @@
       <ComboBox fx:id="bookconditionCB" layoutX="196.0" layoutY="229.0" prefWidth="150.0" />
       <Label layoutX="95.0" layoutY="282.0" text="Remarks" />
       <TextArea fx:id="RemarksTA" layoutX="162.0" layoutY="272.0" prefHeight="55.0" prefWidth="200.0" />
-      <TableView layoutX="38.0" layoutY="368.0" prefHeight="200.0" prefWidth="447.0">
+      <TableView fx:id="lostTableView" layoutX="38.0" layoutY="368.0" prefHeight="200.0" prefWidth="447.0">
         <columns>
           <TableColumn fx:id="bookIDTC" prefWidth="75.0" text="Book ID" />
           <TableColumn fx:id="memberIdTC" prefWidth="75.0" text=" Member ID " />
