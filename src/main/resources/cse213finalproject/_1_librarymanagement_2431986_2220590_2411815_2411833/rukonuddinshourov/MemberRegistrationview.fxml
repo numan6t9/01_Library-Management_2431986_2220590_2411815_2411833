@@ -45,7 +45,7 @@
 
             <Label text="Email :" GridPane.rowIndex="6" />
 
-            <Label text="Phone :" GridPane.rowIndex="7" />
+            <Label text="Member Age" GridPane.rowIndex="7" />
 
             <Label text="Username :" GridPane.rowIndex="11" />
 
@@ -75,7 +75,7 @@
          <TextField fx:id="librarianIdTF" GridPane.columnIndex="1" />
          <TextField fx:id="fullNameTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          <TextField fx:id="emailTF" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-         <TextField fx:id="phoneTF" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <TextField fx:id="enterMemberAgeTF" GridPane.columnIndex="1" GridPane.rowIndex="7" />
          <Label text="Librarian Name" GridPane.rowIndex="2" />
          <columnConstraints>
             <ColumnConstraints />

@@ -1,12 +1,20 @@
 package rukonuddinshourov;
 
+//import abdullahalnuman.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import nonuser.RegisterMember;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Random;
 
 public class MemberRegistrationviewController {
 
@@ -14,8 +22,7 @@ public class MemberRegistrationviewController {
     private TextArea addressTA;
     @javafx.fxml.FXML
     private TextField fullNameTF;
-    @javafx.fxml.FXML
-    private TextField phoneTF;
+
     @javafx.fxml.FXML
     private PasswordField PasswordPF;
     @javafx.fxml.FXML
@@ -38,6 +45,19 @@ public class MemberRegistrationviewController {
     private PasswordField ConfirmPasswordPF;
     @javafx.fxml.FXML
     private BorderPane memberRegistrationMainPane;
+    @javafx.fxml.FXML
+    private TextField enterMemberAgeTF;
+
+    @javafx.fxml.FXML
+    public void initialize() {
+        ToggleGroup genderGroup = new ToggleGroup();
+        maleRB.setToggleGroup(genderGroup);
+        femaleRB.setToggleGroup(genderGroup);
+    }
+    private String generateMemberId() {
+        Random random = new Random();
+        return "Member" + (100000 + random.nextInt(900000));
+    }
 
     @javafx.fxml.FXML
     public void backOnActionButton(ActionEvent actionEvent) throws IOException {
@@ -50,6 +70,47 @@ public class MemberRegistrationviewController {
 
     @javafx.fxml.FXML
     public void registerOnActionButton(ActionEvent actionEvent) {
+        String gender = "";
+        if (femaleRB.isSelected()){
+            gender += "Female";
+        }
+        else{
+            gender += "Male";
+        }
+
+        RegisterMember member = new RegisterMember(
+                addressTA.getText(),
+                Integer.parseInt(enterMemberAgeTF.getText()),
+                birthDateDP.getValue(),
+                emailTF.getText(),
+                gender,
+                fullNameTF.getText()
+        );
+        addressTA.clear();
+        birthDateDP.setValue(null);
+        fullNameTF.clear();
+
+        File f = new File("Member.bin");
+        FileOutputStream fos;
+        ObjectOutputStream oos;
+
+        try {
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
+                oos = new AppendableobjectoutputStrream(fos);
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+            }
+            oos.writeObject(member);
+            oos.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+//        String memberId = generateMemberId();
+//        memberId.setText(memberId);
     }
 
     @javafx.fxml.FXML
