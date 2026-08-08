@@ -34,24 +34,18 @@ public class UpdateMemberInformationView
     private TextField updateName;
     @javafx.fxml.FXML
     private AnchorPane memberInformationMainPane;
-
     @javafx.fxml.FXML
     public void initialize() {
     }
-
     private boolean isValid() {
         if (enterMemberId.getText().isEmpty()) {
             return false;
         }
         return true;
     }
-
     @javafx.fxml.FXML
     public void updateMemberAndInformationAndSaveButton(ActionEvent actionEvent) {
-
-
     }
-
     @javafx.fxml.FXML
     public void searchMemberButton(ActionEvent actionEvent) {
 
@@ -88,8 +82,6 @@ public class UpdateMemberInformationView
                 e.printStackTrace();
             }
         }
-
-
     }
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
