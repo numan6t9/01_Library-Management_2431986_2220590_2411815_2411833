@@ -145,10 +145,7 @@ public class DeactivateMemberAccountViewController {
             return;
         }
 
-        /*
-         * Password verification.
-         * If you use OTP instead, change this condition according to your OTP logic.
-         */
+
         if (!foundMember.getPassword().equals(enteredPassword)) {
             showMessage("Incorrect password or OTP.", true);
             return;
@@ -242,7 +239,6 @@ public class DeactivateMemberAccountViewController {
         return false;
     }
 
-    @SuppressWarnings("unchecked")
     private List<Member> readMembers() {
 
         List<Member> memberList = new ArrayList<>();

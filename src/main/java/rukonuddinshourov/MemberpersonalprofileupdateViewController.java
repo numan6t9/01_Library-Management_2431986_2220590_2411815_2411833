@@ -28,7 +28,6 @@ public class MemberpersonalprofileupdateViewController {
 
     private static final String FILE_NAME = "members.bin";
 
-    // ⚠ Set this from login system
     private String loggedInMemberId = "101";
 
     @FXML
@@ -39,7 +38,6 @@ public class MemberpersonalprofileupdateViewController {
         loadMemberData();
     }
 
-    // ✅ Load members from file
     private List<Member> loadMembers() {
         try (ObjectInputStream ois =
                      new ObjectInputStream(new FileInputStream(FILE_NAME))) {
@@ -51,7 +49,6 @@ public class MemberpersonalprofileupdateViewController {
         }
     }
 
-    // ✅ Save members
     private void saveMembers(List<Member> list) {
         try (ObjectOutputStream oos =
                      new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
@@ -63,7 +60,6 @@ public class MemberpersonalprofileupdateViewController {
         }
     }
 
-    // ✅ Load current member info
     private void loadMemberData()throws IOException {
 
         for (Member m : loadMembers()) {
@@ -82,7 +78,6 @@ public class MemberpersonalprofileupdateViewController {
         }
     }
 
-    // ✅ Save Changes Button
     @FXML
     public void savechangeButtonOnAction(ActionEvent actionEvent) {
 
@@ -125,13 +120,11 @@ public class MemberpersonalprofileupdateViewController {
         showAlert("Profile Updated Successfully ✅");
     }
 
-    // ✅ Update button (optional extra confirm)
     @FXML
     public void updateButtonOnAction(ActionEvent actionEvent) {
         savechangeButtonOnAction(actionEvent);
     }
 
-    // ✅ Cancel button
     @FXML
     public void cancelButtonOnAction(ActionEvent actionEvent)throws IOException {
         loadMemberData();
@@ -139,7 +132,6 @@ public class MemberpersonalprofileupdateViewController {
         confirmPasswordPF.clear();
     }
 
-    // ✅ Back button
     @FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
 
@@ -150,7 +142,6 @@ public class MemberpersonalprofileupdateViewController {
         memberprofileUpdateMainPane.getChildren().setAll(node);
     }
 
-    // ✅ Alert
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(message);
