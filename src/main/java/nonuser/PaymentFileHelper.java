@@ -9,7 +9,7 @@ public class PaymentFileHelper {
 
     private static final String FILE_NAME = "FinePayments.bin";
 
-    // ================= Save (Append) =================
+
     public static void savePayment(FinePayment payment) {
 
         ArrayList<FinePayment> list = readAllPayments();
@@ -25,7 +25,7 @@ public class PaymentFileHelper {
         }
     }
 
-    // ================= Read All =================
+
     @SuppressWarnings("unchecked")
     public static ArrayList<FinePayment> readAllPayments() {
 
@@ -46,7 +46,6 @@ public class PaymentFileHelper {
         }
     }
 
-    // ================= Check if fine already paid =================
     public static boolean isFinePaid(String fineId) {
 
         for (FinePayment p : readAllPayments()) {
@@ -58,7 +57,6 @@ public class PaymentFileHelper {
         return false;
     }
 
-    // ================= Get payments of a member =================
     public static ArrayList<FinePayment> getMemberPayments(String memberId) {
 
         ArrayList<FinePayment> result = new ArrayList<>();
@@ -71,7 +69,6 @@ public class PaymentFileHelper {
         return result;
     }
 
-    // ================= Get last payment =================
     public static FinePayment getLastPayment(String memberId) {
 
         ArrayList<FinePayment> list = getMemberPayments(memberId);
