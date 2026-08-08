@@ -67,7 +67,7 @@ public class ProcessBookReturnsViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // কলাম সেটআপ
+
         bookIDTC.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         titleTC.setCellValueFactory(new PropertyValueFactory<>("title"));
         issueDateTC.setCellValueFactory(new PropertyValueFactory<>("issueDate"));
@@ -232,7 +232,6 @@ public class ProcessBookReturnsViewController implements Initializable {
     }
 
 
-    @SuppressWarnings("unchecked")
     private List<IssuedBook> readIssuedBooks() {
         List<IssuedBook> list = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("IssuedBooks.bin"))) {
@@ -251,7 +250,6 @@ public class ProcessBookReturnsViewController implements Initializable {
         }
     }
 
-    @SuppressWarnings("unchecked")
     private List<Book> readBooksFromFile() {
         List<Book> list = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Book.bin"))) {

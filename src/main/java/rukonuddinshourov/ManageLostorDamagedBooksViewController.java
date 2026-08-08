@@ -27,14 +27,13 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
 
     @FXML private TextArea RemarksTA;
 
-    // ===== ComboBox =====
+
     @FXML private ComboBox<String> bookconditionCB;
 
-    // ===== DatePickers =====
+
     @FXML private DatePicker IssueDateDP;
     @FXML private DatePicker ReportDateDP;
 
-    // ===== TableView (fx:id = lostTableView) =====
     @FXML private TableView<LostBook> lostTableView;
     @FXML private TableColumn<LostBook, String> bookIDTC;
     @FXML private TableColumn<LostBook, String> memberIdTC;
@@ -45,10 +44,8 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
 
     @FXML private AnchorPane lostordamagedBooksMainPane;
 
-    // ===== Data List =====
     private final ObservableList<LostBook> lostBookList = FXCollections.observableArrayList();
 
-    // ================= event-2 : Load Panel =================
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -61,7 +58,6 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         fineTC.setCellValueFactory(new PropertyValueFactory<>("fine"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // Demo data
         lostBookList.addAll(
                 new LostBook("B101", "M101", "Java Programming", "Damaged", 200, "Pending"),
                 new LostBook("B102", "M102", "Math Algebra", "Lost", 500, "Pending")
@@ -71,7 +67,7 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
 
         ReportDateDP.setValue(LocalDate.now());
 
-        // Row select → fill fields
+
         lostTableView.getSelectionModel().selectedItemProperty()
                 .addListener((obs, oldV, newV) -> {
                     if (newV != null) {
@@ -84,7 +80,6 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
                 });
     }
 
-    // ================= event-3 : Search =================
     @FXML
     public void SearchDamageorLostBook(ActionEvent actionEvent) {
 
@@ -110,7 +105,6 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         showAlert("No record found for Book ID: " + id);
     }
 
-    // ================= event-5 : Calculate Fine =================
     @FXML
     public void CalculateFineOnActionButton(ActionEvent actionEvent) {
 
@@ -133,7 +127,7 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         fineperDayTF.setText(String.valueOf(totalFine));
     }
 
-    // ================= event-4 & 7 : Save Record =================
+
     @FXML
     public void SaveRecordOnActionBitton(ActionEvent actionEvent) {
 
@@ -166,7 +160,6 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         showAlert("Record saved successfully!");
     }
 
-    // ================= event-6 : Update Status =================
     @FXML
     public void UpdateLostorDamageBooksButton(ActionEvent actionEvent) {
 
@@ -194,7 +187,7 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         showAlert("Book status updated successfully!");
     }
 
-    // ================= Clear =================
+
     @FXML
     public void ClearRecordOnACtionButton(ActionEvent actionEvent) {
 
@@ -210,7 +203,6 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         lostTableView.getSelectionModel().clearSelection();
     }
 
-    // ================= Back =================
     @FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws Exception {
 
@@ -221,7 +213,7 @@ public class ManageLostorDamagedBooksViewController implements Initializable {
         lostordamagedBooksMainPane.getChildren().setAll(node);
     }
 
-    // ================= Alert Helper =================
+
     private void showAlert(String msg) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);

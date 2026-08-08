@@ -42,7 +42,6 @@ public class UpdateLibraryCatalogViewController implements Initializable {
 
     private ObservableList<Book> bookList = FXCollections.observableArrayList();
 
-    // ================= event-2 Load Panel =================
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -62,7 +61,7 @@ public class UpdateLibraryCatalogViewController implements Initializable {
         quantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // Demo Data
+
         bookList.addAll(
                 new Book("B101","1111","Java","Herbert","Science",10,"Available"),
                 new Book("B102","2222","Math Algebra","Smith","Math",5,"Available"),
@@ -90,7 +89,6 @@ public class UpdateLibraryCatalogViewController implements Initializable {
 
         bookTableView.setItems(bookList);
 
-        // Row select
         bookTableView.getSelectionModel().selectedItemProperty()
                 .addListener((obs, oldV, newV) -> {
                     if(newV != null){
@@ -105,7 +103,7 @@ public class UpdateLibraryCatalogViewController implements Initializable {
                 });
     }
 
-    // ================= event-3 Search =================
+
     @FXML
     public void SearchbuttonOnAction(ActionEvent actionEvent) {
 
@@ -121,7 +119,6 @@ public class UpdateLibraryCatalogViewController implements Initializable {
         showAlert("Book not found!");
     }
 
-    // ================= event-4 & 5 Update =================
     @FXML
     public void updateButtonOnAction(ActionEvent actionEvent) {
 
@@ -132,7 +129,6 @@ public class UpdateLibraryCatalogViewController implements Initializable {
             return;
         }
 
-        // Validation
         if(TitleTF.getText().isEmpty() ||
                 AuthorTF.getText().isEmpty() ||
                 QuantityTF.getText().isEmpty()){
@@ -151,7 +147,6 @@ public class UpdateLibraryCatalogViewController implements Initializable {
         showAlert("Book updated successfully!");
     }
 
-    // ================= event-7 Remove =================
     @FXML
     public void removeButtononAction(ActionEvent actionEvent) {
 
@@ -166,13 +161,12 @@ public class UpdateLibraryCatalogViewController implements Initializable {
         showAlert("Book removed!");
     }
 
-    // ================= event-8 Confirm =================
+
     @FXML
     public void confirmOnActionbutton(ActionEvent actionEvent) {
         showAlert("Catalog update confirmed!");
     }
 
-    // ================= Refresh =================
     @FXML
     public void refreshButtonOAction(ActionEvent actionEvent) {
 
@@ -188,7 +182,6 @@ public class UpdateLibraryCatalogViewController implements Initializable {
         bookTableView.refresh();
     }
 
-    // ================= Back =================
     @FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
 

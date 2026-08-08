@@ -44,7 +44,7 @@ public class GenerateLibraryReportsViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // Fill ComboBoxes
+
         reportTypeCB.setItems(FXCollections.observableArrayList(
                 "Circulation", "Membership", "Inventory"
         ));
@@ -53,7 +53,7 @@ public class GenerateLibraryReportsViewController implements Initializable {
                 "Science", "Math", "History", "Novel"
         ));
 
-        // Set Table Columns
+
         memberIdTC.setCellValueFactory(new PropertyValueFactory<>("memberId"));
         bookTitleTC.setCellValueFactory(new PropertyValueFactory<>("bookTitle"));
         categoryBooksTC.setCellValueFactory(new PropertyValueFactory<>("category"));

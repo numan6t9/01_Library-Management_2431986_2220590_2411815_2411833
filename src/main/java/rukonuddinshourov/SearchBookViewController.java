@@ -74,7 +74,7 @@ masterData.addAll(
                 new Book("B120","1121","Machine Learning","Tom Mitchell","Science",4,"Unavailable")
 );
 
-        // Show all books by default
+
         bookTable.setItems(masterData);
     }
 

@@ -183,7 +183,7 @@ public class IssueBooksToMembersViewController implements Initializable {
         issueBookslabel.setText(msg);
     }
 
-    @SuppressWarnings("unchecked")
+
     private List<Book> readBooksFromFile() {
         List<Book> list = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Book.bin"))) {
@@ -202,7 +202,6 @@ public class IssueBooksToMembersViewController implements Initializable {
         }
     }
 
-    @SuppressWarnings("unchecked")
     private List<IssuedBook> readIssuedBooks() {
         List<IssuedBook> list = new ArrayList<>();
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("IssuedBooks.bin"))) {

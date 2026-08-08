@@ -20,23 +20,23 @@ import java.util.ResourceBundle;
 
 public class MemberPayFinesViewController implements Initializable {
 
-    // ===== Member Info =====
+
     @FXML private TextField memberNameTF;
     @FXML private TextField memberIdTF;
 
-    // ===== Fine Details =====
+
     @FXML private TextField fineIdTF;
     @FXML private TextField booktitleTF;
     @FXML private TextField duedateTF;
     @FXML private TextField dayslateTF;
     @FXML private TextField fineamountTF;
 
-    // ===== Payment Info =====
+
     @FXML private TextField cardmobileNumberTF;
     @FXML private TextField transectionIdTF;
     @FXML private TextField fineAmountTF;
 
-    // ===== Payment Method =====
+
     @FXML private RadioButton creditdabitCardRB;
     @FXML private RadioButton mobileBankingRB;
     @FXML private RadioButton cashRB;
@@ -45,7 +45,7 @@ public class MemberPayFinesViewController implements Initializable {
 
     private ToggleGroup paymentGroup;
 
-    // ===== State =====
+
     private boolean fineLoaded = false;
     private boolean payFineClicked = false;
     private boolean isPaid = false;
@@ -53,9 +53,7 @@ public class MemberPayFinesViewController implements Initializable {
     private double fineAmount = 0;
     private int daysLate = 0;
 
-    // ============================================================
-    // event-2 & 3 : Load Fine Payment Panel
-    // ============================================================
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -76,9 +74,7 @@ public class MemberPayFinesViewController implements Initializable {
         setPaymentSectionDisabled(true);
     }
 
-    // ============================================================
-    // event-4 & 5 : View Fine + Verify
-    // ============================================================
+
     @FXML
     public void viewFineOnActionButton(ActionEvent actionEvent) {
 
@@ -94,7 +90,7 @@ public class MemberPayFinesViewController implements Initializable {
             return;
         }
 
-        // ---- Demo fine record ----
+
         String fineId = "F-1001";
         LocalDate dueDate = LocalDate.now().minusDays(24);
         daysLate = (int) ChronoUnit.DAYS.between(dueDate, LocalDate.now());
@@ -107,7 +103,7 @@ public class MemberPayFinesViewController implements Initializable {
         dayslateTF.setText(String.valueOf(daysLate));
         fineamountTF.setText(String.valueOf(fineAmount));
 
-        // ✅ File check: আগে পেমেন্ট হয়েছে কিনা
+
         if (PaymentFileHelper.isFinePaid(fineId)) {
 
             fineStatus = "Paid";
@@ -141,9 +137,7 @@ public class MemberPayFinesViewController implements Initializable {
                         "Status      : " + fineStatus);
     }
 
-    // ============================================================
-    // event-6 : Pay Fine
-    // ============================================================
+
     @FXML
     public void payFineOnActionButton(ActionEvent actionEvent) {
 
@@ -165,9 +159,7 @@ public class MemberPayFinesViewController implements Initializable {
                 "Choose payment method and enter payment information.");
     }
 
-    // ============================================================
-    // event-9 : Validate Payment
-    // ============================================================
+
     private boolean validatePayment() {
 
         if (!payFineClicked) {
@@ -217,9 +209,7 @@ public class MemberPayFinesViewController implements Initializable {
         return true;
     }
 
-    // ============================================================
-    // event-10, 11, 12 : Process + Save to File + Confirm
-    // ============================================================
+
     @FXML
     public void confirmPaymentOnActionButton(ActionEvent actionEvent) {
 
@@ -242,7 +232,7 @@ public class MemberPayFinesViewController implements Initializable {
         String time = LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm a"));
 
-        // ✅ Save to .bin file
+
         FinePayment payment = new FinePayment(
                 memberIdTF.getText(),
                 memberNameTF.getText(),
@@ -271,9 +261,7 @@ public class MemberPayFinesViewController implements Initializable {
                         "Status         : " + fineStatus);
     }
 
-    // ============================================================
-    // event-13 : Receipt + Payment History
-    // ============================================================
+
     @FXML
     public void printReceiptOnActionButton(ActionEvent actionEvent) {
 
@@ -340,9 +328,7 @@ public class MemberPayFinesViewController implements Initializable {
         alert.showAndWait();
     }
 
-    // ============================================================
-    // Close / Clear
-    // ============================================================
+
     @FXML
     public void closeOnActionButton(ActionEvent actionEvent) {
 
@@ -371,9 +357,7 @@ public class MemberPayFinesViewController implements Initializable {
         showAlert(Alert.AlertType.INFORMATION, "All fields cleared.");
     }
 
-    // ============================================================
-    // Back
-    // ============================================================
+
     @FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws Exception {
 
@@ -384,9 +368,7 @@ public class MemberPayFinesViewController implements Initializable {
         memberPayFinesMainPane.getChildren().setAll(node);
     }
 
-    // ============================================================
-    // Helpers
-    // ============================================================
+
     private void setPaymentSectionDisabled(boolean disable) {
         creditdabitCardRB.setDisable(disable);
         mobileBankingRB.setDisable(disable);

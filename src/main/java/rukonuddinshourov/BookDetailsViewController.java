@@ -47,13 +47,12 @@ public class BookDetailsViewController implements Initializable {
         authorTC.setCellValueFactory(new PropertyValueFactory<>("author"));
         availablityTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // Category is usually not in the simple Book class,
-        // but if your class has getCategory(), use "category" here.
+
         bookcategoryTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         categoryCB.setItems(FXCollections.observableArrayList("Fiction", "Science", "History", "Technology"));
 
-        // Load all books on startup (Event-2)
+
         loadBooksFromFile("");
     }
 
@@ -78,22 +77,19 @@ public class BookDetailsViewController implements Initializable {
 
     @FXML
     public void searchButtonOnAction(ActionEvent actionEvent) {
-        // Event-5: Retrieve from "database" (.bin file)
         loadBooksFromFile(bookNameTF.getText().trim());
     }
 
     @FXML
     public void viewDetailsButtonOnAction(ActionEvent actionEvent) {
-        // Event-3 & Event-4: Select and Verify selected book
         Book selected = bookDetailsTable.getSelectionModel().getSelectedItem();
 
         if (selected != null) {
-            // Event-6: Display author, publisher (dummy), and availability
             bookTitleTF.setText(selected.getTitle());
             authorTF.setText(selected.getAuthor());
             availablityTF.setText(selected.getStatus());
 
-            // Dummy info for fields not in your Book class
+
             PublisherTF.setText("Library Press");
             isbn.setText("ISBN-" + selected.getBookId());
         } else {
@@ -111,7 +107,7 @@ public class BookDetailsViewController implements Initializable {
         bookDetailsMainPane.getChildren().setAll(node);
     }
 
-    // These can remain empty if not needed for Goal-5
+
     @FXML public void searchInTheListButtonOnAction(ActionEvent actionEvent) { searchButtonOnAction(actionEvent); }
     @FXML public void borrowButtonOnAction(ActionEvent actionEvent) { }
 }

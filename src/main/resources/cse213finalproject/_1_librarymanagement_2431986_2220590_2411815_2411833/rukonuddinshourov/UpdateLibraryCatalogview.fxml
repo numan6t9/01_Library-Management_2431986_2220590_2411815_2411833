@@ -68,7 +68,7 @@
          </font>
       </Label>
       <TextField fx:id="shelfLocationTF" layoutX="445.0" layoutY="200.0" />
-      <TableView fx:id="catalogbookTableView" layoutX="97.0" layoutY="343.0" prefHeight="200.0" prefWidth="526.0">
+      <TableView fx:id="bookTableView" layoutX="97.0" layoutY="343.0" prefHeight="200.0" prefWidth="526.0">
         <columns>
           <TableColumn fx:id="bookIdTC" prefWidth="75.0" text="Book ID" />
           <TableColumn fx:id="isbnTC" prefWidth="75.0" text="ISBN" />

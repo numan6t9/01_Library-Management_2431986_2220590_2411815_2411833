@@ -13,9 +13,6 @@ public class DataInitializer {
 
     public static void main(String[] args) {
 
-        // ============================
-        // ১. Book.bin (আগের মতোই আছে)
-        // ============================
         List<Book> bookList = new ArrayList<>();
 
         new Book("B101","1111","Java Programming","James Gosling","Science",5,"Available");
@@ -46,9 +43,6 @@ public class DataInitializer {
             e.printStackTrace();
         }
 
-        // ======================================
-        // ২. IssuedBooks.bin (এটুকু নতুন যোগ করুন)
-        // ======================================
         List<IssuedBook> issuedList = new ArrayList<>();
 
         issuedList.add(new IssuedBook(
