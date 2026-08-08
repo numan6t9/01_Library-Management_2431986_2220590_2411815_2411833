@@ -7,7 +7,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import nonuser.ReadAndWriteHelper;
 import nonuser.RegisterMember;
+import rukonuddinshourov.Member;
 
 import java.io.*;
 
@@ -37,27 +39,23 @@ public class viewMemberListController
     @javafx.fxml.FXML
     public void loadMemberListTable(ActionEvent actionEvent) {
         memberListTableView.getItems().clear();
-
-        File f = new File("Member.bin");
-        try{
-            FileInputStream fis = new FileInputStream(f);
-            ObjectInputStream ois = new ObjectInputStream(fis);
-
-            while(true){
-                try {
+        try {
+            ObjectInputStream ois =  ReadAndWriteHelper.read("Member.bin");
+            while (true){
+                try{
                     RegisterMember m = (RegisterMember) ois.readObject();
                     memberListTableView.getItems().add(m);
                 }
-                catch (EOFException e) {
-                    ois.close();
+                catch (EOFException e){
+
                     break;
                 }
             }
-
-        }
-        catch (Exception e){
+            ois.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     @javafx.fxml.FXML

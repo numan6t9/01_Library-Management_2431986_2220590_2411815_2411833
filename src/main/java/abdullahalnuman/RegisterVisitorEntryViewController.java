@@ -126,7 +126,6 @@ public class RegisterVisitorEntryViewController
         try {
             FileInputStream fis = new FileInputStream(f);
             ObjectInputStream ois = new ObjectInputStream(fis);
-
             while(true){
                 try {
                     Visitor visitor = (Visitor) ois.readObject();
@@ -141,7 +140,5 @@ public class RegisterVisitorEntryViewController
         catch (Exception e){
             e.printStackTrace();
         }
-
-
         }
 }
