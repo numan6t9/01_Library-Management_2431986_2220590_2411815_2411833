@@ -7,7 +7,7 @@ public class Member implements Serializable {
 
     private String memberId;
     private String name;
-    private String phone;
+    private String age;
     private String email;
     private String adress;
     private LocalDate dateOfBirth;
@@ -17,10 +17,10 @@ public class Member implements Serializable {
     private  String password;
     public String status;
 
-    public Member(String memberId, String name, String phone, String email, String adress, LocalDate dateOfBirth, String gender, String firstName, String lastName, String password, String status) {
+    public Member(String memberId, String name, String age, String email, String adress, LocalDate dateOfBirth, String gender, String firstName, String lastName, String password, String status) {
         this.memberId = memberId;
         this.name = name;
-        this.phone = phone;
+        this.age = age;
         this.email = email;
         this.adress = adress;
         this.dateOfBirth = dateOfBirth;
@@ -48,11 +48,11 @@ public class Member implements Serializable {
     }
 
     public String getPhone() {
-        return phone;
+        return age;
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.age = phone;
     }
 
     public String getEmail() {
@@ -124,7 +124,7 @@ public class Member implements Serializable {
         return "Member{" +
                 "memberId='" + memberId + '\'' +
                 ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
+                ", age='" + age + '\'' +
                 ", email='" + email + '\'' +
                 ", adress='" + adress + '\'' +
                 ", dateOfBirth=" + dateOfBirth +

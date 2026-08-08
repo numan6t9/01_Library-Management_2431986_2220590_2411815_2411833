@@ -79,7 +79,10 @@ public class ReserveBookMemberviewController implements Initializable {
         bookList.addAll(
                 new Book("B101", "Java Programming", "James Gosling", "Available"),
                 new Book("B102", "Database System", "Elmasri", "Reserved"),
-                new Book("B103", "Operating System", "Silberschatz", "Available")
+                new Book("B103", "Operating System", "Silberschatz", "Available"),
+                new Book("B104","clean Code","Robart martin", "Available"),
+                new Book("B005", "Java Basics", "Herbert Schildt",  "Available"),
+                new Book("B006", "Effective Java", "Joshua Bloch", "Reserved")
         );
 
         tblBooks.setItems(bookList);
