@@ -69,25 +69,38 @@ public class ReserveBookMemberviewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // ✅ Connect table columns with Book class
+
         booIdTC.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         TitlebookTC.setCellValueFactory(new PropertyValueFactory<>("title"));
         AuthorTC.setCellValueFactory(new PropertyValueFactory<>("author"));
         StatusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // ✅ Sample Data
+
         bookList.addAll(
-                new Book("B101", "Java Programming", "James Gosling", "Available"),
-                new Book("B102", "Database System", "Elmasri", "Reserved"),
-                new Book("B103", "Operating System", "Silberschatz", "Available"),
-                new Book("B104","clean Code","Robart martin", "Available"),
-                new Book("B005", "Java Basics", "Herbert Schildt",  "Available"),
-                new Book("B006", "Effective Java", "Joshua Bloch", "Reserved")
+                new Book("B101","1111","Java Programming","James Gosling","Science",5,"Available"),
+                new Book("B102","2222","Database System","Elmasri","Science",3,"Reserved"),
+                new Book("B103","3333","Operating System","Silberschatz","Science",4,"Available"),
+                new Book("B104","4444","Clean Code","Robert Martin","Science",6,"Available"),
+                new Book("B105","5555","Java Basics","Herbert Schildt","Science",8,"Available"),
+                new Book("B106","6666","Effective Java","Joshua Bloch","Science",2,"Reserved"),
+                new Book("B107","7777","Database Systems","Elmasri","Science",4,"Available"),
+                new Book("B108","8888","Operating Systems","Silberschatz","Science",9,"Available"),
+                new Book("B109","9999","Artificial Intelligence","Russell Norvig","Science",3,"Unavailable"),
+                new Book("B110","1010","Discrete Mathematics","Rosen","Math",15,"Available"),
+                new Book("B111","1112","Data Structures","Mark Allen","Science",11,"Available"),
+                new Book("B112","1113","Computer Networks","Andrew Tanenbaum","Science",5,"Available"),
+                new Book("B113","1114","Software Engineering","Ian Sommerville","Science",6,"Available"),
+                new Book("B114","1115","Linear Algebra","Gilbert Strang","Math",10,"Available"),
+                new Book("B115","1116","Modern History","William Jones","History",8,"Unavailable"),
+                new Book("B116","1117","C Programming","Dennis Ritchie","Science",9,"Available"),
+                new Book("B117","1118","Python Programming","Guido Rossum","Science",14,"Available"),
+                new Book("B118","1119","Digital Logic Design","Morris Mano","Science",7,"Available"),
+                new Book("B119","1120","Statistics Basics","Robert Johnson","Math",13,"Available"),
+                new Book("B120","1121","Machine Learning","Tom Mitchell","Science",4,"Unavailable")
         );
 
         tblBooks.setItems(bookList);
 
-        // ✅ When selecting a row, fill text fields
         tblBooks.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 BookIDTF.setText(newVal.getBookId());
@@ -97,7 +110,6 @@ public class ReserveBookMemberviewController implements Initializable {
         });
     }
 
-    // ✅ Search Book
     @FXML
     public void searchBook(ActionEvent event) {
 
@@ -121,7 +133,7 @@ public class ReserveBookMemberviewController implements Initializable {
         }
     }
 
-    // ✅ Reserve Book
+
     @FXML
     public void reserveBookOnActionButton(ActionEvent event) {
 
@@ -144,26 +156,25 @@ public class ReserveBookMemberviewController implements Initializable {
             return;
         }
 
-        // ✅ Check availability
+
         if (!selectedBook.getStatus().equalsIgnoreCase("Available")) {
             lblMessage.setText("Book is not available.");
             return;
         }
 
-        // ✅ Simple eligibility check
+
         if (memberId.startsWith("0")) {
             lblMessage.setText("Member not eligible.");
             return;
         }
 
-        // ✅ Reserve
         selectedBook.setStatus("Reserved");
         tblBooks.refresh();
 
         lblMessage.setText("Reservation successful on " + date);
     }
 
-    // ✅ Clear Button
+
     @FXML
     public void clearButtonOnAction(ActionEvent event) {
 
@@ -177,7 +188,7 @@ public class ReserveBookMemberviewController implements Initializable {
         tblBooks.setItems(bookList);
     }
 
-    // ✅ Back Button
+
     @FXML
     public void backButtonOnAction(ActionEvent event) throws IOException {
 

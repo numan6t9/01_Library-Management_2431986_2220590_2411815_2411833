@@ -74,14 +74,12 @@ public class ProcessBookReturnsViewController implements Initializable {
         dueDateTC.setCellValueFactory(new PropertyValueFactory<>("dueDate"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // রেডিও বাটন গ্রুপ
         conditionGroup = new ToggleGroup();
         goodRB.setToggleGroup(conditionGroup);
         damagedRB.setToggleGroup(conditionGroup);
         lostRB.setToggleGroup(conditionGroup);
         goodRB.setSelected(true);
 
-        // টেবিল সিলেকশন লিসেনার
         tblBooks.getSelectionModel().selectedItemProperty().addListener(
                 (obs, oldVal, newVal) -> {
                     if (newVal != null) {
@@ -93,7 +91,6 @@ public class ProcessBookReturnsViewController implements Initializable {
                 });
     }
 
-    // Event-3: Search issued books by Member ID
     @FXML
     public void searchIssuedBooks(ActionEvent actionEvent) {
         String memberId = memberIDTF.getText().trim();
@@ -125,7 +122,6 @@ public class ProcessBookReturnsViewController implements Initializable {
         }
     }
 
-    // Event-5: Calculate Fine
     @FXML
     public void calculateFineOnActionButton(ActionEvent actionEvent) {
         LocalDate returnDate = returnDateDP.getValue();
@@ -145,13 +141,11 @@ public class ProcessBookReturnsViewController implements Initializable {
         LocalDate dueDate = LocalDate.parse(dueDateTF.getText());
         double fine = 0.0;
 
-        // Overdue fine calculation
         if (returnDate.isAfter(dueDate)) {
             long overdueDays = ChronoUnit.DAYS.between(dueDate, returnDate);
             fine = overdueDays * 1.0; // $1 per day
         }
 
-        // Book condition fine
         if (damagedRB.isSelected()) {
             fine += 25.0; // Damaged book extra fine
         } else if (lostRB.isSelected()) {
@@ -163,7 +157,6 @@ public class ProcessBookReturnsViewController implements Initializable {
         lblStatus.setText("Fine calculated: $" + String.format("%.2f", fine));
     }
 
-    // Event-6 & Event-7: Return Book and Save
     @FXML
     public void returnBookOnActionButton(ActionEvent actionEvent) {
         IssuedBook selected = tblBooks.getSelectionModel().getSelectedItem();
@@ -180,7 +173,6 @@ public class ProcessBookReturnsViewController implements Initializable {
             return;
         }
 
-        // ১. IssuedBooks.bin আপডেট করা
         List<IssuedBook> allIssued = readIssuedBooks();
         for (IssuedBook ib : allIssued) {
             if (ib.getBookId().equals(selected.getBookId())
@@ -197,7 +189,6 @@ public class ProcessBookReturnsViewController implements Initializable {
         }
         saveIssuedBooks(allIssued);
 
-        // ২. Book.bin এ status আপডেট করা
         List<Book> allBooks = readBooksFromFile();
         for (Book b : allBooks) {
             if (b.getBookId().equals(selected.getBookId())) {
@@ -212,14 +203,13 @@ public class ProcessBookReturnsViewController implements Initializable {
         }
         saveBooksToFile(allBooks);
 
-        // ৩. টেবিল রিফ্রেশ
+
         searchIssuedBooks(actionEvent);
 
         lblStatus.setStyle("-fx-text-fill: green;");
         lblStatus.setText("Book returned successfully! Fine: $" + fineTF.getText());
     }
 
-    // Clear Button
     @FXML
     public void clearOnActionButton(ActionEvent actionEvent) {
         bookIDTF.clear();
@@ -233,7 +223,6 @@ public class ProcessBookReturnsViewController implements Initializable {
         tblBooks.getSelectionModel().clearSelection();
     }
 
-    // Back Button
     @FXML
     public void backOnActionButton(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
@@ -242,7 +231,6 @@ public class ProcessBookReturnsViewController implements Initializable {
         processBookReturnMainPane.getChildren().setAll(node);
     }
 
-    // ========== File Read/Write Methods ==========
 
     @SuppressWarnings("unchecked")
     private List<IssuedBook> readIssuedBooks() {
